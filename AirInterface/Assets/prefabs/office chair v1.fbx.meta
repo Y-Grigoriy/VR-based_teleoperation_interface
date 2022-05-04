@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: cb30fe450f9f97544824a550fba13c87
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armrests
+    100002: Armrests(Mirror)
+    100004: Armrests(Mirror):1
+    100006: Armrests:1
+    100008: Body1
+    100010: Body1 1
+    100012: Body1 10
+    100014: Body1 11
+    100016: Body1 12
+    100018: Body1 13
+    100020: Body1 14
+    100022: Body1 15
+    100024: Body1 16
+    100026: Body1 17
+    100028: Body1 18
+    100030: Body1 19
+    100032: Body1 2
+    100034: Body1 20
+    100036: Body1 21
+    100038: Body1 22
+    100040: Body1 23
+    100042: Body1 24
+    100044: Body1 25
+    100046: Body1 26
+    100048: Body1 27
+    100050: Body1 28
+    100052: Body1 29
+    100054: Body1 3
+    100056: Body1 30
+    100058: Body1 31
+    100060: Body1 32
+    100062: Body1 33
+    100064: Body1 4
+    100066: Body1 5
+    100068: Body1 6
+    100070: Body1 7
+    100072: Body1 8
+    100074: Body1 9
+    100076: Bracket
+    100078: Bracket 1
+    100080: Bracket 2
+    100082: Bracket 3
+    100084: Bracket 4
+    100086: Bracket 5
+    100088: Bracket:1
+    100090: Bracket:1 1
+    100092: Bracket:1 2
+    100094: Bracket:1 3
+    100096: Bracket:1 4
+    100098: Bracket:1 5
+    100100: Component1
+    100102: Component10
+    100104: Component10(Mirror) (1)
+    100106: Component10(Mirror) (1):1
+    100108: Component10:1
+    100110: Component11
+    100112: Component11(Mirror)
+    100114: Component11(Mirror):1
+    100116: Component11:1
+    100118: Component12
+    100120: Component12(Mirror)
+    100122: Component12(Mirror):1
+    100124: Component12:1
+    100126: Component1:1
+    100128: Component2
+    100130: Component2:1
+    100132: Component3
+    100134: Component3:1
+    100136: Component4
+    100138: Component4:1
+    100140: Diff
+    100142: Diff 1
+    100144: Diff 2
+    100146: Diff 3
+    100148: Diff 4
+    100150: Diff 5
+    100152: Diff:1
+    100154: Diff:1 1
+    100156: Diff:1 2
+    100158: Diff:1 3
+    100160: Diff:1 4
+    100162: Diff:1 5
+    100164: LW
+    100166: LW 1
+    100168: LW 2
+    100170: LW 3
+    100172: LW 4
+    100174: LW 5
+    100176: LW:1
+    100178: LW:1 1
+    100180: LW:1 2
+    100182: LW:1 3
+    100184: LW:1 4
+    100186: LW:1 5
+    100188: //RootNode
+    100190: RW
+    100192: RW 1
+    100194: RW 2
+    100196: RW 3
+    100198: RW 4
+    100200: RW 5
+    100202: RW:1
+    100204: RW:1 1
+    100206: RW:1 2
+    100208: RW:1 3
+    100210: RW:1 4
+    100212: RW:1 5
+    100214: Wheel Assembly
+    100216: Wheel Assembly 1
+    100218: Wheel Assembly 2
+    100220: Wheel Assembly 3
+    100222: Wheel Assembly 4
+    100224: Wheel Assembly 5
+    100226: Wheel Assembly:1
+    100228: Wheel Assembly:2
+    100230: Wheel Assembly:3
+    100232: Wheel Assembly:4
+    100234: Wheel Assembly:5
+    100236: Wheel Assembly:6
+    400000: Armrests
+    400002: Armrests(Mirror)
+    400004: Armrests(Mirror):1
+    400006: Armrests:1
+    400008: Body1
+    400010: Body1 1
+    400012: Body1 10
+    400014: Body1 11
+    400016: Body1 12
+    400018: Body1 13
+    400020: Body1 14
+    400022: Body1 15
+    400024: Body1 16
+    400026: Body1 17
+    400028: Body1 18
+    400030: Body1 19
+    400032: Body1 2
+    400034: Body1 20
+    400036: Body1 21
+    400038: Body1 22
+    400040: Body1 23
+    400042: Body1 24
+    400044: Body1 25
+    400046: Body1 26
+    400048: Body1 27
+    400050: Body1 28
+    400052: Body1 29
+    400054: Body1 3
+    400056: Body1 30
+    400058: Body1 31
+    400060: Body1 32
+    400062: Body1 33
+    400064: Body1 4
+    400066: Body1 5
+    400068: Body1 6
+    400070: Body1 7
+    400072: Body1 8
+    400074: Body1 9
+    400076: Bracket
+    400078: Bracket 1
+    400080: Bracket 2
+    400082: Bracket 3
+    400084: Bracket 4
+    400086: Bracket 5
+    400088: Bracket:1
+    400090: Bracket:1 1
+    400092: Bracket:1 2
+    400094: Bracket:1 3
+    400096: Bracket:1 4
+    400098: Bracket:1 5
+    400100: Component1
+    400102: Component10
+    400104: Component10(Mirror) (1)
+    400106: Component10(Mirror) (1):1
+    400108: Component10:1
+    400110: Component11
+    400112: Component11(Mirror)
+    400114: Component11(Mirror):1
+    400116: Component11:1
+    400118: Component12
+    400120: Component12(Mirror)
+    400122: Component12(Mirror):1
+    400124: Component12:1
+    400126: Component1:1
+    400128: Component2
+    400130: Component2:1
+    400132: Component3
+    400134: Component3:1
+    400136: Component4
+    400138: Component4:1
+    400140: Diff
+    400142: Diff 1
+    400144: Diff 2
+    400146: Diff 3
+    400148: Diff 4
+    400150: Diff 5
+    400152: Diff:1
+    400154: Diff:1 1
+    400156: Diff:1 2
+    400158: Diff:1 3
+    400160: Diff:1 4
+    400162: Diff:1 5
+    400164: LW
+    400166: LW 1
+    400168: LW 2
+    400170: LW 3
+    400172: LW 4
+    400174: LW 5
+    400176: LW:1
+    400178: LW:1 1
+    400180: LW:1 2
+    400182: LW:1 3
+    400184: LW:1 4
+    400186: LW:1 5
+    400188: //RootNode
+    400190: RW
+    400192: RW 1
+    400194: RW 2
+    400196: RW 3
+    400198: RW 4
+    400200: RW 5
+    400202: RW:1
+    400204: RW:1 1
+    400206: RW:1 2
+    400208: RW:1 3
+    400210: RW:1 4
+    400212: RW:1 5
+    400214: Wheel Assembly
+    400216: Wheel Assembly 1
+    400218: Wheel Assembly 2
+    400220: Wheel Assembly 3
+    400222: Wheel Assembly 4
+    400224: Wheel Assembly 5
+    400226: Wheel Assembly:1
+    400228: Wheel Assembly:2
+    400230: Wheel Assembly:3
+    400232: Wheel Assembly:4
+    400234: Wheel Assembly:5
+    400236: Wheel Assembly:6
+    2100000: Plastic - Textured - Regular
+    2100002: Plastic - Textured - Polka
+    2100004: Plastic - Textured - Skin
+    2100006: Nylon 6-6 (White)
+    2100008: Stainless Steel - Polished
+    2100010: Fabric (Grey)
+    2100012: Steel - Satin
+    2300000: Body1
+    2300002: Body1 1
+    2300004: Body1 10
+    2300006: Body1 11
+    2300008: Body1 12
+    2300010: Body1 13
+    2300012: Body1 14
+    2300014: Body1 15
+    2300016: Body1 16
+    2300018: Body1 17
+    2300020: Body1 18
+    2300022: Body1 19
+    2300024: Body1 2
+    2300026: Body1 20
+    2300028: Body1 21
+    2300030: Body1 22
+    2300032: Body1 23
+    2300034: Body1 24
+    2300036: Body1 25
+    2300038: Body1 26
+    2300040: Body1 27
+    2300042: Body1 28
+    2300044: Body1 29
+    2300046: Body1 3
+    2300048: Body1 30
+    2300050: Body1 31
+    2300052: Body1 32
+    2300054: Body1 33
+    2300056: Body1 4
+    2300058: Body1 5
+    2300060: Body1 6
+    2300062: Body1 7
+    2300064: Body1 8
+    2300066: Body1 9
+    3300000: Body1
+    3300002: Body1 1
+    3300004: Body1 10
+    3300006: Body1 11
+    3300008: Body1 12
+    3300010: Body1 13
+    3300012: Body1 14
+    3300014: Body1 15
+    3300016: Body1 16
+    3300018: Body1 17
+    3300020: Body1 18
+    3300022: Body1 19
+    3300024: Body1 2
+    3300026: Body1 20
+    3300028: Body1 21
+    3300030: Body1 22
+    3300032: Body1 23
+    3300034: Body1 24
+    3300036: Body1 25
+    3300038: Body1 26
+    3300040: Body1 27
+    3300042: Body1 28
+    3300044: Body1 29
+    3300046: Body1 3
+    3300048: Body1 30
+    3300050: Body1 31
+    3300052: Body1 32
+    3300054: Body1 33
+    3300056: Body1 4
+    3300058: Body1 5
+    3300060: Body1 6
+    3300062: Body1 7
+    3300064: Body1 8
+    3300066: Body1 9
+    4300000: Body1
+    4300002: Body1
+    4300004: Body1
+    4300006: Body1
+    4300008: Body1
+    4300010: Body1
+    4300012: Body1
+    4300014: Body1
+    4300016: Body1
+    4300018: Body1
+    4300020: Body1
+    4300022: Body1
+    4300024: Body1
+    4300026: Body1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,3688 @@
+Unity data 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+69349365 Setpoint:(0.5, 1.5, 0.7); Drone position: (0.4, 1.6, 0.7)
+
+69349399 Setpoint:(0.5, 1.5, 0.7); Drone position: (0.4, 1.6, 0.7)
+
+69349465 Setpoint:(0.4, 1.6, 0.7); Drone position: (0.3, 1.6, 0.7)
+
+69349503 Setpoint:(0.4, 1.6, 0.7); Drone position: (0.3, 1.6, 0.7)
+
+69349566 Setpoint:(0.3, 1.6, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69349601 Setpoint:(0.3, 1.6, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69349657 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.1, 1.7, 0.8)
+
+69349686 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.1, 1.7, 0.8)
+
+69349754 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.0, 1.8, 0.8)
+
+69349805 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.0, 1.8, 0.8)
+
+69349867 Setpoint:(0.0, 1.8, 0.8); Drone position: (-0.1, 1.8, 0.8)
+
+69349912 Setpoint:(0.0, 1.8, 0.8); Drone position: (-0.2, 1.8, 0.8)
+
+69349952 Setpoint:(-0.2, 1.8, 0.8); Drone position: (-0.2, 1.8, 0.8)
+
+69350014 Setpoint:(-0.2, 1.8, 0.8); Drone position: (-0.3, 1.8, 0.8)
+
+69350069 Setpoint:(-0.3, 1.8, 0.8); Drone position: (-0.3, 1.8, 0.8)
+
+69350101 Setpoint:(-0.3, 1.8, 0.8); Drone position: (-0.4, 1.8, 0.8)
+
+69350154 Setpoint:(-0.4, 1.8, 0.8); Drone position: (-0.4, 1.7, 0.8)
+
+69350215 Setpoint:(-0.4, 1.8, 0.8); Drone position: (-0.5, 1.7, 0.8)
+
+69350266 Setpoint:(-0.5, 1.7, 0.8); Drone position: (-0.5, 1.7, 0.8)
+
+69350312 Setpoint:(-0.5, 1.7, 0.8); Drone position: (-0.6, 1.7, 0.8)
+
+69350356 Setpoint:(-0.6, 1.7, 0.8); Drone position: (-0.6, 1.7, 0.8)
+
+69350412 Setpoint:(-0.6, 1.7, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69350467 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.7, 1.6, 0.8)
+
+69350488 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.7, 1.6, 0.8)
+
+69350558 Setpoint:(-0.7, 1.6, 0.8); Drone position: (-0.7, 1.6, 0.8)
+
+69350598 Setpoint:(-0.7, 1.6, 0.8); Drone position: (-0.7, 1.6, 0.8)
+
+69350652 Setpoint:(-0.7, 1.6, 0.8); Drone position: (-0.7, 1.5, 0.8)
+
+69350705 Setpoint:(-0.7, 1.6, 0.8); Drone position: (-0.7, 1.5, 0.8)
+
+69350764 Setpoint:(-0.7, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69350797 Setpoint:(-0.7, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69350866 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69350900 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.4, 0.8)
+
+69350956 Setpoint:(-0.8, 1.4, 0.8); Drone position: (-0.7, 1.4, 0.8)
+
+69351004 Setpoint:(-0.8, 1.4, 0.8); Drone position: (-0.7, 1.4, 0.8)
+
+69351058 Setpoint:(-0.7, 1.4, 0.8); Drone position: (-0.7, 1.4, 0.8)
+
+69351090 Setpoint:(-0.7, 1.4, 0.8); Drone position: (-0.7, 1.4, 0.7)
+
+69351156 Setpoint:(-0.7, 1.4, 0.7); Drone position: (-0.7, 1.3, 0.7)
+
+69351194 Setpoint:(-0.7, 1.4, 0.7); Drone position: (-0.7, 1.3, 0.7)
+
+69351262 Setpoint:(-0.7, 1.3, 0.7); Drone position: (-0.6, 1.3, 0.7)
+
+69351303 Setpoint:(-0.7, 1.3, 0.7); Drone position: (-0.6, 1.3, 0.7)
+
+69351349 Setpoint:(-0.6, 1.3, 0.7); Drone position: (-0.6, 1.3, 0.7)
+
+69351416 Setpoint:(-0.6, 1.3, 0.7); Drone position: (-0.5, 1.3, 0.7)
+
+69351450 Setpoint:(-0.5, 1.3, 0.7); Drone position: (-0.5, 1.2, 0.7)
+
+69351501 Setpoint:(-0.5, 1.3, 0.7); Drone position: (-0.5, 1.2, 0.7)
+
+69351563 Setpoint:(-0.5, 1.2, 0.7); Drone position: (-0.4, 1.2, 0.7)
+
+69351601 Setpoint:(-0.5, 1.2, 0.7); Drone position: (-0.4, 1.2, 0.7)
+
+69351672 Setpoint:(-0.4, 1.2, 0.7); Drone position: (-0.3, 1.2, 0.7)
+
+69351713 Setpoint:(-0.4, 1.2, 0.7); Drone position: (-0.3, 1.2, 0.7)
+
+69351750 Setpoint:(-0.3, 1.2, 0.7); Drone position: (-0.3, 1.2, 0.7)
+
+69351804 Setpoint:(-0.3, 1.2, 0.7); Drone position: (-0.2, 1.2, 0.6)
+
+69351868 Setpoint:(-0.2, 1.2, 0.6); Drone position: (-0.2, 1.2, 0.6)
+
+69351914 Setpoint:(-0.2, 1.2, 0.6); Drone position: (-0.1, 1.2, 0.6)
+
+69351952 Setpoint:(-0.1, 1.2, 0.6); Drone position: (-0.1, 1.2, 0.6)
+
+69352014 Setpoint:(-0.1, 1.2, 0.6); Drone position: (-0.1, 1.2, 0.6)
+
+69352068 Setpoint:(-0.1, 1.2, 0.6); Drone position: (0.0, 1.2, 0.6)
+
+69352099 Setpoint:(-0.1, 1.2, 0.6); Drone position: (0.0, 1.2, 0.6)
+
+69352155 Setpoint:(0.0, 1.2, 0.6); Drone position: (0.0, 1.2, 0.6)
+
+69352207 Setpoint:(0.0, 1.2, 0.6); Drone position: (0.1, 1.2, 0.6)
+
+69352260 Setpoint:(0.1, 1.2, 0.6); Drone position: (0.1, 1.2, 0.6)
+
+69352308 Setpoint:(0.1, 1.2, 0.6); Drone position: (0.1, 1.2, 0.5)
+
+69352373 Setpoint:(0.1, 1.2, 0.5); Drone position: (0.2, 1.2, 0.5)
+
+69352389 Setpoint:(0.1, 1.2, 0.5); Drone position: (0.2, 1.2, 0.5)
+
+69352457 Setpoint:(0.2, 1.2, 0.5); Drone position: (0.2, 1.3, 0.5)
+
+69352503 Setpoint:(0.2, 1.2, 0.5); Drone position: (0.2, 1.3, 0.5)
+
+69352567 Setpoint:(0.2, 1.3, 0.5); Drone position: (0.3, 1.3, 0.5)
+
+69352592 Setpoint:(0.2, 1.3, 0.5); Drone position: (0.3, 1.3, 0.5)
+
+69352659 Setpoint:(0.3, 1.3, 0.5); Drone position: (0.3, 1.3, 0.5)
+
+69352725 Setpoint:(0.3, 1.3, 0.5); Drone position: (0.3, 1.3, 0.5)
+
+69352752 Setpoint:(0.3, 1.3, 0.5); Drone position: (0.3, 1.3, 0.6)
+
+69352811 Setpoint:(0.3, 1.3, 0.5); Drone position: (0.3, 1.4, 0.6)
+
+69352862 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69352901 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69352968 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69352994 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69353059 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69353107 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.4, 0.6)
+
+69353142 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.5, 0.7)
+
+69353211 Setpoint:(0.3, 1.4, 0.6); Drone position: (0.3, 1.5, 0.7)
+
+69353269 Setpoint:(0.3, 1.5, 0.7); Drone position: (0.3, 1.5, 0.7)
+
+69353302 Setpoint:(0.3, 1.5, 0.7); Drone position: (0.3, 1.5, 0.7)
+
+69353356 Setpoint:(0.3, 1.5, 0.7); Drone position: (0.2, 1.5, 0.7)
+
+69353414 Setpoint:(0.3, 1.5, 0.7); Drone position: (0.2, 1.5, 0.8)
+
+69353450 Setpoint:(0.2, 1.5, 0.8); Drone position: (0.2, 1.5, 0.8)
+
+69353500 Setpoint:(0.2, 1.5, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69353568 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69353602 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69353656 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.9)
+
+69353698 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.9)
+
+69353764 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69353798 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69353866 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69353866 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69353953 Setpoint:(0.0, 1.6, 0.9); Drone position: (-0.1, 1.6, 1.0)
+
+69354013 Setpoint:(0.0, 1.6, 0.9); Drone position: (-0.2, 1.6, 1.0)
+
+69354048 Setpoint:(-0.2, 1.6, 1.0); Drone position: (-0.2, 1.6, 1.0)
+
+69354100 Setpoint:(-0.2, 1.6, 1.0); Drone position: (-0.2, 1.6, 1.0)
+
+69354167 Setpoint:(-0.2, 1.6, 1.0); Drone position: (-0.2, 1.6, 1.0)
+
+69354215 Setpoint:(-0.2, 1.6, 1.0); Drone position: (-0.3, 1.7, 1.0)
+
+69354268 Setpoint:(-0.3, 1.7, 1.0); Drone position: (-0.3, 1.7, 1.0)
+
+69354307 Setpoint:(-0.3, 1.7, 1.0); Drone position: (-0.3, 1.7, 1.0)
+
+69354371 Setpoint:(-0.3, 1.7, 1.0); Drone position: (-0.3, 1.7, 1.0)
+
+69354412 Setpoint:(-0.3, 1.7, 1.0); Drone position: (-0.4, 1.7, 1.0)
+
+69354474 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.4, 1.7, 1.0)
+
+69354507 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.4, 1.7, 1.0)
+
+69354567 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.4, 1.7, 1.0)
+
+69354608 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.4, 1.7, 1.0)
+
+69354667 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.5, 1.7, 1.0)
+
+69354695 Setpoint:(-0.4, 1.7, 1.0); Drone position: (-0.5, 1.7, 1.0)
+
+69354771 Setpoint:(-0.5, 1.7, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69354808 Setpoint:(-0.5, 1.7, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69354852 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69354891 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69354965 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69355001 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 1.0)
+
+69355056 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 0.9)
+
+69355089 Setpoint:(-0.5, 1.6, 1.0); Drone position: (-0.5, 1.6, 0.9)
+
+69355170 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355201 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355268 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355300 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355367 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355399 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69355463 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.8)
+
+69355496 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.8)
+
+69355567 Setpoint:(-0.5, 1.6, 0.8); Drone position: (-0.5, 1.7, 0.8)
+
+69355606 Setpoint:(-0.5, 1.6, 0.8); Drone position: (-0.5, 1.7, 0.8)
+
+69355638 Setpoint:(-0.5, 1.7, 0.8); Drone position: (-0.5, 1.7, 0.8)
+
+69355709 Setpoint:(-0.5, 1.7, 0.8); Drone position: (-0.5, 1.7, 0.7)
+
+69355739 Setpoint:(-0.5, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.7)
+
+69355809 Setpoint:(-0.5, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.7)
+
+69355860 Setpoint:(-0.4, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.7)
+
+69355896 Setpoint:(-0.4, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.7)
+
+69355950 Setpoint:(-0.4, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.7)
+
+69356000 Setpoint:(-0.4, 1.7, 0.7); Drone position: (-0.4, 1.7, 0.6)
+
+69356051 Setpoint:(-0.4, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356108 Setpoint:(-0.4, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356164 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356186 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356265 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356285 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356343 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356396 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.3, 1.7, 0.6)
+
+69356461 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.2, 1.7, 0.6)
+
+69356486 Setpoint:(-0.3, 1.7, 0.6); Drone position: (-0.2, 1.7, 0.6)
+
+69356568 Setpoint:(-0.2, 1.7, 0.6); Drone position: (-0.1, 1.7, 0.5)
+
+69356594 Setpoint:(-0.2, 1.7, 0.6); Drone position: (-0.1, 1.7, 0.5)
+
+69356674 Setpoint:(-0.1, 1.7, 0.5); Drone position: (-0.1, 1.7, 0.5)
+
+69356696 Setpoint:(-0.1, 1.7, 0.5); Drone position: (-0.1, 1.7, 0.5)
+
+69356762 Setpoint:(-0.1, 1.7, 0.5); Drone position: (-0.1, 1.7, 0.5)
+
+69356806 Setpoint:(-0.1, 1.7, 0.5); Drone position: (-0.1, 1.7, 0.5)
+
+69356865 Setpoint:(-0.1, 1.7, 0.5); Drone position: (0.0, 1.7, 0.5)
+
+69356898 Setpoint:(-0.1, 1.7, 0.5); Drone position: (0.0, 1.7, 0.5)
+
+69356957 Setpoint:(0.0, 1.7, 0.5); Drone position: (0.0, 1.7, 0.5)
+
+69357007 Setpoint:(0.0, 1.7, 0.5); Drone position: (0.0, 1.7, 0.5)
+
+69357066 Setpoint:(0.0, 1.7, 0.5); Drone position: (0.1, 1.7, 0.5)
+
+69357091 Setpoint:(0.0, 1.7, 0.5); Drone position: (0.1, 1.7, 0.5)
+
+69357150 Setpoint:(0.1, 1.7, 0.5); Drone position: (0.1, 1.7, 0.5)
+
+69357186 Setpoint:(0.1, 1.7, 0.5); Drone position: (0.1, 1.7, 0.5)
+
+69357265 Setpoint:(0.1, 1.7, 0.5); Drone position: (0.1, 1.7, 0.6)
+
+69357299 Setpoint:(0.1, 1.7, 0.5); Drone position: (0.1, 1.7, 0.6)
+
+69357356 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69357393 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69357463 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69357504 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69357563 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.7)
+
+69357601 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.7)
+
+69357669 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69357709 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69357743 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69357811 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.8, 0.8)
+
+69357860 Setpoint:(0.1, 1.8, 0.8); Drone position: (0.1, 1.8, 0.8)
+
+69357906 Setpoint:(0.1, 1.8, 0.8); Drone position: (0.1, 1.8, 0.8)
+
+69357965 Setpoint:(0.1, 1.8, 0.8); Drone position: (0.1, 1.8, 0.8)
+
+69358008 Setpoint:(0.1, 1.8, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69358045 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69358091 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69358166 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.9)
+
+69358197 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.9)
+
+69358267 Setpoint:(0.1, 1.7, 0.9); Drone position: (0.1, 1.7, 0.9)
+
+69358300 Setpoint:(0.1, 1.7, 0.9); Drone position: (0.1, 1.7, 0.9)
+
+69358366 Setpoint:(0.1, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358399 Setpoint:(0.1, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358458 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358500 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358582 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358582 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358661 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358720 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358756 Setpoint:(0.0, 1.7, 0.9); Drone position: (0.0, 1.7, 0.9)
+
+69358796 Setpoint:(0.0, 1.7, 0.9); Drone position: (-0.1, 1.7, 0.9)
+
+69358865 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.7, 0.9)
+
+69358911 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.7, 0.9)
+
+69358959 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.7, 0.9)
+
+69359016 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.7, 0.9)
+
+69359069 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359102 Setpoint:(-0.1, 1.7, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359155 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359202 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359271 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359300 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359362 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359404 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359460 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359508 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69359568 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.8)
+
+69359599 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.8)
+
+69359636 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359697 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359767 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359799 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359863 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359908 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69359965 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69360001 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.8)
+
+69360077 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.7)
+
+69360113 Setpoint:(-0.1, 1.6, 0.8); Drone position: (-0.1, 1.6, 0.7)
+
+69360157 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360210 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360257 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360298 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360366 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360410 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360465 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360511 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360558 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.6, 0.7)
+
+69360593 Setpoint:(-0.1, 1.6, 0.7); Drone position: (-0.1, 1.7, 0.7)
+
+69360667 Setpoint:(-0.1, 1.7, 0.7); Drone position: (-0.1, 1.7, 0.7)
+
+69360685 Setpoint:(-0.1, 1.7, 0.7); Drone position: (-0.1, 1.7, 0.7)
+
+69360757 Setpoint:(-0.1, 1.7, 0.7); Drone position: (0.0, 1.7, 0.6)
+
+69360809 Setpoint:(-0.1, 1.7, 0.7); Drone position: (0.0, 1.7, 0.6)
+
+69360870 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69360909 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69360967 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69360989 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361056 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361116 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361169 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361210 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361274 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361295 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361369 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361386 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.0, 1.7, 0.6)
+
+69361472 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361504 Setpoint:(0.0, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361561 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361608 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361644 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361705 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361767 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361813 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361869 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361901 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.6)
+
+69361964 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.7)
+
+69362007 Setpoint:(0.1, 1.7, 0.6); Drone position: (0.1, 1.7, 0.7)
+
+69362062 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362110 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362169 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362208 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362252 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362313 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362353 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362407 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362473 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362504 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362567 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362603 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362661 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362714 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69362749 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69362783 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69362860 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69362913 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69362952 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69362999 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.8)
+
+69363068 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363101 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363158 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363201 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363263 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363296 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363361 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363398 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363458 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363505 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363568 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363597 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69363667 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363703 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363754 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363794 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363863 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363911 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69363947 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364014 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364063 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364098 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364169 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364208 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364253 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364296 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364364 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69364413 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.7, 0.8)
+
+69364448 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.0, 1.7, 0.8)
+
+69364512 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.0, 1.7, 0.8)
+
+69364568 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.0, 1.7, 0.8)
+
+69364600 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.0, 1.7, 0.8)
+
+69364672 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364688 Setpoint:(0.0, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364775 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364798 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364850 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364909 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69364964 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365001 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365063 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365117 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365155 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365204 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365268 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365292 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69365361 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365401 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365462 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365496 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365558 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365598 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365654 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365703 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365762 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365803 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365853 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69365895 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.7)
+
+69365961 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69365992 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366071 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366106 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366158 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366195 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366264 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366285 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69366356 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366399 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366473 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366503 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366559 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366615 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366654 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366689 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366763 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366800 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366865 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.6, 0.7)
+
+69366907 Setpoint:(0.2, 1.6, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69366971 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367002 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367042 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367084 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367168 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367206 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367254 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367315 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367357 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367400 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367457 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367483 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367549 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.2, 1.7, 0.7)
+
+69367581 Setpoint:(0.2, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367651 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367687 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367761 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367796 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367840 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367902 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69367958 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368009 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368065 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368099 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368174 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368207 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368259 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368300 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368365 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368412 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368469 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368512 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368559 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368600 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368667 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368709 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368770 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368813 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368848 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368892 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69368957 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369009 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369069 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369069 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369167 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369207 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369267 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369314 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369373 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369401 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369459 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369505 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369558 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369575 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369662 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369701 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369749 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369786 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369854 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369904 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69369968 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370001 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370061 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370108 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370169 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370198 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370242 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370309 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.7, 0.7)
+
+69370365 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370417 Setpoint:(0.1, 1.7, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370452 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370509 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370546 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370587 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370661 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370695 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370768 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370810 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370849 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370892 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69370972 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371000 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371073 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371102 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371168 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371168 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.1, 1.6, 0.7)
+
+69371267 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371305 Setpoint:(0.1, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371371 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371402 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371457 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371475 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371549 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371617 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371666 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371703 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371769 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.7)
+
+69371812 Setpoint:(0.0, 1.6, 0.7); Drone position: (0.0, 1.6, 0.8)
+
+69371856 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69371886 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69371957 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69371996 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372062 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372105 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372154 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372194 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372267 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372300 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372354 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372408 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372450 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372495 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372543 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372606 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372668 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372702 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372770 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372800 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372861 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372901 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69372970 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69373002 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69373059 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373103 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373166 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373215 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373255 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373300 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373368 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373391 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373463 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373494 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373557 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373587 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373661 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373711 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373768 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373801 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373854 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373892 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69373970 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69374008 Setpoint:(0.1, 1.7, 0.8); Drone position: (0.1, 1.7, 0.8)
+
+69374067 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374098 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374159 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374189 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374269 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374314 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374355 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374404 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374450 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374500 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374566 Setpoint:(0.2, 1.7, 0.8); Drone position: (0.2, 1.7, 0.8)
+
+69374585 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374629 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374696 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374765 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374796 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374855 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69374911 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69374967 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375000 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375055 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375098 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375157 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375195 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375254 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375307 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375371 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375410 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375455 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375500 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375566 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375617 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375652 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375705 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375758 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375818 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375865 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375899 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375968 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69375991 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376067 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376103 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376150 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376194 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376267 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376301 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376350 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376394 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376455 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376510 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376551 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376599 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376664 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376698 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376755 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376810 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376861 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376898 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376951 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69376998 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377057 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377108 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377156 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377197 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377265 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69377313 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377362 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377410 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377438 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377497 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377562 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377610 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377668 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377713 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377754 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377798 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377852 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377900 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69377970 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378009 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378055 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378118 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378168 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378185 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378257 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378307 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378376 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378395 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378464 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378503 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378553 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378603 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378665 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378697 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378757 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378794 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378864 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378900 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69378950 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69379003 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69379083 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69379103 Setpoint:(0.0, 1.6, 0.8); Drone position: (0.0, 1.6, 0.8)
+
+69379152 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379223 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379265 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379305 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379371 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379415 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379456 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379514 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379554 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379600 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379655 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379709 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379760 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379799 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379868 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379903 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379966 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69379990 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380066 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380108 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380164 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380198 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380255 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380302 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380367 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380394 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380470 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380506 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380564 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380603 Setpoint:(0.1, 1.6, 0.8); Drone position: (0.1, 1.6, 0.8)
+
+69380676 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380707 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380768 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380801 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380840 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380906 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69380967 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381007 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381060 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381104 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381153 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381197 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381258 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381307 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381353 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381408 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381453 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381514 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381566 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381600 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381654 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381697 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381759 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381817 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381859 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381902 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69381951 Setpoint:(0.2, 1.6, 0.8); Drone position: (0.2, 1.6, 0.8)
+
+69382005 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382069 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382106 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382172 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382190 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382270 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382301 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382357 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382403 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382458 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382505 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382574 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382609 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382647 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382716 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382760 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382826 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382846 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382904 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382948 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69382999 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383054 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383105 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383154 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383196 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383258 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383325 Setpoint:(0.2, 1.6, 0.9); Drone position: (0.2, 1.6, 0.9)
+
+69383358 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383398 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383465 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383507 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383567 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383613 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383652 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383723 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383762 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383800 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383859 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383893 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69383968 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69384000 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69384055 Setpoint:(0.2, 1.5, 0.9); Drone position: (0.2, 1.5, 0.9)
+
+69384105 Setpoint:(0.1, 1.5, 0.9); Drone position: (0.1, 1.5, 0.9)
+
+69384163 Setpoint:(0.1, 1.5, 0.9); Drone position: (0.1, 1.5, 0.9)
+
+69384199 Setpoint:(0.1, 1.5, 0.9); Drone position: (0.1, 1.5, 0.9)
+
+69384269 Setpoint:(0.1, 1.5, 0.9); Drone position: (0.1, 1.5, 0.9)
+
+69384304 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384361 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384413 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384458 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384491 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384568 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384592 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384660 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384681 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384756 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384785 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384859 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384911 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69384962 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69385002 Setpoint:(0.1, 1.6, 0.9); Drone position: (0.1, 1.6, 0.9)
+
+69385063 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385093 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385163 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385192 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385260 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385286 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385352 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385407 Setpoint:(0.0, 1.6, 0.9); Drone position: (0.0, 1.6, 0.9)
+
+69385470 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385487 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385571 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385602 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385655 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385721 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385776 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385808 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385867 Setpoint:(-0.1, 1.6, 0.9); Drone position: (-0.1, 1.6, 0.9)
+
+69385910 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69385956 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386004 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386067 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386087 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386163 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386197 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386264 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386295 Setpoint:(-0.2, 1.6, 0.9); Drone position: (-0.2, 1.6, 0.9)
+
+69386347 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386405 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386461 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386514 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386572 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386592 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386665 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386695 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386770 Setpoint:(-0.3, 1.6, 0.9); Drone position: (-0.3, 1.6, 0.9)
+
+69386808 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69386850 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69386904 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69386954 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387008 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387038 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387104 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387175 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387206 Setpoint:(-0.4, 1.6, 0.9); Drone position: (-0.4, 1.6, 0.9)
+
+69387242 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69387310 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69387355 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387406 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387455 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387507 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387569 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387606 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387663 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387694 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387748 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387804 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387860 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387900 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69387957 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69388003 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69388053 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69388107 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69388168 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69388208 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388268 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388286 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388362 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388399 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388465 Setpoint:(-0.6, 1.6, 0.8); Drone position: (-0.6, 1.6, 0.8)
+
+69388507 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388566 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388566 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388655 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388695 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388779 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388828 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388851 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388897 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388950 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69388987 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389037 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389102 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389161 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389203 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389244 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389319 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389341 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389409 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389455 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389489 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389558 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389621 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389666 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389685 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389755 Setpoint:(-0.6, 1.5, 0.8); Drone position: (-0.6, 1.5, 0.8)
+
+69389806 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69389862 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69389910 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69389958 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69389999 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390043 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390085 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390168 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390207 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390271 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390311 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390359 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390393 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69390465 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390488 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390540 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390612 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390647 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390700 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390758 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390808 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390848 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390908 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69390966 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391005 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391054 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391104 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391168 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391205 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391262 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391306 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391355 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391416 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391470 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391501 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391564 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391596 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391662 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391703 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391759 Setpoint:(-0.4, 1.5, 0.9); Drone position: (-0.4, 1.5, 0.9)
+
+69391810 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69391865 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69391898 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69391968 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392000 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392065 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392102 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392168 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392209 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392254 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392301 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392370 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392394 Setpoint:(-0.5, 1.5, 0.9); Drone position: (-0.5, 1.5, 0.9)
+
+69392467 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392501 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392544 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392583 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392669 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392669 Setpoint:(-0.5, 1.6, 0.9); Drone position: (-0.5, 1.6, 0.9)
+
+69392727 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69392824 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69392874 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69392899 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69392948 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69392990 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393059 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393102 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393169 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393204 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393260 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393300 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393351 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393409 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393458 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393506 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393553 Setpoint:(-0.6, 1.6, 0.9); Drone position: (-0.6, 1.6, 0.9)
+
+69393595 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393655 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393702 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393746 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393800 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393866 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393908 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69393962 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394005 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394071 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394099 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394153 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394208 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394264 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394295 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394375 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394375 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394460 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394518 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394567 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394617 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394665 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394711 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394745 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394803 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394862 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394913 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69394969 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395015 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395055 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395114 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395153 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395195 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395270 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395312 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395369 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395388 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395455 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395509 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395573 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395603 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395627 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395691 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395762 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395762 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395849 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395849 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69395961 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396010 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396060 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396112 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396169 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396208 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396267 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396323 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396367 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396417 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396470 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396509 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396549 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396580 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396681 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396715 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396768 Setpoint:(-0.7, 1.6, 0.9); Drone position: (-0.7, 1.6, 0.9)
+
+69396822 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69396847 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69396909 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69396967 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397008 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397081 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397081 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397171 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397189 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397238 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397291 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397360 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397416 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397467 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397505 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397552 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397595 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397671 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397710 Setpoint:(-0.7, 1.5, 0.9); Drone position: (-0.7, 1.5, 0.9)
+
+69397770 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69397814 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69397877 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69397877 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69397975 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69397975 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398068 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398106 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398170 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398203 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398242 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398298 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398350 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398400 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398471 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398504 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398562 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398616 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398667 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398724 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398769 Setpoint:(-0.8, 1.5, 0.8); Drone position: (-0.8, 1.5, 0.8)
+
+69398787 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69398879 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69398910 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69398949 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399015 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399069 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399125 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399144 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399196 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399262 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399313 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399366 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399401 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399476 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399476 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399560 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399591 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399677 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399703 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399748 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399827 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399868 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399913 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69399946 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400016 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400059 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400088 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400143 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400213 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400248 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400302 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400374 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400407 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400461 Setpoint:(-0.9, 1.5, 0.8); Drone position: (-0.9, 1.5, 0.8)
+
+69400516 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400568 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400610 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400677 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400714 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400745 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400786 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400872 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400904 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69400946 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69401007 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69401038 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69401107 Setpoint:(-1.0, 1.5, 0.8); Drone position: (-1.0, 1.5, 0.8)
+
+69401139 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401205 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401280 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401336 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401355 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401422 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401466 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401524 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401557 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401609 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401665 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401696 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401767 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401821 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401873 Setpoint:(-1.0, 1.4, 0.8); Drone position: (-1.0, 1.4, 0.8)
+
+69401904 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69401979 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402012 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402070 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402107 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402159 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402207 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402230 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402315 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402379 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402395 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402478 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402513 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402550 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402581 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402674 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402697 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402734 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402818 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402862 Setpoint:(-1.1, 1.4, 0.8); Drone position: (-1.1, 1.4, 0.8)
+
+69402906 Setpoint:(-1.2, 1.4, 0.8); Drone position: (-1.2, 1.4, 0.8)
+
+69402984 Setpoint:(-1.2, 1.4, 0.8); Drone position: (-1.2, 1.4, 0.8)
+
+69403008 Setpoint:(-1.2, 1.4, 0.8); Drone position: (-1.2, 1.4, 0.8)
+
+69403073 Setpoint:(-1.2, 1.4, 0.8); Drone position: (-1.2, 1.4, 0.8)
+
+69403103 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403154 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403201 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403258 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403294 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403362 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403410 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403444 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403492 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403569 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403618 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403671 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403717 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403777 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403812 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403870 Setpoint:(-1.2, 1.3, 0.8); Drone position: (-1.2, 1.3, 0.8)
+
+69403899 Setpoint:(-1.3, 1.3, 0.8); Drone position: (-1.3, 1.3, 0.8)
+
+69403952 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404016 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404061 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404107 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404168 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404209 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404269 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404304 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404376 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404418 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404476 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404507 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404560 Setpoint:(-1.3, 1.2, 0.8); Drone position: (-1.3, 1.2, 0.8)
+
+69404617 Setpoint:(-1.3, 1.1, 0.8); Drone position: (-1.3, 1.1, 0.8)
+
+69404675 Setpoint:(-1.3, 1.1, 0.8); Drone position: (-1.3, 1.1, 0.8)
+
+69404724 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69404783 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69404816 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69404850 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69404893 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69404962 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405014 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405086 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405111 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405190 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405207 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405245 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405301 Setpoint:(-1.4, 1.1, 0.8); Drone position: (-1.4, 1.1, 0.8)
+
+69405357 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405395 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405452 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405518 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405551 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405604 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405663 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405706 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405762 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405813 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405871 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405922 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69405976 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69406004 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69406049 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69406104 Setpoint:(-1.5, 1.1, 0.8); Drone position: (-1.5, 1.1, 0.8)
+
+69406162 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406202 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406271 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406304 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406376 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406428 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406467 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406501 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406540 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406625 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406661 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406700 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406756 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406796 Setpoint:(-1.6, 1.1, 0.8); Drone position: (-1.6, 1.1, 0.8)
+
+69406872 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69406912 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69406972 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407006 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407060 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407101 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407139 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407189 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407258 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407294 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407365 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407410 Setpoint:(-1.6, 1.2, 0.8); Drone position: (-1.6, 1.2, 0.8)
+
+69407449 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407521 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407576 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407604 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407653 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407702 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407773 Setpoint:(-1.7, 1.2, 0.8); Drone position: (-1.7, 1.2, 0.8)
+
+69407804 Setpoint:(-1.7, 1.3, 0.8); Drone position: (-1.7, 1.3, 0.8)
+
+69407850 Setpoint:(-1.7, 1.3, 0.8); Drone position: (-1.7, 1.3, 0.8)
+
+69407919 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69407991 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408009 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408055 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408107 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408153 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408186 Setpoint:(-1.7, 1.3, 0.9); Drone position: (-1.7, 1.3, 0.9)
+
+69408275 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408313 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408353 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408411 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408464 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408516 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408572 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408618 Setpoint:(-1.8, 1.3, 0.9); Drone position: (-1.8, 1.3, 0.9)
+
+69408673 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408718 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408758 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408814 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408873 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408905 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.2, 0.9)
+
+69408956 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.1, 0.9)
+
+69408995 Setpoint:(-1.8, 1.2, 0.9); Drone position: (-1.8, 1.1, 0.9)
+
+69409083 Setpoint:(-1.8, 1.1, 0.9); Drone position: (-1.8, 1.1, 0.9)
+
+69409109 Setpoint:(-1.8, 1.1, 0.9); Drone position: (-1.7, 1.1, 0.9)
+
+69409160 Setpoint:(-1.7, 1.1, 0.9); Drone position: (-1.7, 1.1, 0.9)
+
+69409194 Setpoint:(-1.7, 1.1, 0.9); Drone position: (-1.7, 1.1, 0.9)
+
+69409272 Setpoint:(-1.7, 1.1, 0.9); Drone position: (-1.7, 1.0, 0.9)
+
+69409291 Setpoint:(-1.7, 1.1, 0.9); Drone position: (-1.7, 1.0, 1.0)
+
+69409362 Setpoint:(-1.7, 1.0, 1.0); Drone position: (-1.7, 1.0, 1.0)
+
+69409414 Setpoint:(-1.7, 1.0, 1.0); Drone position: (-1.7, 1.0, 1.0)
+
+69409467 Setpoint:(-1.7, 1.0, 1.0); Drone position: (-1.7, 0.9, 1.0)
+
+69409495 Setpoint:(-1.7, 1.0, 1.0); Drone position: (-1.7, 0.9, 1.0)
+
+69409572 Setpoint:(-1.7, 0.9, 1.0); Drone position: (-1.7, 0.9, 1.0)
+
+69409609 Setpoint:(-1.7, 0.9, 1.0); Drone position: (-1.7, 0.8, 1.0)
+
+69409653 Setpoint:(-1.7, 0.8, 1.0); Drone position: (-1.7, 0.8, 1.0)
+
+69409712 Setpoint:(-1.7, 0.8, 1.0); Drone position: (-1.7, 0.8, 1.1)
+
+69409774 Setpoint:(-1.7, 0.8, 1.1); Drone position: (-1.7, 0.7, 1.1)
+
+69409812 Setpoint:(-1.7, 0.8, 1.1); Drone position: (-1.7, 0.7, 1.1)
+
+69409863 Setpoint:(-1.7, 0.7, 1.1); Drone position: (-1.8, 0.7, 1.1)
+
+69409914 Setpoint:(-1.7, 0.7, 1.1); Drone position: (-1.8, 0.7, 1.1)
+
+69409947 Setpoint:(-1.8, 0.7, 1.1); Drone position: (-1.8, 0.6, 1.1)
+
+69409984 Setpoint:(-1.8, 0.7, 1.1); Drone position: (-1.8, 0.6, 1.1)
+
+69410064 Setpoint:(-1.8, 0.6, 1.1); Drone position: (-1.8, 0.6, 1.1)
+
+69410115 Setpoint:(-1.8, 0.6, 1.1); Drone position: (-1.8, 0.5, 1.1)
+
+69410181 Setpoint:(-1.8, 0.5, 1.1); Drone position: (-1.8, 0.5, 1.1)
+
+69410181 Setpoint:(-1.8, 0.5, 1.1); Drone position: (-1.8, 0.5, 1.1)
+
+69410247 Setpoint:(-1.8, 0.5, 1.1); Drone position: (-1.8, 0.5, 1.2)
+
+69410316 Setpoint:(-1.8, 0.5, 1.1); Drone position: (-1.8, 0.5, 1.2)
+
+69410368 Setpoint:(-1.8, 0.5, 1.2); Drone position: (-1.8, 0.4, 1.2)
+
+69410412 Setpoint:(-1.8, 0.5, 1.2); Drone position: (-1.8, 0.4, 1.2)
+
+69410470 Setpoint:(-1.8, 0.4, 1.2); Drone position: (-1.8, 0.4, 1.2)
+
+69410508 Setpoint:(-1.8, 0.4, 1.2); Drone position: (-1.8, 0.4, 1.2)
+
+69410559 Setpoint:(-1.8, 0.4, 1.2); Drone position: (-1.9, 0.4, 1.2)
+
+69410579 Setpoint:(-1.8, 0.4, 1.2); Drone position: (-1.9, 0.4, 1.2)
+
+69410634 Setpoint:(-1.9, 0.4, 1.2); Drone position: (-1.9, 0.4, 1.2)
+
+69410691 Setpoint:(-1.9, 0.4, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410756 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410797 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410869 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410916 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410952 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69410988 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411051 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411096 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411172 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411210 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411259 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411303 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411374 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411404 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411445 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411496 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411556 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411617 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411667 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411699 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.9, 0.3, 1.2)
+
+69411768 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69411807 Setpoint:(-1.9, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69411856 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69411896 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69411980 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69411999 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.8, 0.3, 1.2)
+
+69412064 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412110 Setpoint:(-1.8, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412166 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412197 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412277 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412318 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412360 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412417 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412443 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412509 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412571 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412603 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412663 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412701 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.2)
+
+69412766 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.1)
+
+69412809 Setpoint:(-1.7, 0.3, 1.2); Drone position: (-1.7, 0.3, 1.1)
+
+69412866 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69412919 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69412969 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413007 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413060 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413115 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413174 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
+69413191 Setpoint:(-1.7, 0.3, 1.1); Drone position: (-1.7, 0.3, 1.1)
+
