@@ -3,8 +3,8 @@
 *****************************************************************************************/
 
 #include <Wire.h>
-#include "MadgwickAHRS_Troyka.h"
-#include <MPU9250_Madg.h> // Данная библиотека является модификацией библиотеки: https://github.com/bolderflight/MPU9250
+#include "MadgwickAHRS_Troyka/MadgwickAHRS_Troyka.h"
+#include "MPU9250_Madg/MPU9250_Madg.h" // Данная библиотека является модификацией библиотеки: https://github.com/bolderflight/MPU9250
 
 #define BETA 0.2f
 #define TO_DEG 57.29577951308232087679815481410517033f

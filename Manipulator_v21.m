@@ -1,28 +1,28 @@
-%% Блок создания интерфейса
-% Функция создания интерфейса
-function Manipulator_v20 % !!! Ошибка может возникнуть из-за расширения таблицы массы !!!
+%% Р‘Р»РѕРє СЃРѕР·РґР°РЅРёСЏ РёРЅС‚РµСЂС„РµР№СЃР°
+% Р¤СѓРЅРєС†РёСЏ СЃРѕР·РґР°РЅРёСЏ РёРЅС‚РµСЂС„РµР№СЃР°
+function Manipulator_v20 % !!! РћС€РёР±РєР° РјРѕР¶РµС‚ РІРѕР·РЅРёРєРЅСѓС‚СЊ РёР·-Р·Р° СЂР°СЃС€РёСЂРµРЅРёСЏ С‚Р°Р±Р»РёС†С‹ РјР°СЃСЃС‹ !!!
 
-InputData; % Считывание исходных данных
+InputData; % РЎС‡РёС‚С‹РІР°РЅРёРµ РёСЃС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
 
 global l1 l2 TabAngles Steph ChaCond CoorX CoorY mc ms0 ms1 ms2 ms3 ms4...
     TabAng TabMass TabLength DevCon TabMot TabSens TabMaxTorq ris0 choo ...
     De RArr UArr LArr DArr Pplo ClAp Start De2 RWM GrCont AngStep ExpName...
     Pointsy OpM GrRot MOLC almin almax bemin bemax temin temax psmin psmax
 
-Start = cputime; % измерение времени работы функции
+Start = cputime; % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
 
-k_s=0.83333; % коэффициент масштабирования элементов окна по длине
-k_s2=0.7; % коэффициент масштабирования положения элементов окна по длине
-k_s3=0.008; % коэффициент смещения положения блока №3 по Х
-k_s4=0.004; % коэффициент смещения положения блока №2 по X
-k_s5=0.05; % коэффициент смещения положения блока №3 по Y
+k_s=0.83333; % РєРѕСЌС„С„РёС†РёРµРЅС‚ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РѕРєРЅР° РїРѕ РґР»РёРЅРµ
+k_s2=0.7; % РєРѕСЌС„С„РёС†РёРµРЅС‚ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РѕРєРЅР° РїРѕ РґР»РёРЅРµ
+k_s3=0.008; % РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃРјРµС‰РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ Р±Р»РѕРєР° в„–3 РїРѕ РҐ
+k_s4=0.004; % РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃРјРµС‰РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ Р±Р»РѕРєР° в„–2 РїРѕ X
+k_s5=0.05; % РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃРјРµС‰РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ Р±Р»РѕРєР° в„–3 РїРѕ Y
 
-%% Блок элементов №1
-% Создаем графическое окно с тегом figure
+%% Р‘Р»РѕРє СЌР»РµРјРµРЅС‚РѕРІ в„–1
+% РЎРѕР·РґР°РµРј РіСЂР°С„РёС‡РµСЃРєРѕРµ РѕРєРЅРѕ СЃ С‚РµРіРѕРј figure
 hF = figure('Name', 'Manipulator', 'NumberTitle','off','MenuBar', 'none', 'Units', 'characters',...
     'Position', [1 4 270 57], 'Color', [133/255,201/255,181/255],'Tag', 'figure');
 
-% Создание осей с тегом ax для отображения текущего положения манипулятора
+% РЎРѕР·РґР°РЅРёРµ РѕСЃРµР№ СЃ С‚РµРіРѕРј ax РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 set(0,'DefaultAxesFontSize',12,'DefaultAxesFontName','Times New Roman');
 ris0=axes('Position', [0.07*k_s*k_s2 0.28 0.5*k_s 0.7],'Tag', 'ax','NextPlot', 'replacechildren');
 Xmax=l1+l2+0.2;
@@ -32,7 +32,7 @@ xlabel('x, m');
 ylabel('y, m');
 grid on
 
-% Рабочий диапазон углов сервомоторов и координат
+% Р Р°Р±РѕС‡РёР№ РґРёР°РїР°Р·РѕРЅ СѓРіР»РѕРІ СЃРµСЂРІРѕРјРѕС‚РѕСЂРѕРІ Рё РєРѕРѕСЂРґРёРЅР°С‚
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.07*k_s*k_s2 0.175 0.5*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Working range of angles & axes',...
     'FontSize',14,'FontName','Book Antiqua','FontWeight','Bold','Tag', 'textAngles');
@@ -50,30 +50,30 @@ TabAngles=uitable('Data',WAngles,'Units', 'normalized',...
     'RowName',[],'FontName','Book Antiqua','FontSize',12,'ColumnEditable',[true true true false true true],...
     'Tag','TabAngles');
 
-% Поле для ввода комментариев к эксперименту
+% РџРѕР»Рµ РґР»СЏ РІРІРѕРґР° РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ Рє СЌРєСЃРїРµСЂРёРјРµРЅС‚Сѓ
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.115*k_s*k_s2 0.034 0.132*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Experiment comments','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Область ввода текста
+% РћР±Р»Р°СЃС‚СЊ РІРІРѕРґР° С‚РµРєСЃС‚Р°
 ExpName=uicontrol('Style', 'edit', 'Units', 'normalized','Position', [0.315*k_s*k_s2  0.039 0.114*k_s 0.04],...
     'String', '-','BackgroundColor','w','FontSize',13,'FontName','Book Antiqua','Tag','ExpCom');
 
-% Меню выбора приоритетной координаты с тегом ChangeCondition
+% РњРµРЅСЋ РІС‹Р±РѕСЂР° РїСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚С‹ СЃ С‚РµРіРѕРј ChangeCondition
 ChaCond=uicontrol('style','checkbox', 'Units', 'normalized','Value',1,...
     'position',[0.51*k_s*k_s2  0.039 0.2*k_s 0.04],'String','Structural limitations','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold','BackgroundColor', [133/255,201/255,181/255],...
     'Tag','ChangeCondition');
 
-%% Блок элементов №2
+%% Р‘Р»РѕРє СЌР»РµРјРµРЅС‚РѕРІ в„–2
 
-% Кнопки управления положением манипулятора
-% Вставка изображения с поясняющей схемой 
+% РљРЅРѕРїРєРё СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёРµРј РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+% Р’СЃС‚Р°РІРєР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ СЃ РїРѕСЏСЃРЅСЏСЋС‰РµР№ СЃС…РµРјРѕР№ 
 handles.banner = imread('Scheme (46).png'); 
 ris=axes('Units', 'normalized','Position',[0.585*k_s+k_s4 0.679 0.20996 0.30046],'Tag', 'ax2');
 image(handles.banner);
 set(ris,'visible','off','Units', 'normalized');
 
-% Поле выбора положений
+% РџРѕР»Рµ РІС‹Р±РѕСЂР° РїРѕР»РѕР¶РµРЅРёР№
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.58*k_s-k_s3  0.618 0.07*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Points','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold','Tag', 'Poy');
@@ -81,78 +81,78 @@ Pointsy=uicontrol('style','popupmenu', 'Units', 'normalized','position',[0.6402*
     'string',{'reading...';'0 point';'Stable';'Relax';'Stretch out';'Up';'Bottom'},'Value',1,'Callback', @PrePa,'FontSize',12,...
     'FontName','Book Antiqua','backgroundcolor',[1 1 1],'foregroundcolor' ,[.1 .1 .5]);
 
-% Кнопка включения режима демонстрация
+% РљРЅРѕРїРєР° РІРєР»СЋС‡РµРЅРёСЏ СЂРµР¶РёРјР° РґРµРјРѕРЅСЃС‚СЂР°С†РёСЏ
 De=uicontrol('Style', 'togglebutton', 'Units', 'normalized','Position', [0.7166*k_s-k_s3  0.625 0.07*k_s 0.04],...
     'BackgroundColor', [255/255,238/255,155/255],'String','Demo','FontSize',13,...
     'FontName','Book Antiqua','FontWeight','Bold','Callback', @FRDemo,'Tag','Dem');
 
-% Кнопка включения режима вычисления массы груза
+% РљРЅРѕРїРєР° РІРєР»СЋС‡РµРЅРёСЏ СЂРµР¶РёРјР° РІС‹С‡РёСЃР»РµРЅРёСЏ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 De2=uicontrol('Style', 'togglebutton', 'Units', 'normalized','Position', [0.793*k_s-k_s3  0.625 0.07*k_s 0.04],...
     'BackgroundColor', [255/255,238/255,155/255],'String','Weigh','FontSize',13,...
     'FontName','Book Antiqua','FontWeight','Bold','Callback', @ChWeigh,'Tag','Demo2');
 
-% Кнопка с тегом UpArrow
+% РљРЅРѕРїРєР° СЃ С‚РµРіРѕРј UpArrow
 UpAr = char(hex2dec('AD'));
 UArr=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.690977*k_s+k_s4 0.5515 0.04*k_s 0.06],...
     'BackgroundColor', [255/255,238/255,155/255],'String',UpAr,'FontSize',18,'FontName','Symbol',...
     'FontWeight','Bold','Callback', @UpArrow, 'Tag', 'UpArrow');
-% Кнопка с тегом DownArrow
+% РљРЅРѕРїРєР° СЃ С‚РµРіРѕРј DownArrow
 DownAr = char(hex2dec('22'));
 DArr=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.690977*k_s+k_s4 0.4815 0.04*k_s 0.06],...
     'BackgroundColor', [255/255,238/255,155/255],'String',DownAr,'FontSize',12,'FontName','Symbol',...
     'FontWeight','Bold','Callback', @DownArrow, 'Tag', 'DownArrow');
-% Кнопка с тегом LeftArrow
+% РљРЅРѕРїРєР° СЃ С‚РµРіРѕРј LeftArrow
 LeftAr = char(hex2dec('AC'));
 LArr=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.642627*k_s+k_s4 0.4815 0.04*k_s 0.06],...
     'BackgroundColor', [255/255,238/255,155/255],'String',LeftAr,'FontSize',18,'FontName','Symbol',...
     'FontWeight','Bold','Callback', @LeftArrow, 'Tag', 'LeftArrow');
-% Кнопка с тегом RightArrow
+% РљРЅРѕРїРєР° СЃ С‚РµРіРѕРј RightArrow
 RightAr = char(hex2dec('AE'));
 RArr=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.739327*k_s+k_s4 0.4815 0.04*k_s 0.06],...
     'BackgroundColor', [255/255,238/255,155/255],'String',RightAr,'FontSize',18,'FontName','Symbol',...
     'FontWeight','Bold','Callback', @RightArrow, 'Tag', 'RightArrow');
 
-% Поля для выбора шага, на который изменяется координата при нажатии на кнопки управления положением
+% РџРѕР»СЏ РґР»СЏ РІС‹Р±РѕСЂР° С€Р°РіР°, РЅР° РєРѕС‚РѕСЂС‹Р№ РёР·РјРµРЅСЏРµС‚СЃСЏ РєРѕРѕСЂРґРёРЅР°С‚Р° РїСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєРЅРѕРїРєРё СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёРµРј
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.558977*k_s+k_s4  0.4135 0.057*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Step, m:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Область ввода текста
+% РћР±Р»Р°СЃС‚СЊ РІРІРѕРґР° С‚РµРєСЃС‚Р°
 Steph=uicontrol('Style', 'edit', 'Units', 'normalized','Position', [0.620977*k_s+k_s4  0.4235 0.09*k_s 0.04],...
     'String', '0.02','BackgroundColor','w','FontSize',12,'FontName','Book Antiqua','Tag','edtStep');
 
-% Поле с выбором приоритетной координаты
+% РџРѕР»Рµ СЃ РІС‹Р±РѕСЂРѕРј РїСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚С‹
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.715*k_s+k_s4 0.4135 0.067*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Main axis:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Меню выбора приоритетной координаты с тегом ChooseAxis
+% РњРµРЅСЋ РІС‹Р±РѕСЂР° РїСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚С‹ СЃ С‚РµРіРѕРј ChooseAxis
 choo=uicontrol('style','popupmenu', 'Units', 'normalized','position',[0.787*k_s+k_s4  0.4225 0.07*k_s 0.04],'string',{'None';'X';'Y'},'FontSize',12,...
     'FontName','Book Antiqua','backgroundcolor',[1 1 1],'foregroundcolor' ,[.1 .1 .5],'Tag', 'ChooseAxis');
 
-% Поля для ручного ввода координат
+% РџРѕР»СЏ РґР»СЏ СЂСѓС‡РЅРѕРіРѕ РІРІРѕРґР° РєРѕРѕСЂРґРёРЅР°С‚
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.560476*k_s+k_s4 0.375 0.301*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Coordinates:','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Область текста с тегом textX
+% РћР±Р»Р°СЃС‚СЊ С‚РµРєСЃС‚Р° СЃ С‚РµРіРѕРј textX
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.575977*k_s+k_s4  0.33 0.04*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'X, m:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold','Tag', 'textX');
-% Область ввода текста с тегом edtX 0.0554 0.28 0
+% РћР±Р»Р°СЃС‚СЊ РІРІРѕРґР° С‚РµРєСЃС‚Р° СЃ С‚РµРіРѕРј edtX 0.0554 0.28 0
 CoorX=uicontrol('Style', 'edit', 'Units', 'normalized','Position', [0.620977*k_s+k_s4  0.34 0.09*k_s 0.04],...
     'String', '0.07','BackgroundColor','w','FontSize',12,'FontName','Book Antiqua','Tag', 'edtX');
-% Область текста с тегом textY
+% РћР±Р»Р°СЃС‚СЊ С‚РµРєСЃС‚Р° СЃ С‚РµРіРѕРј textY
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.710976*k_s+k_s4 0.33 0.04*k_s 0.04],...
     'BackgroundColor',[133/255,201/255,181/255],'String', 'Y, m:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold','Tag', 'textY');
-% Область ввода текста с тегом edtY -0.0398 -0.56 -0.07
+% РћР±Р»Р°СЃС‚СЊ РІРІРѕРґР° С‚РµРєСЃС‚Р° СЃ С‚РµРіРѕРј edtY -0.0398 -0.56 -0.07
 CoorY=uicontrol('Style', 'edit', 'Units', 'normalized','Position', [0.755976*k_s+k_s4 0.34 0.09*k_s 0.04],...
     'String','-0.11','BackgroundColor','w','FontSize',12,'FontName','Book Antiqua','Tag', 'edtY');
 
-% Кнопка с тегом btnPlot для отображения текущего положения манипулятора
+% РљРЅРѕРїРєР° СЃ С‚РµРіРѕРј btnPlot РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 Pplo=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.560477*k_s+k_s4 0.279 0.301*k_s 0.05],...
     'BackgroundColor', [255/255,238/255,155/255],'String', 'Plot','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold','Callback', @BtnPlot, 'Tag', 'btnPlot');
 
-% Таблица с массами серводвигателей и груза
+% РўР°Р±Р»РёС†Р° СЃ РјР°СЃСЃР°РјРё СЃРµСЂРІРѕРґРІРёРіР°С‚РµР»РµР№ Рё РіСЂСѓР·Р°
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.555977*k_s+k_s4  0.225 0.105*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Mass, kg','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold','Tag', 'textMass');
@@ -161,8 +161,8 @@ TabMass=uitable('Data',mas,'Units', 'normalized','Position',[0.555977*k_s+k_s4 0
     'ColumnWidth',{65 65},'ColumnName',[],'RowName',[],'FontName','Symbol','FontSize',14,...
     'ColumnEditable', [false true],'Tag','TabMass');
 
-% Таблицы с выходными данными
-% Таблица с вычисленными углами поворотов
+% РўР°Р±Р»РёС†С‹ СЃ РІС‹С…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё
+% РўР°Р±Р»РёС†Р° СЃ РІС‹С‡РёСЃР»РµРЅРЅС‹РјРё СѓРіР»Р°РјРё РїРѕРІРѕСЂРѕС‚РѕРІ
 AngDeg = ['Angles,' ' ' char(hex2dec('B0'))];
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.670977*k_s+k_s4 0.225 0.084*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', AngDeg,'FontSize',14,...
@@ -173,7 +173,7 @@ AngName={'<HTML><font size=+1>&alpha</HTML>' ' '; '<HTML><font size=+1>&beta</HT
 TabAng=uitable('Data',AngName,'Units', 'normalized','Position',[0.670977*k_s+k_s4 0.06 0.084*k_s 0.168],...
     'ColumnWidth',{30 75},'ColumnName',[],'RowName',[],'FontName','Symbol','FontSize',14,'Tag','TabAng');
 
-% Таблица с величинами длин звеньев
+% РўР°Р±Р»РёС†Р° СЃ РІРµР»РёС‡РёРЅР°РјРё РґР»РёРЅ Р·РІРµРЅСЊРµРІ
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.757477*k_s+k_s4  0.225 0.12*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Length of link, m','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold');
@@ -182,41 +182,41 @@ TabLength=uitable('Data',Leng,'Units', 'normalized','Position',[0.771227*k_s+k_s
     'ColumnWidth',{40 75},'ColumnName',[],'RowName',[],'ColumnEditable', [false true],...
     'FontName','Symbol','FontSize',14);
 
-%% Блок элементов №3
+%% Р‘Р»РѕРє СЌР»РµРјРµРЅС‚РѕРІ в„–3
 
-% Кнопка вызова помощи
+% РљРЅРѕРїРєР° РІС‹Р·РѕРІР° РїРѕРјРѕС‰Рё
 uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.944 0.95 0.6*0.04*k_s 0.6*0.06],...
     'BackgroundColor', [133/255,201/255,181/255],'String','?','FontSize',18,'FontName','Book Antiqua',...
     'FontWeight','Bold','Callback', @HelpApp);
 
-% Кнопка закрытия приложения
+% РљРЅРѕРїРєР° Р·Р°РєСЂС‹С‚РёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 ClAp=uicontrol('Style', 'pushbutton', 'Units', 'normalized','Position', [0.974 0.95 0.6*0.04*k_s 0.6*0.06],...
     'BackgroundColor', [133/255,201/255,181/255],'String','X','FontSize',18,'FontName','Book Antiqua',...
     'FontWeight','Bold','Callback', @CloseApp);
 
-% Область текста с тегом Con
+% РћР±Р»Р°СЃС‚СЊ С‚РµРєСЃС‚Р° СЃ С‚РµРіРѕРј Con
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9448*k_s-k_s3  0.89 0.114*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Connection','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold','Tag', 'Con');
 
-% Меню подключения/отключения манипулятора
+% РњРµРЅСЋ РїРѕРґРєР»СЋС‡РµРЅРёСЏ/РѕС‚РєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 DevCon=uicontrol('style','popupmenu', 'Units', 'normalized','position',[1.0566*k_s-k_s3  0.895 0.11*k_s 0.04],...
     'string',{'Switch off';'Arduino';'USB2Dynamixel';'OpenCM';'Bluetooth'},'Value',1,'Callback', @BtnPlot,'FontSize',12,...
     'FontName','Book Antiqua','backgroundcolor',[1 1 1],'foregroundcolor' ,[.1 .1 .5]);
 
-% Поле выбора углового шага, на который поворачиваются Dynamixelи 
+% РџРѕР»Рµ РІС‹Р±РѕСЂР° СѓРіР»РѕРІРѕРіРѕ С€Р°РіР°, РЅР° РєРѕС‚РѕСЂС‹Р№ РїРѕРІРѕСЂР°С‡РёРІР°СЋС‚СЃСЏ DynamixelРё 
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9448*k_s-k_s3  0.795+k_s5 0.114*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Angular step, deg:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Область ввода текста 0.04 0.026
+% РћР±Р»Р°СЃС‚СЊ РІРІРѕРґР° С‚РµРєСЃС‚Р° 0.04 0.026
 AngStep=uicontrol('Style', 'edit', 'Units', 'normalized','Position', [1.0566*k_s-k_s3  0.8+k_s5 0.09*k_s 0.04],...
     'String', '0.024','BackgroundColor','w','FontSize',13,'FontName','Book Antiqua','Tag','edtAngStep');
 
-% Выбор типа мотора
+% Р’С‹Р±РѕСЂ С‚РёРїР° РјРѕС‚РѕСЂР°
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.924*k_s-k_s3  0.745+k_s5 0.134*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Parameters of motors:','FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
-% Кнопка перезаписи параметров моторов
+% РљРЅРѕРїРєР° РїРµСЂРµР·Р°РїРёСЃРё РїР°СЂР°РјРµС‚СЂРѕРІ РјРѕС‚РѕСЂРѕРІ
 RWM=uicontrol('Style', 'togglebutton', 'Units', 'normalized','Position', [1.0566*k_s-k_s3  0.75+k_s5 0.08*k_s 0.04],...
     'BackgroundColor', [255/255,238/255,155/255],'String','OverWrite','FontSize',13,...
     'FontName','Book Antiqua','FontWeight','Bold','Callback', @ReWr,'Tag','ReWrMo');
@@ -225,29 +225,29 @@ MDat={'<HTML><font size=+1><center />Motor</HTML>' '<HTML><font size=+1><center 
     '<HTML><font size=+1><center />Speed</HTML>'...
     '<HTML><font size=+1><center />P</HTML>' '<HTML><font size=+1><center />I</HTML>'...
     '<HTML><font size=+1><center />D</HTML>' '<HTML><font size=+1><center />ID</HTML>'};
-TypMot= {'№ 1 (Base)' 'Dynamixel' '84' '32' '8' '2'; '№ 2 (Center)' 'Dynamixel' '104' '32' '8' '2';... 
-     '№ 3 (Wrist)' 'Dynamixel' '210' '32' '1' '1';  '№ 4 (Wrist2)' 'Dynamixel' '110' '32' '1' '1';  ...
-     '№ 5 (Grip)' 'Servo' '' ' ' ' ' ' '};
-% TypMot= {'№ 1 (Base)' 'Dynamixel' '84' '32' '6' '0'; '№ 2 (Center)' 'Dynamixel' '104' '32' '6' '0';... 
-%      '№ 3 (Wrist)' 'Dynamixel' '210' '32' '1' '1';  '№ 4 (Grip)' 'Servo' '' ' ' ' ' ' '};
+TypMot= {'в„– 1 (Base)' 'Dynamixel' '84' '32' '8' '2'; 'в„– 2 (Center)' 'Dynamixel' '104' '32' '8' '2';... 
+     'в„– 3 (Wrist)' 'Dynamixel' '210' '32' '1' '1';  'в„– 4 (Wrist2)' 'Dynamixel' '110' '32' '1' '1';  ...
+     'в„– 5 (Grip)' 'Servo' '' ' ' ' ' ' '};
+% TypMot= {'в„– 1 (Base)' 'Dynamixel' '84' '32' '6' '0'; 'в„– 2 (Center)' 'Dynamixel' '104' '32' '6' '0';... 
+%      'в„– 3 (Wrist)' 'Dynamixel' '210' '32' '1' '1';  'в„– 4 (Grip)' 'Servo' '' ' ' ' ' ' '};
 TabMot=uitable('Data',TypMot,'Units', 'normalized','Position', [0.90*k_s-k_s3  0.545+k_s5 0.2934*k_s 0.198],...
     'ColumnFormat',({[] {'Dynamixel' 'Servo' 'Disabled'} 'numeric' 'numeric'}),'ColumnName',MDat,'RowName',[],...
     'ColumnEditable',[false true true true true true false],'ColumnWidth',{100 100 50 30 30 30 30},...
     'FontName','Symbol','FontSize',14);
 
-% Отметка учёта перегрузки моторов
+% РћС‚РјРµС‚РєР° СѓС‡С‘С‚Р° РїРµСЂРµРіСЂСѓР·РєРё РјРѕС‚РѕСЂРѕРІ
 MOLC=uicontrol('Style', 'checkbox', 'Units', 'normalized','Position', [0.975*k_s-k_s3  0.502+k_s5 0.154*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String','Motor overload check','FontSize',13,...
     'FontName','Book Antiqua','FontWeight','Bold');%,'Callback',@BtnPlot,'Tag','ReWrMo');
 
-% Кнопки поворота моторов
+% РљРЅРѕРїРєРё РїРѕРІРѕСЂРѕС‚Р° РјРѕС‚РѕСЂРѕРІ
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9298*k_s-k_s3  0.460+k_s5 0.2472*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Grip rotation',...
     'FontSize',12,'FontName','Book Antiqua','FontWeight','Bold');
 GrRot=uicontrol('Style', 'slider', 'Units', 'normalized','Position', [0.99*k_s-k_s3  0.443+k_s5 0.161*k_s 0.022],...
     'BackgroundColor', [255/255,238/255,155/255],'Min',psmin,'Max',psmax,'Value',90,...
     'Callback',@ValRot,'Tag','GRot');
-AngZe = ['Motor №4     ' num2str(psmin) char(hex2dec('B0'))];
+AngZe = ['Motor в„–4     ' num2str(psmin) char(hex2dec('B0'))];
 AngEn = [num2str(psmax) char(hex2dec('B0'))];
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.89*k_s-k_s3  0.425+k_s5 0.10*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', AngZe,'FontSize',12,...
@@ -256,7 +256,7 @@ uicontrol('Style', 'text', 'Units', 'normalized','Position', [1.159*k_s-k_s3  0.
     'BackgroundColor', [133/255,201/255,181/255],'String', AngEn,'FontSize',12,...
     'FontName','Book Antiqua','FontWeight','Bold');
 
-% Управление хватом
+% РЈРїСЂР°РІР»РµРЅРёРµ С…РІР°С‚РѕРј
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9322*k_s-k_s3  0.388+k_s5 0.114*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Operation Mode','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold');
@@ -264,7 +264,7 @@ OpM=uicontrol('style','popupmenu', 'Units', 'normalized','position',[1.057*k_s-k
     'string',{'Manual';'Teleoperation'},'Value',1,'Callback', @GrCo,'FontSize',12,... % 
     'FontName','Book Antiqua','backgroundcolor',[1 1 1],'foregroundcolor' ,[.1 .1 .5]);
 
-% Управление хватом
+% РЈРїСЂР°РІР»РµРЅРёРµ С…РІР°С‚РѕРј
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9452*k_s-k_s3  0.348+k_s5 0.114*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Grip Control','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold');
@@ -272,16 +272,16 @@ GrCont=uicontrol('style','popupmenu', 'Units', 'normalized','position',[1.057*k_
     'string',{'Hold';'Drop';'Stop';'Check';'Rotate'},'Value',3,'Callback', @GrCo,'FontSize',12,...
     'FontName','Book Antiqua','backgroundcolor',[1 1 1],'foregroundcolor' ,[.1 .1 .5]);
 
-% Вывод данных с датчиков силы и расстояния
+% Р’С‹РІРѕРґ РґР°РЅРЅС‹С… СЃ РґР°С‚С‡РёРєРѕРІ СЃРёР»С‹ Рё СЂР°СЃСЃС‚РѕСЏРЅРёСЏ
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9298*k_s-k_s3  0.364 0.2472*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Data from sensors',...
     'FontSize',14,'FontName','Book Antiqua','FontWeight','Bold');
-TabSens=uitable('Data', {'FSR №1' 'on' ' ' 'N'; 'FSR №2' 'on' ' ' 'N'; 'Ultrasonic' 'on' ' ' 'm'},...
+TabSens=uitable('Data', {'FSR в„–1' 'on' ' ' 'N'; 'FSR в„–2' 'on' ' ' 'N'; 'Ultrasonic' 'on' ' ' 'm'},...
     'Units', 'normalized','Position', [0.936*k_s-k_s3  0.27 0.231*k_s 0.099],...
     'ColumnFormat',({[] {'off' 'on'} []}),'ColumnEditable',[false true false false],'ColumnName',[],...
     'RowName',[],'ColumnWidth',{95 70 85 40},'FontName','Book Antiqua','FontSize',14);
 
-% Значение максимальных крутящих моментов
+% Р—РЅР°С‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
 uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9298*k_s-k_s3  0.225 0.2472*k_s 0.04],...
     'BackgroundColor', [133/255,201/255,181/255],'String', 'Torques, kg*cm','FontSize',14,...
     'FontName','Book Antiqua','FontWeight','Bold');
@@ -291,7 +291,7 @@ uicontrol('Style', 'text', 'Units', 'normalized','Position', [0.9298*k_s-k_s3  0
 TorqName={'<HTML>T<sub>1</sub></HTML>' ' ' ' ' ' ' 81.6 ' '; '<HTML> T<sub>2</sub></HTML>' ' ' ' ' ' ' 56.1 ' ';...
     '<HTML>T<sub>3</sub></HTML>' ' ' ' ' ' ' 16.5 ' ';'<HTML>T<sub>4</sub></HTML>' ' ' ' ' ' ' 16.5 ' ';...
     '<HTML>T<sub>5</sub></HTML>' ' ' ' ' ' ' 6.26 ' '};
-TCN={'<HTML><font size=+1><center />№</HTML>' '<HTML><font size=+1><center />T<SUB>max. est.</SUB></HTML>'...
+TCN={'<HTML><font size=+1><center />в„–</HTML>' '<HTML><font size=+1><center />T<SUB>max. est.</SUB></HTML>'...
     '<HTML><font size=+1><center />T<SUB>est</SUB></HTML>' '<HTML><font size=+1><center />T<SUB>real</SUB></HTML>'...
     '<HTML><font size=+1><center />T<SUB>max</SUB></HTML>' '<HTML><font size=+1><center />U<SUB>cur</SUB></HTML>'};
 TabMaxTorq=uitable('Data',TorqName,'Units', 'normalized',...
@@ -299,15 +299,15 @@ TabMaxTorq=uitable('Data',TorqName,'Units', 'normalized',...
     'ColumnName',TCN,'RowName',[],'FontName','Symbol','FontSize',14);
 
 
-%% Дополнительные действия
-% Скрываем указатель на окно приложения 
+%% Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ
+% РЎРєСЂС‹РІР°РµРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РѕРєРЅРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ 
 set(hF, 'HandleVisibility', 'callback');
 
-axes(ris0); % Переключение на график, отображающий положение манипулятора
+axes(ris0); % РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅР° РіСЂР°С„РёРє, РѕС‚РѕР±СЂР°Р¶Р°СЋС‰РёР№ РїРѕР»РѕР¶РµРЅРёРµ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 end
 
-% Функция построения изображения дрона
+% Р¤СѓРЅРєС†РёСЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РґСЂРѕРЅР°
 function PicDrone
 
 xdr1=0.001*[152.1 29.1 152.1 159.1 166.1 289.1 166.1 166.1 152.1 152.1 173.1 173.1 145.1 145.1 173.1];
@@ -320,42 +320,42 @@ p4=plot(xdr1,ydr1,'k',-xdr1,ydr1,'k',xdr0,ydr0,'k');
 
 end
 
-% Функция нажатия на кнопку Plot
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Plot
 function BtnPlot(src,evt)
 
 global q x0 y0
 
 if q==0
     q=1;
-    Angl=checkRange; % считывание значений максимального рабочего диапазона манипулятора
-    [x0,y0]=StartPoint(Angl(2,3),Angl(1,2)); % зависит от максимального угла theta и минимального угла beta
+    Angl=checkRange; % СЃС‡РёС‚С‹РІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЂР°Р±РѕС‡РµРіРѕ РґРёР°РїР°Р·РѕРЅР° РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+    [x0,y0]=StartPoint(Angl(2,3),Angl(1,2)); % Р·Р°РІРёСЃРёС‚ РѕС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° theta Рё РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° beta
 end
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
-str0 = get(handles.edtStep, 'String'); % берем текст из строки ввода (шаг увеличения координаты h)
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+str0 = get(handles.edtStep, 'String'); % Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ h)
 h=str2num(str0);
 
-% Считывание координат из строк ввода
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
 str = get(handles.edtX, 'String');
 x=str2num(str);
-x1=x; % новое положение
-x=x0; % предыдущее положение
+x1=x; % РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+x=x0; % РїСЂРµРґС‹РґСѓС‰РµРµ РїРѕР»РѕР¶РµРЅРёРµ
 
 str2 = get(handles.edtY, 'String');
 y=str2num(str2);
-y1=y; % новое положение
-y=y0; % предыдущее положение
+y1=y; % РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+y=y0; % РїСЂРµРґС‹РґСѓС‰РµРµ РїРѕР»РѕР¶РµРЅРёРµ
 
 StartApp(x,y,x1,y1)
 end
 
-% Функция нажатия на кнопку Up
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Up
 function UpArrow(src,evt)
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
-str0 = get(handles.edtStep, 'String'); % берем текст из строки ввода (шаг увеличения координаты h)
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+str0 = get(handles.edtStep, 'String'); % Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ h)
 h=str2num(str0);
-% Считывание координат из строк ввода
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
 str = get(handles.edtX, 'String');
 x=str2num(str);
 x1=x;
@@ -365,13 +365,13 @@ y1=y+h;
 StartApp(x,y,x1,y1);
 end
 
-% Функция нажатия на кнопку Down
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Down
 function DownArrow(src,evt)
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
-str0 = get(handles.edtStep, 'String'); % берем текст из строки ввода (шаг увеличения координаты h)
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+str0 = get(handles.edtStep, 'String'); % Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ h)
 h=str2num(str0);
-% Считывание координат из строк ввода
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
 str = get(handles.edtX, 'String');
 x=str2num(str);
 x1=x;
@@ -381,13 +381,13 @@ y1=y-h;
 StartApp(x,y,x1,y1);
 end
 
-% Функция нажатия на кнопку Right
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Right
 function RightArrow(src,evt)
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
-str0 = get(handles.edtStep, 'String'); % берем текст из строки ввода (шаг увеличения координаты h)
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+str0 = get(handles.edtStep, 'String'); % Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ h)
 h=str2num(str0);
-% Считывание координат из строк ввода
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
 str = get(handles.edtY, 'String');
 y=str2num(str);
 y1=y;
@@ -397,13 +397,13 @@ x1=x+h;
 StartApp(x,y,x1,y1);
 end
 
-% Функция нажатия на кнопку Left
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Left
 function LeftArrow(src,evt)
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
-str0 = get(handles.edtStep, 'String'); % берем текст из строки ввода (шаг увеличения координаты h)
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+str0 = get(handles.edtStep, 'String'); % Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ h)
 h=str2num(str0);
-% Считывание координат из строк ввода
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
 str = get(handles.edtY, 'String');
 y=str2num(str);
 y1=y;
@@ -413,7 +413,7 @@ x1=x-h;
 StartApp(x,y,x1,y1);
 end
 
-% Считывания положения слайдера
+% РЎС‡РёС‚С‹РІР°РЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ СЃР»Р°Р№РґРµСЂР°
 function ValRot(src,evt)
 
 global GrRot TabAng
@@ -426,41 +426,41 @@ GripRotate;
 
 end
 
-% Функция нажатия на кнопку Help
+% Р¤СѓРЅРєС†РёСЏ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Help
 function HelpApp(src,evt)
 
-% Создаем графическое окно с тегом figure
+% РЎРѕР·РґР°РµРј РіСЂР°С„РёС‡РµСЃРєРѕРµ РѕРєРЅРѕ СЃ С‚РµРіРѕРј figure
 HelpF = figure('Name', 'Help', 'NumberTitle','off','MenuBar', 'none', 'Units', 'characters','Position', [100 0 155.526 150],...
     'Color', [255/255,255/255,255/255],'Tag', 'HelpFigure');
-% Вставка изображения с описанием 
+% Р’СЃС‚Р°РІРєР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ СЃ РѕРїРёСЃР°РЅРёРµРј 
 handles.banner = imread('Help.png'); 
 ris2=axes('Units', 'normalized','Position',[0.05 0.05 0.9 0.9]);
 image(handles.banner);
 set(ris2,'visible','off','Units', 'pixels');
 end
 
-% Функция закрытия приложения
+% Р¤СѓРЅРєС†РёСЏ Р·Р°РєСЂС‹С‚РёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 function CloseApp(src,evt)
 
 global DevCon CountArd CountDyn Ard CountExit p
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 CountExit=1;
 
 if SwC~=1
-    ChButs(SwC); % Мониторинг текущих параметров датчиков и моторов
+    ChButs(SwC); % РњРѕРЅРёС‚РѕСЂРёРЅРі С‚РµРєСѓС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ РґР°С‚С‡РёРєРѕРІ Рё РјРѕС‚РѕСЂРѕРІ
 end
 
 if SwC==3 % USB2Dynamixel
-    writeDigitalPin(Ard,'D3',0); % отключение питания
+    writeDigitalPin(Ard,'D3',0); % РѕС‚РєР»СЋС‡РµРЅРёРµ РїРёС‚Р°РЅРёСЏ
     closePort(p); % Close port
     unloadlibrary('dxl_x64_c');
     CountDyn=0;
 end
 
 if SwC==2 % Arduino
-    clear serv Ard % Отключение Arduino
+    clear serv Ard % РћС‚РєР»СЋС‡РµРЅРёРµ Arduino
     CountArd=0;
 end
 
@@ -472,43 +472,43 @@ clear all hidden
 close all hidden
 end
 
-%% Блок вспомогательных функций
-% Первичная функция
+%% Р‘Р»РѕРє РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№
+% РџРµСЂРІРёС‡РЅР°СЏ С„СѓРЅРєС†РёСЏ
 function StartApp(x,y,x1,y1)
 
 global DevCon Start
 
-Proc(x,y,x1,y1); % Обработка введённого положения
+Proc(x,y,x1,y1); % РћР±СЂР°Р±РѕС‚РєР° РІРІРµРґС‘РЅРЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 if (SwC>=2)
-    ChButs(SwC); % Мониторинг текущих параметров датчиков и моторов
+    ChButs(SwC); % РњРѕРЅРёС‚РѕСЂРёРЅРі С‚РµРєСѓС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ РґР°С‚С‡РёРєРѕРІ Рё РјРѕС‚РѕСЂРѕРІ
 end
 
 ElapsedSens = cputime - Start;
 
 end
 
-% Распределение заданий в зависимости от подключения
+% Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ Р·Р°РґР°РЅРёР№ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 function Proc(x,y,x1,y1)
 
 global DevCon CountArd CountDyn CountOCM CountBT serv Ard CountCalc ...
     TabSens Dxl IDm InitData p
 
-CountCalc=1; % Счётчик для отслеживания начала расчёта
+CountCalc=1; % РЎС‡С‘С‚С‡РёРє РґР»СЏ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ РЅР°С‡Р°Р»Р° СЂР°СЃС‡С‘С‚Р°
 
 InitData=PlotLocation(x,y,x1,y1);
 %ElapsedCalc = cputime - Start
 pause(0.1);
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 if (SwC==1) && ((CountArd~=0) || (CountDyn~=0))
     closePort(p); % Close port
-    unloadlibrary('dxl_x64_c'); % отключение библиотеки для моторов Dynamixel
-    writeDigitalPin(Ard,'D3',0); % отключение питания
+    unloadlibrary('dxl_x64_c'); % РѕС‚РєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
+    writeDigitalPin(Ard,'D3',0); % РѕС‚РєР»СЋС‡РµРЅРёРµ РїРёС‚Р°РЅРёСЏ
    
-    % Удаление показаний сенсоров
+    % РЈРґР°Р»РµРЅРёРµ РїРѕРєР°Р·Р°РЅРёР№ СЃРµРЅСЃРѕСЂРѕРІ
     Tsens=get(TabSens,'Data');
     TSens(1,3)={' '};
     TSens(2,3)={' '};
@@ -519,30 +519,30 @@ if (SwC==1) && ((CountArd~=0) || (CountDyn~=0))
     CountDyn=0;
     CountOCM=0;
     
-    clear serv Ard IDm Dxl % Отключение Arduino
+    clear serv Ard IDm Dxl % РћС‚РєР»СЋС‡РµРЅРёРµ Arduino
 end
 
 if (SwC==2) && (CountArd==0)
-    [Ard,serv]=ArdSwitch(SwC); % Включение Arduino
+    [Ard,serv]=ArdSwitch(SwC); % Р’РєР»СЋС‡РµРЅРёРµ Arduino
 else
     if ((CountOCM~=0) || (CountDyn==1)) &&  (SwC==2) && (CountArd==1)
         closePort(p); % Close port
-        unloadlibrary('dxl_x64_c'); % отключение библиотеки для моторов Dynamixel
-        writeDigitalPin(Ard,'D3',0); % отключение питания
+        unloadlibrary('dxl_x64_c'); % РѕС‚РєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
+        writeDigitalPin(Ard,'D3',0); % РѕС‚РєР»СЋС‡РµРЅРёРµ РїРёС‚Р°РЅРёСЏ
 
         CountDyn=2;
         CountOCM=0;
         
-        clear Dxl IDm %p % Отключение Arduino
+        clear Dxl IDm %p % РћС‚РєР»СЋС‡РµРЅРёРµ Arduino
     end
 end
 %ElapsedArd = cputime - Start
 
 if (SwC==3) && ((CountDyn==0) || (CountDyn==2))
     if CountDyn==2
-        writeDigitalPin(Ard,'D3',1); % отключение питания
+        writeDigitalPin(Ard,'D3',1); % РѕС‚РєР»СЋС‡РµРЅРёРµ РїРёС‚Р°РЅРёСЏ
     end
-    DynoSwitch(SwC); % Включение USB2Dynamixel
+    DynoSwitch(SwC); % Р’РєР»СЋС‡РµРЅРёРµ USB2Dynamixel
     if IDm==0
         set(DevCon,'Value',2);
     end
@@ -550,34 +550,34 @@ end
 %ElapsedDyno = cputime - Start
 
 if (SwC==4) && (CountOCM==0)
-    Dxl=OpenCMCon(SwC); % Включение OpenCM
+    Dxl=OpenCMCon(SwC); % Р’РєР»СЋС‡РµРЅРёРµ OpenCM
 end
 
 if (SwC==5) && (CountBT==false)
-    BTCon(SwC); % Управление по Bluetooth
+    BTCon(SwC); % РЈРїСЂР°РІР»РµРЅРёРµ РїРѕ Bluetooth
 end
 
 pause(0.1);
 
 if (SwC>=2)
     CountCalc=0;
-    WriteAngles(SwC,InitData,Ard,serv); % Запись текущих положений на моторы
+    WriteAngles(SwC,InitData,Ard,serv); % Р—Р°РїРёСЃСЊ С‚РµРєСѓС‰РёС… РїРѕР»РѕР¶РµРЅРёР№ РЅР° РјРѕС‚РѕСЂС‹
 end
 
 end
 
-% Функция проверки нажатия кнопок
+% Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРѕРє
 function ChButs(SwC)
 
 global RArr UArr LArr DArr Pplo GrHo GrDr GSt De De2 ChOb TabMot Ard...
     CountExit ChSt CountCalc Co IDm x0 ClAp RWM %Dxl Us
 
 for k=1:1:10000
-    %Start = cputime; % измерение времени работы функции
+    %Start = cputime; % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
     
     WrData;
     
-    % Прекращение функции при нажатии закрыть приложение
+    % РџСЂРµРєСЂР°С‰РµРЅРёРµ С„СѓРЅРєС†РёРё РїСЂРё РЅР°Р¶Р°С‚РёРё Р·Р°РєСЂС‹С‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ
     %chb=exist('ClAp')
     if CountExit==1%0 || chb==2
         break
@@ -615,14 +615,14 @@ for k=1:1:10000
         set(GrDr,'Value',0);
         set(ChOb,'Value',0);
     end
-    %Elapsed = cputime - Start % измерение времени работы функции
+    %Elapsed = cputime - Start % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
     pause(1)%0.2);
     
     if (CountCalc==1)
         break
     else
         if ((k>2) || (Co>0))
-            Otkat=ChObstacle; % Проверка избегания столкновения с препятствием
+            Otkat=ChObstacle; % РџСЂРѕРІРµСЂРєР° РёР·Р±РµРіР°РЅРёСЏ СЃС‚РѕР»РєРЅРѕРІРµРЅРёСЏ СЃ РїСЂРµРїСЏС‚СЃС‚РІРёРµРј
             if Otkat~=0
                 Otkat=0;
                 break
@@ -631,16 +631,16 @@ for k=1:1:10000
     end
     
     
-    % Считывание данных
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С…
     if SwC>=2
         SensData(Ard);
     end
     
     if SwC==3
-        [kMrD,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+        [kMrD,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
         for i=1:kMrD
             if strcmp({'Dynamixel'},ChMot(i,2))==1
-                DynoData(IDm(i),i); % Считывание данных моторов Dynamixel
+                DynoData(IDm(i),i); % РЎС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… РјРѕС‚РѕСЂРѕРІ Dynamixel
             end
         end
     end
@@ -649,7 +649,7 @@ end
 
 end
 
-% Проверка наличия препятствия
+% РџСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ РїСЂРµРїСЏС‚СЃС‚РІРёСЏ
 function Otkat=ChObstacle
 
 global yach CoorX CoorY TabMaxTorq Co compres DatTorq x0 y0 Steph MOLC
@@ -657,30 +657,30 @@ global yach CoorX CoorY TabMaxTorq Co compres DatTorq x0 y0 Steph MOLC
 chcond=get(MOLC, 'Value');
 
 if chcond~=0
-    % Считывание текущих координат
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… РєРѕРѕСЂРґРёРЅР°С‚
     str = get(CoorX, 'String');
     x=str2num(str);
     str2 = get(CoorY, 'String');
     y=str2num(str2);
     
-    % Считываем шаг изменения координат
+    % РЎС‡РёС‚С‹РІР°РµРј С€Р°Рі РёР·РјРµРЅРµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚
     str0 = get(Steph, 'String');
-    h=0.03; % Шаг, на который отступает манипулятор при перегрузке
+    h=0.03; % РЁР°Рі, РЅР° РєРѕС‚РѕСЂС‹Р№ РѕС‚СЃС‚СѓРїР°РµС‚ РјР°РЅРёРїСѓР»СЏС‚РѕСЂ РїСЂРё РїРµСЂРµРіСЂСѓР·РєРµ
     
-    % Считывание значений максимальных и вычисленных моментов
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… Рё РІС‹С‡РёСЃР»РµРЅРЅС‹С… РјРѕРјРµРЅС‚РѕРІ
     TMT=get(TabMaxTorq,'Data');
     T1max=cell2mat(TMT(1,5));
     T2max=cell2mat(TMT(2,5));
     T1est=cell2mat(TMT(1,3));
     T2est=cell2mat(TMT(2,3));
     
-    % Проверка изменения положения манипулятора
+    % РџСЂРѕРІРµСЂРєР° РёР·РјРµРЅРµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
     npo=1;
     if (x==x0) || (y==y0)
         npo=0;
     end
     
-    % Проверка превышения допустимой нагрузки
+    % РџСЂРѕРІРµСЂРєР° РїСЂРµРІС‹С€РµРЅРёСЏ РґРѕРїСѓСЃС‚РёРјРѕР№ РЅР°РіСЂСѓР·РєРё
     mvt=0;
     if (DatTorq(yach,1)/T1max>0.96) || (DatTorq(yach,2)/T2max>0.90) || ...
             (DatTorq(yach,1)/T1est>1.25) || (DatTorq(yach,2)/T2est>1.5)
@@ -696,8 +696,8 @@ if chcond~=0
         
         if (Co<5) && ...
                 (((npo==1) && (mvt==1)) || ((npo~=1) && ((compres==1) || (mvt==1)))...
-                || ((Co>=1) && ((compres==1) || (mvt==1)))) % Новое положение и перегрузка
-            Co=Co+1; % изменение значения счётчика
+                || ((Co>=1) && ((compres==1) || (mvt==1)))) % РќРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ Рё РїРµСЂРµРіСЂСѓР·РєР°
+            Co=Co+1; % РёР·РјРµРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃС‡С‘С‚С‡РёРєР°
             x1=x-h;
             y1=x1*y/x;
             Otkat=1;
@@ -724,7 +724,7 @@ end
 
 end
 
-% Функция сравнения крутящих моментов
+% Р¤СѓРЅРєС†РёСЏ СЃСЂР°РІРЅРµРЅРёСЏ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
 function compres=checkT(T,ind,Co,Coef)
 
 if (T(ind,1)/T(ind-(1+Co),1)>Coef) || (T(ind,2)/T(ind-(1+Co),2)>Coef)
@@ -735,7 +735,7 @@ end
 
 end
 
-% Cчитывание данных и запись в файл
+% CС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р»
 function WrData
 
 global TabSens TabAng TabMaxTorq Start yach CoorX CoorY...
@@ -746,7 +746,7 @@ if CountName==0
     CountName=CountName+1;
 end
 
-A = {'Time','X, m','Y, m','FSR №1, N','FSR №2, N','Distance, m',...
+A = {'Time','X, m','Y, m','FSR в„–1, N','FSR в„–2, N','Distance, m',...
     'alpha, deg', 'beta, deg','theta, deg', 'phi, deg','T1, m','T2, m',...
     'T3, m','U1, V','U2, V','U3, V','mcc, kg','mcr, kg','error, %','mcav, kg'};
 sheet = 1;
@@ -758,28 +758,28 @@ numYach=[nY num2str(yach)];
 nYa=['V' num2str(yach)];
 MassData=zeros(1,12);
 
-% запись времени от начала отсчёта
+% Р·Р°РїРёСЃСЊ РІСЂРµРјРµРЅРё РѕС‚ РЅР°С‡Р°Р»Р° РѕС‚СЃС‡С‘С‚Р°
 MassData(1) = cputime - Start;
 
-% Считывание координат из строк ввода
-%handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РёР· СЃС‚СЂРѕРє РІРІРѕРґР°
+%handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 str = get(CoorX, 'String');
 MassData(2)=str2num(str);
 str2 = get(CoorY, 'String');
 MassData(3)=str2num(str2);
 
-Tsens=get(TabSens,'Data'); % данные с датчиков
+Tsens=get(TabSens,'Data'); % РґР°РЅРЅС‹Рµ СЃ РґР°С‚С‡РёРєРѕРІ
 MassData(4)=cell2mat(Tsens(1,3));
 MassData(5)=cell2mat(Tsens(2,3));
 MassData(6)=cell2mat(Tsens(3,3));
 
-angles=get(TabAng,'Data'); % запись углов без учёта поворота гриппера
+angles=get(TabAng,'Data'); % Р·Р°РїРёСЃСЊ СѓРіР»РѕРІ Р±РµР· СѓС‡С‘С‚Р° РїРѕРІРѕСЂРѕС‚Р° РіСЂРёРїРїРµСЂР°
 MassData(7)=cell2mat(angles(1,2));
 MassData(8)=cell2mat(angles(2,2));
 MassData(9)=cell2mat(angles(3,2));
 MassData(10)=cell2mat(angles(4,2));
 
-TMT=get(TabMaxTorq,'Data'); % значения крутящих моментов и данных о напряжениях на моторах
+TMT=get(TabMaxTorq,'Data'); % Р·РЅР°С‡РµРЅРёСЏ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ Рё РґР°РЅРЅС‹С… Рѕ РЅР°РїСЂСЏР¶РµРЅРёСЏС… РЅР° РјРѕС‚РѕСЂР°С…
 MassData(11)=cell2mat(TMT(1,4));
 DatTorq(yach,1)=MassData(11);
 MassData(12)=cell2mat(TMT(2,4));
@@ -805,19 +805,19 @@ xlswrite(filename,(ttt),sheet,nYa);
 
 end
 
-% Создание нового файла для записи данных
+% РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С…
 function filename=ChangeName
 
-%filename = 'D:\Yashin\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx';
-filename = 'D:\Учёба\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx';
+%filename = 'D:\Yashin\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx';
+filename = 'D:\РЈС‡С‘Р±Р°\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx';
 
-% Проверка существования имени
-%path='D:\Yashin\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\';
-path='D:\Учёба\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\';
+% РџСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РёРјРµРЅРё
+%path='D:\Yashin\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\';
+path='D:\РЈС‡С‘Р±Р°\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\';
 name='testdata';
 ext='.xlsx';
-%i=xlsread('D:\Yashin\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx',1,'A1:A1'); % считывание номера предыдущего эксперимента
-i=xlsread('D:\Учёба\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx',1,'A1:A1'); % считывание номера предыдущего эксперимента
+%i=xlsread('D:\Yashin\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx',1,'A1:A1'); % СЃС‡РёС‚С‹РІР°РЅРёРµ РЅРѕРјРµСЂР° РїСЂРµРґС‹РґСѓС‰РµРіРѕ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°
+i=xlsread('D:\РЈС‡С‘Р±Р°\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx',1,'A1:A1'); % СЃС‡РёС‚С‹РІР°РЅРёРµ РЅРѕРјРµСЂР° РїСЂРµРґС‹РґСѓС‰РµРіРѕ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°
 chee=1;
 while chee~=0
     chee=exist(filename);
@@ -827,12 +827,12 @@ while chee~=0
     end
 end
 
-%xlswrite('D:\Yashin\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx',i,1,'A1'); % запись номера текущего эксперимента
-xlswrite('D:\Учёба\SkolTech\Ph.D\Дрон с манипулятором\Расчёты\Experiment data\testdata.xlsx',i,1,'A1'); % запись номера текущего эксперимента
+%xlswrite('D:\Yashin\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx',i,1,'A1'); % Р·Р°РїРёСЃСЊ РЅРѕРјРµСЂР° С‚РµРєСѓС‰РµРіРѕ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°
+xlswrite('D:\РЈС‡С‘Р±Р°\SkolTech\Ph.D\Р”СЂРѕРЅ СЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂРѕРј\Р Р°СЃС‡С‘С‚С‹\Experiment data\testdata.xlsx',i,1,'A1'); % Р·Р°РїРёСЃСЊ РЅРѕРјРµСЂР° С‚РµРєСѓС‰РµРіРѕ СЌРєСЃРїРµСЂРёРјРµРЅС‚Р°
 
 end
 
-% Проверка нахождения параметра в нужном диапазоне
+% РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РїР°СЂР°РјРµС‚СЂР° РІ РЅСѓР¶РЅРѕРј РґРёР°РїР°Р·РѕРЅРµ
 function P=ParamCheck(P,MinP,MaxP)
 if P<MinP
     P=MinP;
@@ -843,10 +843,10 @@ else
 end
 end
 
-% Проверка знаков при координатах
+% РџСЂРѕРІРµСЂРєР° Р·РЅР°РєРѕРІ РїСЂРё РєРѕРѕСЂРґРёРЅР°С‚Р°С…
 function [znx,zny]=Octothorpe(x,y,x0,y0)
 
-% Определение знака при координате X
+% РћРїСЂРµРґРµР»РµРЅРёРµ Р·РЅР°РєР° РїСЂРё РєРѕРѕСЂРґРёРЅР°С‚Рµ X
 if x~=0
     znx=abs(x)/x;
 else
@@ -857,7 +857,7 @@ else
     end
 end
 
-% Определение знака при координате Y
+% РћРїСЂРµРґРµР»РµРЅРёРµ Р·РЅР°РєР° РїСЂРё РєРѕРѕСЂРґРёРЅР°С‚Рµ Y
 if y~=0
     zny=abs(y)/y;
 else
@@ -870,13 +870,13 @@ end
 
 end
 
-% Вычисление длины по теореме косинусов
+% Р’С‹С‡РёСЃР»РµРЅРёРµ РґР»РёРЅС‹ РїРѕ С‚РµРѕСЂРµРјРµ РєРѕСЃРёРЅСѓСЃРѕРІ
 function len=TeorCos(a,b,angle)
 len=sqrt(a^2+b^2-2*a*b*cosd(angle));
 end
 
-%% Блок расчёта параметров
-% Функция с исходными данными
+%% Р‘Р»РѕРє СЂР°СЃС‡С‘С‚Р° РїР°СЂР°РјРµС‚СЂРѕРІ
+% Р¤СѓРЅРєС†РёСЏ СЃ РёСЃС…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё
 function InputData
 
 clc
@@ -887,39 +887,39 @@ global g l1 l2 l3 z cm1 cm2 cm3 arm4 Z1 Z2 mc ms0 ms1 ms2 ms3 ms4 ml1 ml2...
     CountName CountExit T0calc CalibT mmc gamma yach err massc CountMot...
     Co compres almin almax bemin bemax temin temax psmin psmax
 
-g=9.80665; % м/с2, ускорение свободного падения
+g=9.80665; % Рј/СЃ2, СѓСЃРєРѕСЂРµРЅРёРµ СЃРІРѕР±РѕРґРЅРѕРіРѕ РїР°РґРµРЅРёСЏ
 
-l1 = 0.27698; %0.274379; %0.294644; %0.2989; %0.274; % м, длина звена № 1
-l2 = 0.259219; %0.328827; %0.330082; %0.30644; %0.310; % м, длина звена № 2
-l3 = 0.058; % м, расстояние от оси сервомотора № 2 до центра масс сервомотора № 3
-%0.045;  % м, длина звена № 3
+l1 = 0.27698; %0.274379; %0.294644; %0.2989; %0.274; % Рј, РґР»РёРЅР° Р·РІРµРЅР° в„– 1
+l2 = 0.259219; %0.328827; %0.330082; %0.30644; %0.310; % Рј, РґР»РёРЅР° Р·РІРµРЅР° в„– 2
+l3 = 0.058; % Рј, СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РѕСЃРё СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2 РґРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 3
+%0.045;  % Рј, РґР»РёРЅР° Р·РІРµРЅР° в„– 3
 
-z=0.0313; %0.0398; %0;% м, смещение первого звена по вертекали
+z=0.0313; %0.0398; %0;% Рј, СЃРјРµС‰РµРЅРёРµ РїРµСЂРІРѕРіРѕ Р·РІРµРЅР° РїРѕ РІРµСЂС‚РµРєР°Р»Рё
 
-cm1=0.113643; %0.185821; %0.119571; %0.139542;%0.300608; % м, расстояние от оси сервомотора № 0 до центра масс звена 1
-cm2=0.097669; %0.196804; %0.139379; %0.157359;%0.13164; % м, расстояние от оси сервомотора № 1 до центра масс звена 2
-cm3=0.09385; %0.065027; %0.061421; % м, расстояние от оси сервомотора № 2 до центра масс хвата с грузом
+cm1=0.113643; %0.185821; %0.119571; %0.139542;%0.300608; % Рј, СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РѕСЃРё СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 0 РґРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ Р·РІРµРЅР° 1
+cm2=0.097669; %0.196804; %0.139379; %0.157359;%0.13164; % Рј, СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РѕСЃРё СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 1 РґРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ Р·РІРµРЅР° 2
+cm3=0.09385; %0.065027; %0.061421; % Рј, СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РѕСЃРё СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2 РґРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ С…РІР°С‚Р° СЃ РіСЂСѓР·РѕРј
 
-arm4=0.050171;%0.075; % м, максимальное расстояние от оси шестерни № 2 до центра масс груза
+arm4=0.050171;%0.075; % Рј, РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РѕСЃРё С€РµСЃС‚РµСЂРЅРё в„– 2 РґРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ РіСЂСѓР·Р°
 
-Z1=13; % колич1ество зубьев шестерни № 1
-Z2=24; % количество зубьев шестерни № 2
+Z1=13; % РєРѕР»РёС‡1РµСЃС‚РІРѕ Р·СѓР±СЊРµРІ С€РµСЃС‚РµСЂРЅРё в„– 1
+Z2=24; % РєРѕР»РёС‡РµСЃС‚РІРѕ Р·СѓР±СЊРµРІ С€РµСЃС‚РµСЂРЅРё в„– 2
 
-% Масса указана без учёта веса крепежа, проводов и датчиков
-mc=0;%0.035; %0.24; % кг, масса груза
-ms0=0.153; %0.072;%0.063; % кг, масса сервомотора № 0 (база)
-ms1=0.126; %0.056;%0.063; % кг, масса сервомотора № 1
-ms2=0.0535; %0.063; %0.056;%0.021; % кг, масса сервомотора № 2
-ms3=0.0535; %0.056; %0.0158;%0.0078; % кг, масса сервомотора № 3
-ms4=0.063; % кг, масса сервомотора № 4 (хват)
-ml1=0.075+0.0035+6*0.0005+4*0.0003+0.0024*6*l1/(l1+l2); %0.055;%0.031; % кг, масса звена № 1, 0,0035 - подшипник
-ml2=0.063+0.0035+6*0.0005+4*0.0003+0.0024*6*l2/(l1+l2); %0.059;%0.037; % кг, масса звена № 2
-mx=0.063+8*(0.0016+0.0001)+6*0.0002+4*0.0028+3*0.0005; % кг, масса хвата
-mkp=0.001; % кг, масса крестовины
+% РњР°СЃСЃР° СѓРєР°Р·Р°РЅР° Р±РµР· СѓС‡С‘С‚Р° РІРµСЃР° РєСЂРµРїРµР¶Р°, РїСЂРѕРІРѕРґРѕРІ Рё РґР°С‚С‡РёРєРѕРІ
+mc=0;%0.035; %0.24; % РєРі, РјР°СЃСЃР° РіСЂСѓР·Р°
+ms0=0.153; %0.072;%0.063; % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 0 (Р±Р°Р·Р°)
+ms1=0.126; %0.056;%0.063; % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 1
+ms2=0.0535; %0.063; %0.056;%0.021; % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2
+ms3=0.0535; %0.056; %0.0158;%0.0078; % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 3
+ms4=0.063; % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 4 (С…РІР°С‚)
+ml1=0.075+0.0035+6*0.0005+4*0.0003+0.0024*6*l1/(l1+l2); %0.055;%0.031; % РєРі, РјР°СЃСЃР° Р·РІРµРЅР° в„– 1, 0,0035 - РїРѕРґС€РёРїРЅРёРє
+ml2=0.063+0.0035+6*0.0005+4*0.0003+0.0024*6*l2/(l1+l2); %0.059;%0.037; % РєРі, РјР°СЃСЃР° Р·РІРµРЅР° в„– 2
+mx=0.063+8*(0.0016+0.0001)+6*0.0002+4*0.0028+3*0.0005; % РєРі, РјР°СЃСЃР° С…РІР°С‚Р°
+mkp=0.001; % РєРі, РјР°СЃСЃР° РєСЂРµСЃС‚РѕРІРёРЅС‹
 
-% Грузы: 0.2719 - аккумулятор шуруповёрта, 0.2158 - рулетка, 0.169 - коробка с металлом, 0.1641 - коробка с MX-106, 0.0784 - деревянный куб,
-% 0.0777 - мини тиски, 0.0419 - белый пластиковый куб со штрихкодом, 0.0399 - белый пластиковый куб, 0.0355 - оранжевый пластиковый параллелепипед
-mmc=[0.1641 0.0784 0.0419 0.0399 0.0355]; % массив масс грузов
+% Р“СЂСѓР·С‹: 0.2719 - Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ С€СѓСЂСѓРїРѕРІС‘СЂС‚Р°, 0.2158 - СЂСѓР»РµС‚РєР°, 0.169 - РєРѕСЂРѕР±РєР° СЃ РјРµС‚Р°Р»Р»РѕРј, 0.1641 - РєРѕСЂРѕР±РєР° СЃ MX-106, 0.0784 - РґРµСЂРµРІСЏРЅРЅС‹Р№ РєСѓР±,
+% 0.0777 - РјРёРЅРё С‚РёСЃРєРё, 0.0419 - Р±РµР»С‹Р№ РїР»Р°СЃС‚РёРєРѕРІС‹Р№ РєСѓР± СЃРѕ С€С‚СЂРёС…РєРѕРґРѕРј, 0.0399 - Р±РµР»С‹Р№ РїР»Р°СЃС‚РёРєРѕРІС‹Р№ РєСѓР±, 0.0355 - РѕСЂР°РЅР¶РµРІС‹Р№ РїР»Р°СЃС‚РёРєРѕРІС‹Р№ РїР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ
+mmc=[0.1641 0.0784 0.0419 0.0399 0.0355]; % РјР°СЃСЃРёРІ РјР°СЃСЃ РіСЂСѓР·РѕРІ
 % T0calc=[4.39436282742831 1.66369414137586;6.28996744709001 1.29328297942829;5.34510282481346 1.26258662873457;5.65453891492921 1.47837488313661;5.75842427841379 1.26966687161803;6.29996138872704 1.46176397089384;5.82744050297219 1.28794584751303;6.43215609001060 1.25780570602980;6.53496420136355 1.20525165660815;6.40395118096490 1.10046522276335;6.74343894012486 1.27487974248199;6.50314383755538 1.31723764513101;6.27652951717607 1.95984425938905;5.59718986879193 2.10292789116791;5.51514775740210 1.69826563101890;4.85945416899317 1.61161907072253];
 T0calc=[4.75962946817786 2.20435919790758;6.24501743679163 1.53428509154316;7.54047079337402 1.65119877942459;7.32604402789887 1.81147558849172;7.41211857018309 1.60162380122058;7.36339363557106 1.99969485614647;7.59656931124673 1.64707933740192;7.64262641673932 1.65014167393200;7.72721883173496 1.59739537925022;7.88747384481255 1.63564734088928;7.96276591107236 1.58158238884045;7.95350261551874 1.65859851787271;7.75230383609416 2.24620749782040;7.46591979075850 2.23917829119442;7.03169354838710 2.20717088055798;6.41835222319093 2.15548169136879];
 CalibT=[52.0000000000000;57.7295779513083;63.4591559026165;69.1887338539247;74.9183118052329;80.6478897565412;86.3774677078494;92.1070456591577;97.8366236104659;103.566201561774;109.295779513082;115.025357464391;120.754935415699;126.484513367007;132.214091318315;137.943669269623];
@@ -932,39 +932,39 @@ temin=0;
 temax=180;
 psmin=0;
 psmax=180;
-fi=90; % градусов, угол раскрытия хвата
-gamma=25; % максимальный угол наклона второго звена над плоскостью дрона
+fi=90; % РіСЂР°РґСѓСЃРѕРІ, СѓРіРѕР» СЂР°СЃРєСЂС‹С‚РёСЏ С…РІР°С‚Р°
+gamma=25; % РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓРіРѕР» РЅР°РєР»РѕРЅР° РІС‚РѕСЂРѕРіРѕ Р·РІРµРЅР° РЅР°Рґ РїР»РѕСЃРєРѕСЃС‚СЊСЋ РґСЂРѕРЅР°
 
-q=0; % счётчик для первого вывода графика
-ChAn=0; % счётчик для первой проверки совпадения допустимых диапазонов
-ChSt=0; % счётчик выключения хвата
-CountArd=0; % счётчик включения Arduino
-CountDyn=0; % счётчик включения USB2Dynamixel
-CountOCM=0; % счётчик включения Open CM
-CountBT=false; % счётчик включения Bluetooth
-CountMot=0; % счётчик включения моторов
-CountInvM=0; % счётчик расчёта обратной матрицы
-CountName=0; % счётчик записи в файл
-CountExit=0; % счётчик выхода из приложения
-yach=2; % счётчик строк
-Co=0; % счётчик отступления от препятствия
-compres=0; % счётчик наличия повторной перегрузки
+q=0; % СЃС‡С‘С‚С‡РёРє РґР»СЏ РїРµСЂРІРѕРіРѕ РІС‹РІРѕРґР° РіСЂР°С„РёРєР°
+ChAn=0; % СЃС‡С‘С‚С‡РёРє РґР»СЏ РїРµСЂРІРѕР№ РїСЂРѕРІРµСЂРєРё СЃРѕРІРїР°РґРµРЅРёСЏ РґРѕРїСѓСЃС‚РёРјС‹С… РґРёР°РїР°Р·РѕРЅРѕРІ
+ChSt=0; % СЃС‡С‘С‚С‡РёРє РІС‹РєР»СЋС‡РµРЅРёСЏ С…РІР°С‚Р°
+CountArd=0; % СЃС‡С‘С‚С‡РёРє РІРєР»СЋС‡РµРЅРёСЏ Arduino
+CountDyn=0; % СЃС‡С‘С‚С‡РёРє РІРєР»СЋС‡РµРЅРёСЏ USB2Dynamixel
+CountOCM=0; % СЃС‡С‘С‚С‡РёРє РІРєР»СЋС‡РµРЅРёСЏ Open CM
+CountBT=false; % СЃС‡С‘С‚С‡РёРє РІРєР»СЋС‡РµРЅРёСЏ Bluetooth
+CountMot=0; % СЃС‡С‘С‚С‡РёРє РІРєР»СЋС‡РµРЅРёСЏ РјРѕС‚РѕСЂРѕРІ
+CountInvM=0; % СЃС‡С‘С‚С‡РёРє СЂР°СЃС‡С‘С‚Р° РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹
+CountName=0; % СЃС‡С‘С‚С‡РёРє Р·Р°РїРёСЃРё РІ С„Р°Р№Р»
+CountExit=0; % СЃС‡С‘С‚С‡РёРє РІС‹С…РѕРґР° РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ
+yach=2; % СЃС‡С‘С‚С‡РёРє СЃС‚СЂРѕРє
+Co=0; % СЃС‡С‘С‚С‡РёРє РѕС‚СЃС‚СѓРїР»РµРЅРёСЏ РѕС‚ РїСЂРµРїСЏС‚СЃС‚РІРёСЏ
+compres=0; % СЃС‡С‘С‚С‡РёРє РЅР°Р»РёС‡РёСЏ РїРѕРІС‚РѕСЂРЅРѕР№ РїРµСЂРµРіСЂСѓР·РєРё
 
-err=0; % значение ошибки вычисления массы груза
-massc=0; % усреднённое значение массы груза
+err=0; % Р·РЅР°С‡РµРЅРёРµ РѕС€РёР±РєРё РІС‹С‡РёСЃР»РµРЅРёСЏ РјР°СЃСЃС‹ РіСЂСѓР·Р°
+massc=0; % СѓСЃСЂРµРґРЅС‘РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 
 end
 
-% Функция построения положения хвата
+% Р¤СѓРЅРєС†РёСЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ С…РІР°С‚Р°
 function PicGrip(xg0,yg0,fi)
 
-% Общая часть
+% РћР±С‰Р°СЏ С‡Р°СЃС‚СЊ
 xgr(1,1)=xg0;
 ygr(1,1)=yg0;
 xgr(1,2)=xgr(1,1)+0.027611;
 ygr(1,2)=ygr(1,1)+0.012157;
 
-% Верхняя и нижняя части
+% Р’РµСЂС…РЅСЏСЏ Рё РЅРёР¶РЅСЏСЏ С‡Р°СЃС‚Рё
 for i=1:2
     xgr(i,3)=xgr(1,1)+0.047798;
     ygr(i,3)=ygr(1,1)+(-1)^(i+1)*0.0135;
@@ -978,13 +978,13 @@ for i=1:2
     ygr(i,7)=ygr(i,6);
 end
 
-% Дополнительные точки эскиза корпуса хвата
+% Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С‚РѕС‡РєРё СЌСЃРєРёР·Р° РєРѕСЂРїСѓСЃР° С…РІР°С‚Р°
 xgr(1,8)=xgr(1,1)+0.003131;
 ygr(1,8)=ygr(1,1)+0.029;
 ygr(2,8)=ygr(1,1)-0.029;
 xgr(1,9)=xgr(1,8)+0.028584;
 
-% Изображение хвата
+% РР·РѕР±СЂР°Р¶РµРЅРёРµ С…РІР°С‚Р°
 plot([xgr(1,1),xgr(1,2)],[ygr(1,1),ygr(1,2)],'k',...
     [xgr(1,3),xgr(1,4)],[ygr(1,3),ygr(1,4)],'k',...
     [xgr(1,5),xgr(1,6)],[ygr(1,5),ygr(1,6)],'k',...
@@ -994,18 +994,18 @@ plot([xgr(1,1),xgr(1,2)],[ygr(1,1),ygr(1,2)],'k',...
     [xgr(2,4),xgr(2,6),xgr(2,7)],[ygr(2,4),ygr(2,6),ygr(2,7)],'k-o',...
     'LineWidth',3,'MarkerSize',2)
 
-% Отображение зубчатого зацепления
+% РћС‚РѕР±СЂР°Р¶РµРЅРёРµ Р·СѓР±С‡Р°С‚РѕРіРѕ Р·Р°С†РµРїР»РµРЅРёСЏ
 rectangle('Position',[(xgr(1,3)-0.0135),(ygr(1,3)-0.0135),(0.0135)*2,(0.0135)*2], 'Curvature',[1,1])
 rectangle('Position',[(xgr(2,3)-0.0135),(ygr(2,3)-0.0135),(0.0135)*2,(0.0135)*2], 'Curvature',[1,1])
 rectangle('Position',[(xgr(1,2)-0.006732),(ygr(1,2)-0.006732),(0.006732)*2,(0.006732)*2], 'Curvature',[1,1])
 
-% Отображение эскиза корпуса хвата
+% РћС‚РѕР±СЂР°Р¶РµРЅРёРµ СЌСЃРєРёР·Р° РєРѕСЂРїСѓСЃР° С…РІР°С‚Р°
 plot([xgr(1,1),xgr(1,8),xgr(1,9),xgr(1,5),xgr(1,5),xgr(1,9),xgr(1,8),xgr(1,1)],...
     [ygr(1,1),ygr(1,8),ygr(1,8),ygr(1,5),ygr(2,5),ygr(2,8),ygr(2,8),ygr(1,1)],'k',0,0.08,'b x')
 PicDrone;
 end
 
-% Вычисление углов Beta и Theta, править!
+% Р’С‹С‡РёСЃР»РµРЅРёРµ СѓРіР»РѕРІ Beta Рё Theta, РїСЂР°РІРёС‚СЊ!
 function [beta,theta]=CalcAngl(x,y,Angl)
 
 syms t bet alf a b c d ff
@@ -1013,9 +1013,9 @@ global CountInvM l1 l2 z beta1
 %StartLaLaLa = cputime;
 if CountInvM==0
     CountInvM=1;
-    WKin = waitbar(0,'Computation of inverse kinematics'); % Окно ожидания расчёта обратной матрицы
+    WKin = waitbar(0,'Computation of inverse kinematics'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ СЂР°СЃС‡С‘С‚Р° РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹
     
-    % Запись матриц перехода между системами координат
+    % Р—Р°РїРёСЃСЊ РјР°С‚СЂРёС† РїРµСЂРµС…РѕРґР° РјРµР¶РґСѓ СЃРёСЃС‚РµРјР°РјРё РєРѕРѕСЂРґРёРЅР°С‚
     A(:,:,1)=[cos(t) -sin(t) 0 0; sin(t) cos(t) 0 0; 0 0 1 0; 0 0 0 1];
     A(:,:,2)=[1 0 0 a; 0 1 0 0; 0 0 1 0; 0 0 0 1];
     A(:,:,3)=[1 0 0 0; 0 1 0 ff; 0 0 1 0; 0 0 0 1];
@@ -1023,7 +1023,7 @@ if CountInvM==0
     A(:,:,5)=[1 0 0 b; 0 1 0 0; 0 0 1 0; 0 0 0 1];
     A(:,:,6)=[cos(alf) -sin(alf) 0 0; sin(alf) cos(alf) 0 0; 0 0 1 0; 0 0 0 1];
     
-    % Цикл для вычислления обратной матрицы, независимо от количества матриц
+    % Р¦РёРєР» РґР»СЏ РІС‹С‡РёСЃР»Р»РµРЅРёСЏ РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹, РЅРµР·Р°РІРёСЃРёРјРѕ РѕС‚ РєРѕР»РёС‡РµСЃС‚РІР° РјР°С‚СЂРёС†
     T=A(:,:,1);
     sz=size(A);
     if sz(3)>=2
@@ -1033,18 +1033,18 @@ if CountInvM==0
     end
     T=simplify(T);
     
-    % Формирование кравнения для вычисления угла beta
+    % Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РєСЂР°РІРЅРµРЅРёСЏ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СѓРіР»Р° beta
     if simplify(T(1,4)^2+T(2, 4)^2)~=a^2
         eq=simplify(T(1,4)^2+T(2, 4)^2-c^2-d^2);
     else
         eq=simplify(T(1,4)-c^2);
     end
     
-    beta1=collect(simplify(solve(eq,bet,'Real', true))) % вычисление угла Beta
-    t1=collect(simplify(solve(eq,t,'Real', true))); % вычисление угла Beta
+    beta1=collect(simplify(solve(eq,bet,'Real', true))) % РІС‹С‡РёСЃР»РµРЅРёРµ СѓРіР»Р° Beta
+    t1=collect(simplify(solve(eq,t,'Real', true))); % РІС‹С‡РёСЃР»РµРЅРёРµ СѓРіР»Р° Beta
     
-    waitbar(1,WKin,'Successfully ;-)'); % Окно ожидания расчёта обратной матрицы
-    close(WKin); % Закрытие окна расчёта обратной матрицы
+    waitbar(1,WKin,'Successfully ;-)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ СЂР°СЃС‡С‘С‚Р° РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹
+    close(WKin); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° СЂР°СЃС‡С‘С‚Р° РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹
     
 end
 %ElapsedLaLaLa = cputime - StartLaLaLa
@@ -1052,7 +1052,7 @@ end
 beta0=double(subs(beta1,[a b c d ff],[l1 l2 x y z]))*180/pi;
 %ElapsedLol = cputime - StartLaLaLa
 %beta0=double(beta0)*180/pi
-% Выбор значения угла Beta в диапазоне от 0 до 180
+% Р’С‹Р±РѕСЂ Р·РЅР°С‡РµРЅРёСЏ СѓРіР»Р° Beta РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ 180
 j=1;
 for i=1:length(beta0)
     if fix(beta0(i)*1e3)==0
@@ -1085,13 +1085,13 @@ end
 
 beta0=real(beta);
 
-% Вычисление угла theta
+% Р’С‹С‡РёСЃР»РµРЅРёРµ СѓРіР»Р° theta
 k1=l2*cosd(beta0)+l1;
 k2=l2*sind(beta0)+z;
 
 theta0=-(atan2d(y,x)-atan2d(k2,k1));
 
-% Проверка значения угла Theta в диапазоне от 0 до 180
+% РџСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёСЏ СѓРіР»Р° Theta РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ 180
 j=1;
 for i=1:length(theta0)
     if (fix(theta0(i))>=Angl(1,3)) && (fix(theta0(i))<=Angl(2,3))
@@ -1114,8 +1114,8 @@ end
 %ElapsedOlololo = cputime - StartLaLaLa
 end
 
-% Функция вычисления положения манипулятора, править!
-% Порядок данных в массиве InitData: theta, beta, alpha, phi, gamma
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°, РїСЂР°РІРёС‚СЊ!
+% РџРѕСЂСЏРґРѕРє РґР°РЅРЅС‹С… РІ РјР°СЃСЃРёРІРµ InitData: theta, beta, alpha, phi, gamma
 function InitData=PlotLocation(x,y,x1,y1)
 
 global q l1 l2 z fi TabAng CoorY CoorX choo ChaCond TabMaxTorq xa ya...
@@ -1123,11 +1123,11 @@ global q l1 l2 z fi TabAng CoorY CoorX choo ChaCond TabMaxTorq xa ya...
 
 xp=x0;
 yp=y0;
-%% Получение исходной информации
-%Start2 = cputime; % измерение времени работы функции
-Angl=checkRange; % Получение информации о рабочем диапазоне манипулятора
+%% РџРѕР»СѓС‡РµРЅРёРµ РёСЃС…РѕРґРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё
+%Start2 = cputime; % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
+Angl=checkRange; % РџРѕР»СѓС‡РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
-% Величины углов в предыдущей точке
+% Р’РµР»РёС‡РёРЅС‹ СѓРіР»РѕРІ РІ РїСЂРµРґС‹РґСѓС‰РµР№ С‚РѕС‡РєРµ
 angles0=get(TabAng,'Data');
 [rAng,cAng]=size(angles0);
 for i=1:rAng
@@ -1138,32 +1138,32 @@ for i=1:rAng
     end
 end
 
-% Запись исходного положения
+% Р—Р°РїРёСЃСЊ РёСЃС…РѕРґРЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
 if q==0
     q=1;
-    [x0,y0]=StartPoint(Angl(2,3),Angl(1,2)); % поиск координат манипулятора при минимальных значениях углов beta и theta
+    [x0,y0]=StartPoint(Angl(2,3),Angl(1,2)); % РїРѕРёСЃРє РєРѕРѕСЂРґРёРЅР°С‚ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° РїСЂРё РјРёРЅРёРјР°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёСЏС… СѓРіР»РѕРІ beta Рё theta
 else
     x0=x;
     y0=y;
 end
 
-%% Проверка нахождения координат в рабочем диапазоне манипулятора
-% Запись введённого положения
+%% РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ РІ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+% Р—Р°РїРёСЃСЊ РІРІРµРґС‘РЅРЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
 x2=x1;
 y2=y1;
 
-% Считывание информации о приоритетной координате
-val = get(choo,'Value'); % Значения: 1 - нет приоритета, 2 - X, 3 - Y
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ РєРѕРѕСЂРґРёРЅР°С‚Рµ
+val = get(choo,'Value'); % Р—РЅР°С‡РµРЅРёСЏ: 1 - РЅРµС‚ РїСЂРёРѕСЂРёС‚РµС‚Р°, 2 - X, 3 - Y
 
-% Считывание информации о наличии ограничений связанных с креплением манипулятора к дрону
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅР°Р»РёС‡РёРё РѕРіСЂР°РЅРёС‡РµРЅРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ РєСЂРµРїР»РµРЅРёРµРј РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° Рє РґСЂРѕРЅСѓ
 Sw = get(ChaCond,'Value');
 
-% Проверка значений координат, чтобы не превышали допустимые значения X и Y
+% РџСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёР№ РєРѕРѕСЂРґРёРЅР°С‚, С‡С‚РѕР±С‹ РЅРµ РїСЂРµРІС‹С€Р°Р»Рё РґРѕРїСѓСЃС‚РёРјС‹Рµ Р·РЅР°С‡РµРЅРёСЏ X Рё Y
 if val~=1
     x1=ParamCheck(x1,Angl(1,5),Angl(2,5));
     y1=ParamCheck(y1,Angl(1,6),Angl(2,6));
 else
-    if val == 1 % Возврат к предыдущим координатам в случае ввода координат вне допустимого диапазона
+    if val == 1 % Р’РѕР·РІСЂР°С‚ Рє РїСЂРµРґС‹РґСѓС‰РёРј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј РІ СЃР»СѓС‡Р°Рµ РІРІРѕРґР° РєРѕРѕСЂРґРёРЅР°С‚ РІРЅРµ РґРѕРїСѓСЃС‚РёРјРѕРіРѕ РґРёР°РїР°Р·РѕРЅР°
         if (x1<Angl(1,5)) || (x1>Angl(2,5)) || (y1<Angl(1,6)) || (y1>Angl(2,6))
             x1=x0;
             y1=y0;
@@ -1171,21 +1171,21 @@ else
     end
 end
 
-% Проверка координат в связи с ограничением длины звеньев
+% РџСЂРѕРІРµСЂРєР° РєРѕРѕСЂРґРёРЅР°С‚ РІ СЃРІСЏР·Рё СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј РґР»РёРЅС‹ Р·РІРµРЅСЊРµРІ
 if sqrt(x1^2+y1^2)<=(sqrt(l1^2+z^2)+l2)
     x=x1;
     y=y1;
 else
     [znx,zny]=Octothorpe(x1,y1,x0,y0);
-    if val == 2 % Выбрана ось X, как приоритетная
+    if val == 2 % Р’С‹Р±СЂР°РЅР° РѕСЃСЊ X, РєР°Рє РїСЂРёРѕСЂРёС‚РµС‚РЅР°СЏ
         x=x1;
         y=zny*sqrt((sqrt(l1^2+z^2)+l2)^2-x1^2);
     else
-        if val == 1 % Возврат к предыдущим координатам в случае ввода координат вне допустимого диапазона
+        if val == 1 % Р’РѕР·РІСЂР°С‚ Рє РїСЂРµРґС‹РґСѓС‰РёРј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј РІ СЃР»СѓС‡Р°Рµ РІРІРѕРґР° РєРѕРѕСЂРґРёРЅР°С‚ РІРЅРµ РґРѕРїСѓСЃС‚РёРјРѕРіРѕ РґРёР°РїР°Р·РѕРЅР°
             x=x0;
             y=y0;
         else
-            if val == 3 % Выбрана ось Y, как приоритетная
+            if val == 3 % Р’С‹Р±СЂР°РЅР° РѕСЃСЊ Y, РєР°Рє РїСЂРёРѕСЂРёС‚РµС‚РЅР°СЏ
                 y=y1;
                 x=znx*sqrt((sqrt(l1^2+z^2)+l2)^2-y1^2);
             end
@@ -1196,22 +1196,22 @@ end
 x;
 y;
 
-[x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Дополнительная проверка из-за ограничения связанного с наличием дрона
+[x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РёР·-Р·Р° РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РЅР°Р»РёС‡РёРµРј РґСЂРѕРЅР°
 % 2
 x;
 y;
 
-%% Вычисление углов между звеньями по координатам
-% Определение углов beta и theta
+%% Р’С‹С‡РёСЃР»РµРЅРёРµ СѓРіР»РѕРІ РјРµР¶РґСѓ Р·РІРµРЅСЊСЏРјРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
+% РћРїСЂРµРґРµР»РµРЅРёРµ СѓРіР»РѕРІ beta Рё theta
 [db,dt]=CalcAngl(x,y,Angl);
 db=180-db;
 
 [znx,zny]=Octothorpe(x,y,x0,y0);
 
-p=0; % Счётчик возврата к начальной точке
-imp=0; % Счётчик возврата недостижимости новой точки
+p=0; % РЎС‡С‘С‚С‡РёРє РІРѕР·РІСЂР°С‚Р° Рє РЅР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРµ
+imp=0; % РЎС‡С‘С‚С‡РёРє РІРѕР·РІСЂР°С‚Р° РЅРµРґРѕСЃС‚РёР¶РёРјРѕСЃС‚Рё РЅРѕРІРѕР№ С‚РѕС‡РєРё
 
-% Проверка нахождения угла beta в рабочем диапазоне
+% РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ СѓРіР»Р° beta РІ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ
 if (db<Angl(1,2)) || (db>Angl(2,2))
     while (db<Angl(1,2)) || (db>Angl(2,2)) || p==0
         if val~=1
@@ -1220,27 +1220,27 @@ if (db<Angl(1,2)) || (db>Angl(2,2))
             r=TeorCos(sqrt(l1^2+z^2),l2,db+atand(z/l1));
         end
         
-        if val==1 % Отсутстувует пересчёт координат, возврат к предыдущим координатам
+        if val==1 % РћС‚СЃСѓС‚СЃС‚СѓРІСѓРµС‚ РїРµСЂРµСЃС‡С‘С‚ РєРѕРѕСЂРґРёРЅР°С‚, РІРѕР·РІСЂР°С‚ Рє РїСЂРµРґС‹РґСѓС‰РёРј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
             x=x0;
             y=y0;
             p=1;
         else
-            if val==2 % Приоритет координата X
+            if val==2 % РџСЂРёРѕСЂРёС‚РµС‚ РєРѕРѕСЂРґРёРЅР°С‚Р° X
                 y=zny*sqrt(r^2-x^2);
             else
-                if val==3 % Приоритет координата Y
+                if val==3 % РџСЂРёРѕСЂРёС‚РµС‚ РєРѕРѕСЂРґРёРЅР°С‚Р° Y
                     x=znx*sqrt(r^2-y^2);
                 end
             end
-            [x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Дополнительная проверка из-за ограничения связанного с наличием дрона
+            [x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РёР·-Р·Р° РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РЅР°Р»РёС‡РёРµРј РґСЂРѕРЅР°
         end
         
         [db,dt]=CalcAngl(x,y,Angl);
         db=180-db;
         
-        imp=imp+1; % подсчёт количества итераций
+        imp=imp+1; % РїРѕРґСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РёС‚РµСЂР°С†РёР№
         
-        if imp==50 % возвращение к предыдущей точке, если не удаётся достигнуть нового значения
+        if imp==50 % РІРѕР·РІСЂР°С‰РµРЅРёРµ Рє РїСЂРµРґС‹РґСѓС‰РµР№ С‚РѕС‡РєРµ, РµСЃР»Рё РЅРµ СѓРґР°С‘С‚СЃСЏ РґРѕСЃС‚РёРіРЅСѓС‚СЊ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ
             x=x0;
             y=y0;
             p=1;
@@ -1254,34 +1254,34 @@ y;
 
 [znx,zny]=Octothorpe(x,y,x0,y0);
 
-if p~=1 % Проверка нахождения угла theta в рабочем диапазоне, если не произошёл возврат к исходным координатам
+if p~=1 % РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ СѓРіР»Р° theta РІ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ, РµСЃР»Рё РЅРµ РїСЂРѕРёР·РѕС€С‘Р» РІРѕР·РІСЂР°С‚ Рє РёСЃС…РѕРґРЅС‹Рј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
     if (dt<Angl(1,3)) || (dt>Angl(2,3))
         while (dt<Angl(1,3)) || (dt>Angl(2,3)) || p==0
             if val~=1
                 dt=ParamCheck(dt,Angl(1,3),Angl(2,3));
             end
             
-            if val==1 % Отсутстувует пересчёт координат, возврат к предыдущим координатам
+            if val==1 % РћС‚СЃСѓС‚СЃС‚СѓРІСѓРµС‚ РїРµСЂРµСЃС‡С‘С‚ РєРѕРѕСЂРґРёРЅР°С‚, РІРѕР·РІСЂР°С‚ Рє РїСЂРµРґС‹РґСѓС‰РёРј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
                 x=x0;
                 y=y0;
                 p=1;
             else
-                if val==2 % Приоритет координата X
+                if val==2 % РџСЂРёРѕСЂРёС‚РµС‚ РєРѕРѕСЂРґРёРЅР°С‚Р° X
                     y=sqrt(l2^2-(-znx*y-sqrt(l1^2+z^2)*cosd(180-dt-atand(z/l1)))^2)-sqrt(l1^2+z^2)*sind(180-dt-atand(z/l1));
                 else
-                    if val==3 % Приоритет координата Y
+                    if val==3 % РџСЂРёРѕСЂРёС‚РµС‚ РєРѕРѕСЂРґРёРЅР°С‚Р° Y
                         x=sqrt(l2^2-(-zny*y-sqrt(l1^2+z^2)*sind(180-dt-atand(z/l1)))^2)-sqrt(l1^2+z^2)*cosd(180-dt-atand(z/l1));
                     end
                 end
-                [x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Дополнительная проверка из-за ограничения связанного с наличием дрона
+                [x,y]=CheckGeom(Sw,val,x,y,x0,y0); % Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РёР·-Р·Р° РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РЅР°Р»РёС‡РёРµРј РґСЂРѕРЅР°
             end
             
             [db,dt]=CalcAngl(x,y,Angl);
             db=180-db;
             
-            imp=imp+1; % подсчёт количества итераций
+            imp=imp+1; % РїРѕРґСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РёС‚РµСЂР°С†РёР№
             
-            if imp==50 % возвращение к предыдущей точке, если не удаётся достигнуть нового значения
+            if imp==50 % РІРѕР·РІСЂР°С‰РµРЅРёРµ Рє РїСЂРµРґС‹РґСѓС‰РµР№ С‚РѕС‡РєРµ, РµСЃР»Рё РЅРµ СѓРґР°С‘С‚СЃСЏ РґРѕСЃС‚РёРіРЅСѓС‚СЊ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ
                 x=x0;
                 y=y0;
                 p=1;
@@ -1294,7 +1294,7 @@ end
 x;
 y;
 
-% Определение угла alfa при параллельности полу конечного звена
+% РћРїСЂРµРґРµР»РµРЅРёРµ СѓРіР»Р° alfa РїСЂРё РїР°СЂР°Р»Р»РµР»СЊРЅРѕСЃС‚Рё РїРѕР»Сѓ РєРѕРЅРµС‡РЅРѕРіРѕ Р·РІРµРЅР°
 da=db+dt-90;
 if da>Angl(2,1) || da<Angl(1,1)
     x=x0;
@@ -1304,15 +1304,15 @@ if da>Angl(2,1) || da<Angl(1,1)
     da=InitData(3);
 end   
 
-% Перезапись начальных координат
+% РџРµСЂРµР·Р°РїРёСЃСЊ РЅР°С‡Р°Р»СЊРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚
 x0=x;
 y0=y;
 
-% Запись полученных координат в приложение
+% Р—Р°РїРёСЃСЊ РїРѕР»СѓС‡РµРЅРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚ РІ РїСЂРёР»РѕР¶РµРЅРёРµ
 set(CoorX,'string',x);
 set(CoorY,'string',y);
 
-% Запись полученных углов в таблицу
+% Р—Р°РїРёСЃСЊ РїРѕР»СѓС‡РµРЅРЅС‹С… СѓРіР»РѕРІ РІ С‚Р°Р±Р»РёС†Сѓ
 datAng=get(TabAng,'Data');
 datAng(2,2)={db};
 datAng(3,2)={dt};
@@ -1322,9 +1322,9 @@ set(TabAng,'Data',datAng);
 da;
 db;
 dt;
-fi=cell2mat(datAng(4,2)); % считывание текущего положения угла phi
+fi=cell2mat(datAng(4,2)); % СЃС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ СѓРіР»Р° phi
 
-% Координаты звеньев
+% РљРѕРѕСЂРґРёРЅР°С‚С‹ Р·РІРµРЅСЊРµРІ
 LinkCoord=CalcCoord(dt,db,da);
 for i=1:4
     xc(i)=LinkCoord(i,1);
@@ -1332,7 +1332,7 @@ for i=1:4
 end
 %ElapsedAng = cputime - Start2
 
-%% Рассчёт крутящих моментов
+%% Р Р°СЃСЃС‡С‘С‚ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
 [T0,T1,T2,T3,arm123x,arm123y]=CalcTorq(db,dt);
 
 TMT=get(TabMaxTorq,'Data');
@@ -1342,17 +1342,17 @@ TMT(3,3)={T2};
 TMT(5,3)={T3};
 set(TabMaxTorq,'Data',TMT);
 
-%% Вывод графической информации
-% Изображение текущего положения манипулятора и его центра масс на графике
+%% Р’С‹РІРѕРґ РіСЂР°С„РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРё
+% РР·РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° Рё РµРіРѕ С†РµРЅС‚СЂР° РјР°СЃСЃ РЅР° РіСЂР°С„РёРєРµ
 
 cla
 
 hold on
 
-p1=plot(xa,ya,'g','LineWidth',5); % Изобрачение рабочей области манипулятора
-p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % Изображение текужего положения манипулятора
-p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс манипулятора
-p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс дрона
+p1=plot(xa,ya,'g','LineWidth',5); % РР·РѕР±СЂР°С‡РµРЅРёРµ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСѓР¶РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РґСЂРѕРЅР°
 PicDrone;
 
 PicGrip(xc(4),yc(4),fi);
@@ -1364,13 +1364,13 @@ set(leg,'FontSize',14,'FontName','Book Antiqua','FontWeight','Bold','Location','
 
 end
 
-% Функция считывания введённых диапазонов углов и координат и проверки их нахождения в допустимых диапазонах
-% Angl состоит из следующих данных: Min,Max - 1 и 2; alfa,beta,theta,x,y - 1..5
+% Р¤СѓРЅРєС†РёСЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РІРІРµРґС‘РЅРЅС‹С… РґРёР°РїР°Р·РѕРЅРѕРІ СѓРіР»РѕРІ Рё РєРѕРѕСЂРґРёРЅР°С‚ Рё РїСЂРѕРІРµСЂРєРё РёС… РЅР°С…РѕР¶РґРµРЅРёСЏ РІ РґРѕРїСѓСЃС‚РёРјС‹С… РґРёР°РїР°Р·РѕРЅР°С…
+% Angl СЃРѕСЃС‚РѕРёС‚ РёР· СЃР»РµРґСѓСЋС‰РёС… РґР°РЅРЅС‹С…: Min,Max - 1 Рё 2; alfa,beta,theta,x,y - 1..5
 function Angl=checkRange
 
 global TabAngles TabLength ChaCond l1 l2 z ChAn xa ya Angl0 gamma
 
-% Первая проверка допустимых диапазонов
+% РџРµСЂРІР°СЏ РїСЂРѕРІРµСЂРєР° РґРѕРїСѓСЃС‚РёРјС‹С… РґРёР°РїР°Р·РѕРЅРѕРІ
 if ChAn==0
     Angl=get(TabAngles,'Data');
     Angl0=Angl;
@@ -1379,34 +1379,34 @@ else
     Angl=get(TabAngles,'Data');
 end    
 
-% Запись прошлых значений длин звеньев и считывание новых длин
+% Р—Р°РїРёСЃСЊ РїСЂРѕС€Р»С‹С… Р·РЅР°С‡РµРЅРёР№ РґР»РёРЅ Р·РІРµРЅСЊРµРІ Рё СЃС‡РёС‚С‹РІР°РЅРёРµ РЅРѕРІС‹С… РґР»РёРЅ
 l10=l1;
 l20=l2;
 TL=get(TabLength,'Data');
 l1=cell2mat(TL(1,2));
 l2=cell2mat(TL(2,2));
 
-compAngl=sum(sum(Angl~=Angl0)); % проверка изменения диапазона
+compAngl=sum(sum(Angl~=Angl0)); % РїСЂРѕРІРµСЂРєР° РёР·РјРµРЅРµРЅРёСЏ РґРёР°РїР°Р·РѕРЅР°
 
-if (compAngl>0) || (l1~=l10) || (l2~=l20) || (ChAn==1)  % Костыль
+if (compAngl>0) || (l1~=l10) || (l2~=l20) || (ChAn==1)  % РљРѕСЃС‚С‹Р»СЊ
     
-    % Проверка рабочего диапазона углов alpha, beta и theta
-    RangAng=[-70 340; 0 180; 0 180]'; % максимально допустимые значения углов
+    % РџСЂРѕРІРµСЂРєР° СЂР°Р±РѕС‡РµРіРѕ РґРёР°РїР°Р·РѕРЅР° СѓРіР»РѕРІ alpha, beta Рё theta
+    RangAng=[-70 340; 0 180; 0 180]'; % РјР°РєСЃРёРјР°Р»СЊРЅРѕ РґРѕРїСѓСЃС‚РёРјС‹Рµ Р·РЅР°С‡РµРЅРёСЏ СѓРіР»РѕРІ
     for i=1:2
         for j=1:3
             Angl(i,j)=ParamCheck(Angl(i,j),RangAng(1,j),RangAng(2,j));
         end
     end
     
-    % Проверка рабочего диапазона координаты Х
-    % Определение минимального значения Х
+    % РџСЂРѕРІРµСЂРєР° СЂР°Р±РѕС‡РµРіРѕ РґРёР°РїР°Р·РѕРЅР° РєРѕРѕСЂРґРёРЅР°С‚С‹ РҐ
+    % РћРїСЂРµРґРµР»РµРЅРёРµ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РҐ
     if Angl(1,2)>=360-2*Angl(2,3)-Angl(2,2) % betaMin>=360-2*tetaMax-betaMax
         [Angl(1,5),yM]=CalcPos(Angl(2,3),Angl(2,2)); % xMin=l1*cosd(-tetaMax)-l2*cosd(betaMax+tetaMax)
     else
         [Angl(1,5),yM]=CalcPos(Angl(2,3),Angl(1,2)); % xMin=l1*cosd(-tetaMax)-l2*cosd(betaMin+tetaMax)
     end
     
-    % Определение максимального значения Х (выполняется при thetaMin+atand(z/l1))
+    % РћРїСЂРµРґРµР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РҐ (РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РїСЂРё thetaMin+atand(z/l1))
     if (Angl(1,2)<=(180-Angl(1,3))) && (Angl(2,2)>=(180-Angl(1,3))) % (betaMin<(180-tetaMin)) && (betaMax>(180-tetaMin))
         Angl(2,5)=l1*cosd(-Angl(1,3)-atand(z/l1))+z*cosd(-90+Angl(1,3)+atand(z/l1))+l2; % xMax=l1*cosd(-tetaMin)+l2
     else
@@ -1419,17 +1419,17 @@ if (compAngl>0) || (l1~=l10) || (l2~=l20) || (ChAn==1)  % Костыль
         end
     end
 
-    % Проверка рабочего диапазона координаты Y
-    % Определение минимального значения Y
+    % РџСЂРѕРІРµСЂРєР° СЂР°Р±РѕС‡РµРіРѕ РґРёР°РїР°Р·РѕРЅР° РєРѕРѕСЂРґРёРЅР°С‚С‹ Y
+    % РћРїСЂРµРґРµР»РµРЅРёРµ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ Y
     if Angl(1,3)>90 && Angl(2,3)>90 % tetaMin>90 && tetaMax>90
         if Angl(2,2)<(270-Angl(1,3)) % betaMax<270-tetaMin
-            [xM,Angl(1,6)]=CalcPos(Angl(1,3),Angl(2,2)); % yMin=l1*sind(-tetaMin)-l2*cosd(betaMax+tetaMin) только все синусы наверно
+            [xM,Angl(1,6)]=CalcPos(Angl(1,3),Angl(2,2)); % yMin=l1*sind(-tetaMin)-l2*cosd(betaMax+tetaMin) С‚РѕР»СЊРєРѕ РІСЃРµ СЃРёРЅСѓСЃС‹ РЅР°РІРµСЂРЅРѕ
         else
             if (Angl(2,2)>=(270-Angl(1,3))) && (Angl(1,2)<=(270-Angl(1,3))) % betaMax>=270-tetaMin & betaMin<=270-tetaMin
                 Angl(1,6)=-l1*sind(Angl(1,3))-z*sind(-90+Angl(1,3))-l2; % yMin=-l1*sind(tetaMin)-l2
             else
                 if Angl(1,2)>(270-Angl(1,3)) % betaMin>270-tetaMin
-                    [xM,Angl(1,6)]=CalcPos(Angl(1,3),Angl(1,2)); % yMin=l1*sind(-tetaMin)-l2*cosd(betaMin+tetaMin) только все синусы наверно
+                    [xM,Angl(1,6)]=CalcPos(Angl(1,3),Angl(1,2)); % yMin=l1*sind(-tetaMin)-l2*cosd(betaMin+tetaMin) С‚РѕР»СЊРєРѕ РІСЃРµ СЃРёРЅСѓСЃС‹ РЅР°РІРµСЂРЅРѕ
                 end
             end
             %Angl(1,5)=l1*sind(-Angl(1,3))+l2*sind(Angl(2,2)+Angl(1,3)); % yMin=l1*sind(-tetaMin)+l2*sind(betaMax+tetaMin)
@@ -1449,7 +1449,7 @@ if (compAngl>0) || (l1~=l10) || (l2~=l20) || (ChAn==1)  % Костыль
         end
     end
     
-    % Определение максимального значения Y
+    % РћРїСЂРµРґРµР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ Y
     ksi=fix(real(CalcAuxAng(sqrt(l1^2+z^2),l2,Angl(1,2))));
     if Angl(1,3)<=(90+ksi) % thetaMin<=(90+ksi)
         omega=90-Angl(1,3);
@@ -1467,39 +1467,39 @@ if (compAngl>0) || (l1~=l10) || (l2~=l20) || (ChAn==1)  % Костыль
     else
         omega=270-Angl(2,3);
         if (Angl(2,2)<omega) || (Angl(2,2)<2*omega-Angl(1,2))
-            [xM,Angl(2,6)]=CalcPos(Angl(2,3),Angl(1,2)); % yMax=l1*sind(-tetaMax)-l2*cosd(betaMin+tetaMax) только все синусы наверно
+            [xM,Angl(2,6)]=CalcPos(Angl(2,3),Angl(1,2)); % yMax=l1*sind(-tetaMax)-l2*cosd(betaMin+tetaMax) С‚РѕР»СЊРєРѕ РІСЃРµ СЃРёРЅСѓСЃС‹ РЅР°РІРµСЂРЅРѕ
         else
             if (Angl(1,2)>omega) || (Angl(1,2)>=2*omega-Angl(2,2))
-                [xM,Angl(2,6)]=CalcPos(Angl(2,3),Angl(2,2)); % yMax=l1*sind(-tetaMax)-l2*cosd(betaMax+tetaMax) только все синусы наверно
+                [xM,Angl(2,6)]=CalcPos(Angl(2,3),Angl(2,2)); % yMax=l1*sind(-tetaMax)-l2*cosd(betaMax+tetaMax) С‚РѕР»СЊРєРѕ РІСЃРµ СЃРёРЅСѓСЃС‹ РЅР°РІРµСЂРЅРѕ
             end
         end
     end
     
-    % Считывание информации о наличии ограничений связанных с креплением манипулятора к дрону
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅР°Р»РёС‡РёРё РѕРіСЂР°РЅРёС‡РµРЅРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ РєСЂРµРїР»РµРЅРёРµРј РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° Рє РґСЂРѕРЅСѓ
     Sw = get(ChaCond,'Value');
     if (Angl(2,6)>l2*sind(gamma)+z) && (Sw==1)
         Angl(2,6)=l2*sind(gamma)+z;
     end
         
-    [xa,ya]=PlotWorkArea(Angl); % отображение рабочей области
+    [xa,ya]=PlotWorkArea(Angl); % РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё
     
-    Angl(2,6)=max(ya); % поправка максимального значения Y при наличии дрона(временное решение)
+    Angl(2,6)=max(ya); % РїРѕРїСЂР°РІРєР° РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ Y РїСЂРё РЅР°Р»РёС‡РёРё РґСЂРѕРЅР°(РІСЂРµРјРµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ)
     
     set(TabAngles,'Data',Angl);
     
     ChAn=2; 
 end
 
-Angl0=Angl; % запись последнего диапазона
+Angl0=Angl; % Р·Р°РїРёСЃСЊ РїРѕСЃР»РµРґРЅРµРіРѕ РґРёР°РїР°Р·РѕРЅР°
 
 end
 
-% Функция определения начальной допустимой точки
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅР°С‡Р°Р»СЊРЅРѕР№ РґРѕРїСѓСЃС‚РёРјРѕР№ С‚РѕС‡РєРё
 function [x0,y0]=StartPoint(theta,beta)
 
 global TabAng
 
-% Определение начальных допустимых координат (только для первого вывода графика)
+% РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°С‡Р°Р»СЊРЅС‹С… РґРѕРїСѓСЃС‚РёРјС‹С… РєРѕРѕСЂРґРёРЅР°С‚ (С‚РѕР»СЊРєРѕ РґР»СЏ РїРµСЂРІРѕРіРѕ РІС‹РІРѕРґР° РіСЂР°С„РёРєР°)
 alpha=180-beta-theta;
 LinkCoord=CalcCoord(theta,beta,alpha);
 x0=LinkCoord(4,1);
@@ -1508,7 +1508,7 @@ db0=beta;
 dt0=theta;
 da0=alpha;
 
-% Запись полученных углов в таблицу
+% Р—Р°РїРёСЃСЊ РїРѕР»СѓС‡РµРЅРЅС‹С… СѓРіР»РѕРІ РІ С‚Р°Р±Р»РёС†Сѓ
 datAng=get(TabAng,'Data');
 datAng(2,2)={db0};
 datAng(3,2)={dt0};
@@ -1516,19 +1516,19 @@ datAng(1,2)={da0};
 set(TabAng,'Data',datAng);
 end
 
-% Дополнительная проверка координат из-за ограничения связанного с наличием дрона
+% Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РєРѕРѕСЂРґРёРЅР°С‚ РёР·-Р·Р° РѕРіСЂР°РЅРёС‡РµРЅРёСЏ СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РЅР°Р»РёС‡РёРµРј РґСЂРѕРЅР°
 function [x,y]=CheckGeom(Sw,val,x,y,x0,y0)
 
 global l1 z gamma
 
 p=l1-z/tand(gamma);
-if Sw==1 % корректировка с учётом структурных ограничений
-    if val==3 % Приоритетной является координата Y
+if Sw==1 % РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° СЃ СѓС‡С‘С‚РѕРј СЃС‚СЂСѓРєС‚СѓСЂРЅС‹С… РѕРіСЂР°РЅРёС‡РµРЅРёР№
+    if val==3 % РџСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ СЏРІР»СЏРµС‚СЃСЏ РєРѕРѕСЂРґРёРЅР°С‚Р° Y
         if (x>=0) && (x<p) && (y>=0)
             x=p;
         else
             if (x<p) && (y>0)
-                y=0; % возможно нужно подправить
+                y=0; % РІРѕР·РјРѕР¶РЅРѕ РЅСѓР¶РЅРѕ РїРѕРґРїСЂР°РІРёС‚СЊ
             else
                 if (x>=p) && (y>=0)
                     if y>(x-p)*tand(gamma)
@@ -1538,7 +1538,7 @@ if Sw==1 % корректировка с учётом структурных ограничений
             end
         end
     else
-        if val==2 % Приоритетной является координата X, возможно нужно подправить
+        if val==2 % РџСЂРёРѕСЂРёС‚РµС‚РЅРѕР№ СЏРІР»СЏРµС‚СЃСЏ РєРѕРѕСЂРґРёРЅР°С‚Р° X, РІРѕР·РјРѕР¶РЅРѕ РЅСѓР¶РЅРѕ РїРѕРґРїСЂР°РІРёС‚СЊ
             if (x<p) && (y>0)
                 y=0;
             else
@@ -1560,44 +1560,44 @@ if Sw==1 % корректировка с учётом структурных ограничений
 end
 end
 
-% Функция построения рабочей области манипулятора
+% Р¤СѓРЅРєС†РёСЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 function [xa,ya]=PlotWorkArea(Angl)
 
 global l1 l2 z gamma ChaCond TabMaxTorq
-%Start3 = cputime; % измерение времени работы функции
+%Start3 = cputime; % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
 
-WAr = waitbar(0,'Computation of WorkArea'); % Окно ожидания расчёта рабочей области
+WAr = waitbar(0,'Computation of WorkArea'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ СЂР°СЃС‡С‘С‚Р° СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё
 
-% Считывание информации о наличии ограничений связанных с креплением манипулятора к дрону
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅР°Р»РёС‡РёРё РѕРіСЂР°РЅРёС‡РµРЅРёР№ СЃРІСЏР·Р°РЅРЅС‹С… СЃ РєСЂРµРїР»РµРЅРёРµРј РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° Рє РґСЂРѕРЅСѓ
 Sw = get(ChaCond,'Value');
 
-% Рассчёт количества точек
+% Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° С‚РѕС‡РµРє
 h=0.1;
 
-% Построение области при tethaMax от betaMax до betaMin
+% РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕР±Р»Р°СЃС‚Рё РїСЂРё tethaMax РѕС‚ betaMax РґРѕ betaMin
 [xa1,ya1]=CalcArc((l1*cosd(Angl(2,3))+z*cosd(-90+Angl(2,3))),(-l1*sind(Angl(2,3))-z*sind(-90+Angl(2,3))),l2,-(Angl(2,2)-180+Angl(2,3)),-(Angl(1,2)-180+Angl(2,3)),h); %[xa1,ya1]=CalcArc((l1*cosd(tetaMax)),(-l1*sind(tetaMax)),l2,-(betaMax-180+tetaMax),-(betaMin-180+tetaMax),h);
 
-% Построение области при betaMin от tetaMax до tetaMin
+% РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕР±Р»Р°СЃС‚Рё РїСЂРё betaMin РѕС‚ tetaMax РґРѕ tetaMin
 phi1=CalcAuxAng(sqrt(l1^2+z^2),l2,Angl(1,2)+atand(z/l1)); % phi1=acosd((l1-l2*cosd(betaMin))/sqrt(l1^2+l2^2-2*l1*l2*cosd(betaMin)));
 [xa2,ya2]=CalcArc((0),(0),TeorCos(sqrt(l1^2+z^2),l2,Angl(1,2)+atand(z/l1)),-(Angl(2,3)-phi1-atand(z/l1)),-(Angl(1,3)-phi1-atand(z/l1)),h); % [xa2,ya2]=CalcArc((0),(0),sqrt(l1^2+l2^2-2*l1*l2*cosd(betaMin)),-(tetaMax-phi1),-(tetaMin-phi1),h);
 
-% Построение области при tethaMin от betaMin до beta Max
+% РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕР±Р»Р°СЃС‚Рё РїСЂРё tethaMin РѕС‚ betaMin РґРѕ beta Max
 [xa3,ya3]=CalcArc((l1*cosd(Angl(1,3))+z*cosd(-90+Angl(1,3))),(-l1*sind(Angl(1,3))-z*sind(-90+Angl(1,3))),l2,(180-Angl(1,3)-Angl(1,2)),(180-Angl(1,3)-Angl(2,2)),-h); % [xa3,ya3]=CalcArc((l1*cosd(tetaMin)),(-l1*sind(tetaMin)),l2,(180-tetaMin-betaMin),(180-tetaMin-betaMax),-h);
 
-% Построение области при betaMax от tethaMin до tethaMax
+% РџРѕСЃС‚СЂРѕРµРЅРёРµ РѕР±Р»Р°СЃС‚Рё РїСЂРё betaMax РѕС‚ tethaMin РґРѕ tethaMax
 phi2=CalcAuxAng(sqrt(l1^2+z^2),l2,Angl(2,2)+atand(z/l1)); % phi2=acosd((l1-l2*cosd(betaMax))/sqrt(l1^2+l2^2-2*l1*l2*cosd(betaMax)));
 [xa4,ya4]=CalcArc((0),(0),TeorCos(sqrt(l1^2+z^2),l2,Angl(2,2)+atand(z/l1)),-(Angl(1,3)-phi2-atand(z/l1)),-(Angl(2,3)-phi2-atand(z/l1)),-h); % [xa4,ya4]=CalcArc((0),(0),sqrt(l1^2+l2^2-2*l1*l2*cosd(betaMax)),-(tetaMin-phi2),-(tetaMax-phi2),-h);ElapsedPi = cputime - Start3
 
-% Объединение полученных координат рабочей области
+% РћР±СЉРµРґРёРЅРµРЅРёРµ РїРѕР»СѓС‡РµРЅРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё
 xa=[xa1 xa2 xa3 xa4];
 ya=[ya1 ya2 ya3 ya4];
 
-% Определение максимальных крутящих моментов моторов
+% РћРїСЂРµРґРµР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ РјРѕС‚РѕСЂРѕРІ
 i=1;
 Tmax=[0 0 0 0 0];
 for i=1:length(xa)
     
-    % Проверка нахождения манипулятора в допустимой зоне в I квадранте из-за наличия дрона
+    % РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° РІ РґРѕРїСѓСЃС‚РёРјРѕР№ Р·РѕРЅРµ РІ I РєРІР°РґСЂР°РЅС‚Рµ РёР·-Р·Р° РЅР°Р»РёС‡РёСЏ РґСЂРѕРЅР°
     if Sw==1
         if (xa(i)<TeorCos(sqrt(l1^2+z^2),l2,Angl(1,2)+atand(z/l1))) && (ya(i)>0)
             xa(i)=xa(i-1);
@@ -1617,7 +1617,7 @@ for i=1:length(xa)
     [db,dt]=CalcAngl(xa(i),ya(i),Angl);
     [T0,T1,T2,T3,arm123x,arm123y]=CalcTorq(db,dt);
     
-    % Обновление максимальных значений крутящих моментов
+    % РћР±РЅРѕРІР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
     if T0>Tmax(1)
         Tmax(1)=T0;
     end
@@ -1634,7 +1634,7 @@ for i=1:length(xa)
     
 end
 %ElapsedCalcu = cputime - Start3
-% Запись максимальных значений моментов
+% Р—Р°РїРёСЃСЊ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№ РјРѕРјРµРЅС‚РѕРІ
 TMT=get(TabMaxTorq,'Data');
 for i=1:5
     if i~=4
@@ -1643,13 +1643,13 @@ for i=1:5
 end
 set(TabMaxTorq,'Data',TMT);
 
-waitbar(1,WAr,'Successfully ;-)'); % Окно ожидания расчёта рабочей области
-close(WAr); % Закрытие окна расчёта рабочей области
+waitbar(1,WAr,'Successfully ;-)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ СЂР°СЃС‡С‘С‚Р° СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё
+close(WAr); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° СЂР°СЃС‡С‘С‚Р° СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё
 
 %Elapsedbl = cputime - Start3
 end
 
-% Функция определения значения угла beta
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ СѓРіР»Р° beta
 function [db,c2,s2,r0,r]=findBeta(x,y,l1,l2,betaMin,betaMax)
 
 c2=(x^2+y^2-l1^2-l2^2)/(2*l1*l2);
@@ -1660,37 +1660,37 @@ else
 end
 db=real(180-db);
 
-r0=l1^2+l2^2-2*l1*l2*cosd(db); % Определение текущего радиус-вектора
+r0=l1^2+l2^2-2*l1*l2*cosd(db); % РћРїСЂРµРґРµР»РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ СЂР°РґРёСѓСЃ-РІРµРєС‚РѕСЂР°
      
-% Проверка нахождения угла beta в рабочем диапазоне
+% РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ СѓРіР»Р° beta РІ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ
 if (db<betaMin) || (db>betaMax)
     db=ParamCheck(db,betaMin,betaMax);
     c2=cosd(180-db);
-    r=l1^2+l2^2-2*l1*l2*cosd(db); % Определение нового радиус-вектора
+    r=l1^2+l2^2-2*l1*l2*cosd(db); % РћРїСЂРµРґРµР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЂР°РґРёСѓСЃ-РІРµРєС‚РѕСЂР°
 else
     r=r0;
 end
     
 s2=sind(180-db);
-if abs(s2)<1e-6 % Замена точного значения
+if abs(s2)<1e-6 % Р—Р°РјРµРЅР° С‚РѕС‡РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ
     s2=0;
 end
     
 end
 
-% Функция определения угла tetha
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ СѓРіР»Р° tetha
 function [dt,c1,s1]=findTetha(x,y,l1,l2,c2,s2,tetaMin,tetaMax)
 
 c1=(y*l2*s2+x*(l1+l2*c2))/(l1^2+l2^2+2*l1*l2*c2);
 s1=(-x*l2*s2+y*(l1+l2*c2))/(l1^2+l2^2+2*l1*l2*c2);
 dt=-acosd(c1)+180;
     
-% Проверка положения звена №1 относительно оси Х
+% РџСЂРѕРІРµСЂРєР° РїРѕР»РѕР¶РµРЅРёСЏ Р·РІРµРЅР° в„–1 РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РѕСЃРё РҐ
 if (c1>0 && s1>=0) || (c1<0 && s1>=0)
     dt=360-dt;
 end
     
-% Проверка нахождения угла teta в рабочем диапазоне
+% РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ СѓРіР»Р° teta РІ СЂР°Р±РѕС‡РµРј РґРёР°РїР°Р·РѕРЅРµ
 if 180-dt<tetaMin
     dt=180-tetaMin;
 else
@@ -1707,7 +1707,7 @@ end
 
 end
 
-% Функция вычисления координат звеньев
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ Р·РІРµРЅСЊРµРІ
 function LinkCoord=CalcCoord(theta,beta,alpha)
 
 global l1 l2 l3 z
@@ -1728,7 +1728,7 @@ LinkCoord(5,2)=LinkCoord(4,2)+l3*sind(180-theta-beta-alpha);
 
 end
 
-% Функция вычисления положения третьего линка
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїРѕР»РѕР¶РµРЅРёСЏ С‚СЂРµС‚СЊРµРіРѕ Р»РёРЅРєР°
 function [xMax,yMax]=CalcPos(theta,beta)
 
 global l1 l2 z
@@ -1738,12 +1738,12 @@ yMax=l1*sind(-theta)-z*sind(-90+theta)+l2*sind(beta+theta); % Y
 
 end
 
-% Функция для вычисления вспомогательного угла
+% Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРіРѕ СѓРіР»Р°
 function AuxAng=CalcAuxAng(a,b,angle)
 AuxAng=acosd((a-b*cosd(angle))/sqrt(a^2+b^2-2*a*b*cosd(angle)));
 end
 
-% Матрица поворота
+% РњР°С‚СЂРёС†Р° РїРѕРІРѕСЂРѕС‚Р°
 function R=RotMat(arz,ary,arx)
 Rz=[cosd(arz) -sind(arz) 0 0; sind(arz) cosd(arz) 0 0; 0 0 1 0; 0 0 0 1];
 Ry=[cosd(ary) 0 sind(ary) 0; 0 1 0 0; -sind(ary) 0 cosd(ary) 0; 0 0 0 1];
@@ -1751,36 +1751,36 @@ Rx=[1 0 0 0; 0 cosd(arx) -sind(arx) 0; 0 sind(arx) cosd(arx) 0; 0 0 0 1];
 R=Rz*Ry*Rx;
 end
 
-% Матрица переноса
+% РњР°С‚СЂРёС†Р° РїРµСЂРµРЅРѕСЃР°
 function D=DisMat(qz,qy,qx)
 D=[1 0 0 qx; 0 1 0 qy; 0 0 1 qz; 0 0 0 1];
 end
 
-% Функция расчёта крутящих моментов моторов (нужно править...)
+% Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ РјРѕС‚РѕСЂРѕРІ (РЅСѓР¶РЅРѕ РїСЂР°РІРёС‚СЊ...)
 function [T0,T1,T2,T3,arm123x,arm123y]=CalcTorq(beta,teta)
 
 global TabMass l1 l2 l3 g cm1 cm2 cm3 arm4 Z1 Z2 ml1 ml2 mx z mkp
 
 M=get(TabMass,'Data');
-mc=cell2mat(M(1,2)); % кг, масса груза
-ms0=cell2mat(M(2,2)); % кг, масса сервомотора № 0
-ms1=cell2mat(M(3,2)); % кг, масса сервомотора № 1
-ms2=cell2mat(M(4,2)); % кг, масса сервомотора № 2
-ms3=cell2mat(M(5,2)); % кг, масса сервомотора № 3
-ms4=cell2mat(M(4,2)); % кг, масса сервомотора № 4
-m23=ml2+mx+mc+ms3+ms2+ms4; % кг, масса 2-го звена с сервомоторами (2 и 3), крепежом, хватом и грузом
-m123=ml1+ml2+mx+ms3+ms2+ms1+ms4; % кг, масса 1-го и 2-го звеньев с сервомоторами (1, 2, 3), крепежом, хватом и грузом
+mc=cell2mat(M(1,2)); % РєРі, РјР°СЃСЃР° РіСЂСѓР·Р°
+ms0=cell2mat(M(2,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 0
+ms1=cell2mat(M(3,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 1
+ms2=cell2mat(M(4,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2
+ms3=cell2mat(M(5,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 3
+ms4=cell2mat(M(4,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 4
+m23=ml2+mx+mc+ms3+ms2+ms4; % РєРі, РјР°СЃСЃР° 2-РіРѕ Р·РІРµРЅР° СЃ СЃРµСЂРІРѕРјРѕС‚РѕСЂР°РјРё (2 Рё 3), РєСЂРµРїРµР¶РѕРј, С…РІР°С‚РѕРј Рё РіСЂСѓР·РѕРј
+m123=ml1+ml2+mx+ms3+ms2+ms1+ms4; % РєРі, РјР°СЃСЃР° 1-РіРѕ Рё 2-РіРѕ Р·РІРµРЅСЊРµРІ СЃ СЃРµСЂРІРѕРјРѕС‚РѕСЂР°РјРё (1, 2, 3), РєСЂРµРїРµР¶РѕРј, С…РІР°С‚РѕРј Рё РіСЂСѓР·РѕРј
 
-% Центр тяжести манипулятора без груза
+% Р¦РµРЅС‚СЂ С‚СЏР¶РµСЃС‚Рё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР° Р±РµР· РіСЂСѓР·Р°
 arm123x=((ml1*cm1+(ms1+ml2+mx+ms3+ms2+ms4)*l1)*cosd(teta)+(ml2*(cm1)+(mx+ms3+ms4+ms2)*(l2))*cosd(180-(beta+teta))+mx*l3+ms3*cm3)/m123;
 arm123y=((ml1*cm1+(ms1+ml2+mx+ms3+ms2+ms4)*l1)*sind(-teta)+(ml2*(cm1)+(mx+ms3+ms4+ms2)*(l2))*sind(180-(beta+teta)))/m123;
 
-T4=arm4*mc*g; % момент, создаваемый грузом
-u=Z2/Z1; % передаточное число
-T3=10.19716*T4/u; % кг-см, крутящий момент сервомотора № 3
-T2=10.19716*(mx*cm3+mc*(cm3+arm4)+ms3*l3+0.022*0.0207+0.164*0.01+0.173*0.006)*g; % кг-см, крутящий момент сервомотора № 2
-T1=T2+10.19716*((mc + mx + ms3+ms4 + ms2+0.0207+0.01+0.006)*l2 + ml2*cm2)*g*(cosd(180-teta-beta)); % кг-см, крутящий момент сервомотора № 1
-T0=T1+10.19716*((mc + mx + ms3+ms4 + ms2 + ml2 + ms1+0.0207+0.01+0.006+0.02)*sqrt(l1^2+z^2) + ml1*cm1)*g*(cosd(teta-acosd(l1/sqrt(l1^2+z^2)))); % кг-см, крутящий момент сервомотора № 0
+T4=arm4*mc*g; % РјРѕРјРµРЅС‚, СЃРѕР·РґР°РІР°РµРјС‹Р№ РіСЂСѓР·РѕРј
+u=Z2/Z1; % РїРµСЂРµРґР°С‚РѕС‡РЅРѕРµ С‡РёСЃР»Рѕ
+T3=10.19716*T4/u; % РєРі-СЃРј, РєСЂСѓС‚СЏС‰РёР№ РјРѕРјРµРЅС‚ СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 3
+T2=10.19716*(mx*cm3+mc*(cm3+arm4)+ms3*l3+0.022*0.0207+0.164*0.01+0.173*0.006)*g; % РєРі-СЃРј, РєСЂСѓС‚СЏС‰РёР№ РјРѕРјРµРЅС‚ СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2
+T1=T2+10.19716*((mc + mx + ms3+ms4 + ms2+0.0207+0.01+0.006)*l2 + ml2*cm2)*g*(cosd(180-teta-beta)); % РєРі-СЃРј, РєСЂСѓС‚СЏС‰РёР№ РјРѕРјРµРЅС‚ СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 1
+T0=T1+10.19716*((mc + mx + ms3+ms4 + ms2 + ml2 + ms1+0.0207+0.01+0.006+0.02)*sqrt(l1^2+z^2) + ml1*cm1)*g*(cosd(teta-acosd(l1/sqrt(l1^2+z^2)))); % РєРі-СЃРј, РєСЂСѓС‚СЏС‰РёР№ РјРѕРјРµРЅС‚ СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 0
 
 %if T0<0
 %    T0=-1*T0;
@@ -1788,47 +1788,47 @@ T0=T1+10.19716*((mc + mx + ms3+ms4 + ms2 + ml2 + ms1+0.0207+0.01+0.006+0.02)*sqr
 
 end
 
-% Функция вычисления координат рабочей области (построение одного элемента)
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕРѕСЂРґРёРЅР°С‚ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё (РїРѕСЃС‚СЂРѕРµРЅРёРµ РѕРґРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°)
 function [xa,ya]=CalcArc(xc,yc,R,a1,a2,h)
 xa=xc + R * cos((a1*pi/180):h:(a2*pi/180));
 ya=yc + R * sin((a1*pi/180):h:(a2*pi/180));
 end
 
-%% Блок управления устройствами
-% Функция подключения/отключения Arduino
+%% Р‘Р»РѕРє СѓРїСЂР°РІР»РµРЅРёСЏ СѓСЃС‚СЂРѕР№СЃС‚РІР°РјРё
+% Р¤СѓРЅРєС†РёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ/РѕС‚РєР»СЋС‡РµРЅРёСЏ Arduino
 function [Ard,serv]=ArdSwitch(SwC)
 
 global TabSens CountArd Us serv tps
 
-[kMr,ChMot]=NumbMot({'Servo'}); % Проверка количества сервомоторов
+[kMr,ChMot]=NumbMot({'Servo'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° СЃРµСЂРІРѕРјРѕС‚РѕСЂРѕРІ
 
 if (SwC>=2) && (kMr~=0)
     
-    WCon = waitbar(0,'Connection to Arduino'); % Окно ожидания подключения
+    WCon = waitbar(0,'Connection to Arduino'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     clear Ard serv
-    Ard=arduino('btspp://98D33491078C','uno'); % Подключение к Arduino
+    Ard=arduino('btspp://98D33491078C','uno'); % РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє Arduino
     CountArd=1;
     
-    writeDigitalPin(Ard,'D3',1); % включение питания
+    writeDigitalPin(Ard,'D3',1); % РІРєР»СЋС‡РµРЅРёРµ РїРёС‚Р°РЅРёСЏ
     
-    % Подключение ультразвукового датчика
-    waitbar(1/6,WCon,'Connection Ultrasonic sensor'); % Окно ожидания подключения
+    % РџРѕРґРєР»СЋС‡РµРЅРёРµ СѓР»СЊС‚СЂР°Р·РІСѓРєРѕРІРѕРіРѕ РґР°С‚С‡РёРєР°
+    waitbar(1/6,WCon,'Connection Ultrasonic sensor'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     Tsens=get(TabSens,'Data');
     if strcmp({'on'},Tsens(3,2))==1
-        Us = addon(Ard, 'JRodrigoTech/HCSR04', 'D12', 'D11'); % Подключение ультразвукового датчика (trigger pin D7 и echo pin D11)
+        Us = addon(Ard, 'JRodrigoTech/HCSR04', 'D12', 'D11'); % РџРѕРґРєР»СЋС‡РµРЅРёРµ СѓР»СЊС‚СЂР°Р·РІСѓРєРѕРІРѕРіРѕ РґР°С‚С‡РёРєР° (trigger pin D7 Рё echo pin D11)
     else
         Us=0;
     end
     
-    AngMas=ConvAng; % Считывание текущих значений углов
+    AngMas=ConvAng; % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
     
-    % Подключение сервомоторов
-    Pins=[{'D8'} {'D7'} {'D4'} {'D3'} {'D2'}]; % подключение моторов к пинам Arduino (база, центр, запястье, схват)
+    % РџРѕРґРєР»СЋС‡РµРЅРёРµ СЃРµСЂРІРѕРјРѕС‚РѕСЂРѕРІ
+    Pins=[{'D8'} {'D7'} {'D4'} {'D3'} {'D2'}]; % РїРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂРѕРІ Рє РїРёРЅР°Рј Arduino (Р±Р°Р·Р°, С†РµРЅС‚СЂ, Р·Р°РїСЏСЃС‚СЊРµ, СЃС…РІР°С‚)
     j=1;
     for i=1:5
-        waitbar((i+1)/6,WCon,'Connection to Motors'); % Окно ожидания подключения
-        if strcmp({'Servo'},ChMot(i,2))==1 % Проверка подключения к сервомотору
-            serv(j) = servo(Ard,strjoin(Pins(i))); % Подключение к сервомотору № 1 (база) к пину 8
+        waitbar((i+1)/6,WCon,'Connection to Motors'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
+        if strcmp({'Servo'},ChMot(i,2))==1 % РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє СЃРµСЂРІРѕРјРѕС‚РѕСЂСѓ
+            serv(j) = servo(Ard,strjoin(Pins(i))); % РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє СЃРµСЂРІРѕРјРѕС‚РѕСЂСѓ в„– 1 (Р±Р°Р·Р°) Рє РїРёРЅСѓ 8
             if i==5
                 if AngMas(i-1)~=cell2mat({' '})
                     writePosition(serv(j),AngMas(i-1));
@@ -1836,31 +1836,31 @@ if (SwC>=2) && (kMr~=0)
             elseif AngMas(i)~=cell2mat({' '})
                 writePosition(serv(j),AngMas(i));
             end
-            tps(j)=i; % Запись номеров сервомоторов
+            tps(j)=i; % Р—Р°РїРёСЃСЊ РЅРѕРјРµСЂРѕРІ СЃРµСЂРІРѕРјРѕС‚РѕСЂРѕРІ
             j=j+1;
         end
     end
-    % Считывание и перезапись показаний сенсоров
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ Рё РїРµСЂРµР·Р°РїРёСЃСЊ РїРѕРєР°Р·Р°РЅРёР№ СЃРµРЅСЃРѕСЂРѕРІ
     SensData(Ard);
     
-    waitbar(6/6,WCon,'Successfully ;-)'); % Окно ожидания подключения
-    close(WCon); % Закрытие окна ожидания подключения
+    waitbar(6/6,WCon,'Successfully ;-)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
+    close(WCon); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 
 end
 
 end
 
-% Функция считывания показаний датчиков силы и расстояния
+% Р¤СѓРЅРєС†РёСЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РїРѕРєР°Р·Р°РЅРёР№ РґР°С‚С‡РёРєРѕРІ СЃРёР»С‹ Рё СЂР°СЃСЃС‚РѕСЏРЅРёСЏ
 function SensData(Ard)
 
 global TabSens TabMass Us DevCon mcc err massc
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 if SwC>=2
     Tsens=get(TabSens,'Data');
     
-    if strcmp({'on'},Tsens(1,2))==1 % Проверка подключения сенсора № 1
+    if strcmp({'on'},Tsens(1,2))==1 % РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЃРµРЅСЃРѕСЂР° в„– 1
         V1=readVoltage(Ard,strjoin({'A0'}));
         if V1<0.4545
             V1=0.4545;
@@ -1869,7 +1869,7 @@ if SwC>=2
         Tsens(1,3)={DatSens1};
     end
     
-    if strcmp({'on'},Tsens(2,2))==1 % Проверка подключения сенсора № 2
+    if strcmp({'on'},Tsens(2,2))==1 % РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЃРµРЅСЃРѕСЂР° в„– 2
         DatSens2=CalcForce(readVoltage(Ard,strjoin({'A4'})));
         if DatSens2<1.071
             DatSens2=0;
@@ -1885,47 +1885,47 @@ if SwC>=2
         set(TabMass,'Data',M);
     end
     
-    % Расчёт примерного веса груза
+    % Р Р°СЃС‡С‘С‚ РїСЂРёРјРµСЂРЅРѕРіРѕ РІРµСЃР° РіСЂСѓР·Р°
 %     if (DatSens1~=0) || (DatSens2~=0)
         mcc=CalcCargo(0);
 %     else
 %         mcc=0;
 %     end
     
-    if strcmp({'on'},Tsens(3,2))==1 % Проверка подключения ультразвукового датчика
+    if strcmp({'on'},Tsens(3,2))==1 % РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ СѓР»СЊС‚СЂР°Р·РІСѓРєРѕРІРѕРіРѕ РґР°С‚С‡РёРєР°
         DatSens3 = readDistance(Us);
         Tsens(3,3)={DatSens3};
     end
     
-    set(TabSens,'Data',Tsens); % Запись данных датчиков в таблицу
+    set(TabSens,'Data',Tsens); % Р—Р°РїРёСЃСЊ РґР°РЅРЅС‹С… РґР°С‚С‡РёРєРѕРІ РІ С‚Р°Р±Р»РёС†Сѓ
     
 end
 
 end
 
-% Функция вычисления прикладываемой к датчику силы
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїСЂРёРєР»Р°РґС‹РІР°РµРјРѕР№ Рє РґР°С‚С‡РёРєСѓ СЃРёР»С‹
 function FSens=CalcForce(VSens)
 
 global g
 
-R2=[100000 30000 11000 6200 3400 2100 1300 740 450 310 260]; % Ом, сопротивление на резисторе
-F2=g*0.001*[16 20 50 100 260 510 1000 2000 4000 7000 10000]; % Н, величина прикладываемой силы
+R2=[100000 30000 11000 6200 3400 2100 1300 740 450 310 260]; % РћРј, СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ РЅР° СЂРµР·РёСЃС‚РѕСЂРµ
+F2=g*0.001*[16 20 50 100 260 510 1000 2000 4000 7000 10000]; % Рќ, РІРµР»РёС‡РёРЅР° РїСЂРёРєР»Р°РґС‹РІР°РµРјРѕР№ СЃРёР»С‹
 
 if VSens<(50/110)
     FSens=0;
 else
     RSens=10000*5/VSens-10000;
-    FSens=interp1(R2,F2,RSens); % вычисление силы для полученного напряжения датчика
+    FSens=interp1(R2,F2,RSens); % РІС‹С‡РёСЃР»РµРЅРёРµ СЃРёР»С‹ РґР»СЏ РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РЅР°РїСЂСЏР¶РµРЅРёСЏ РґР°С‚С‡РёРєР°
 end
 
 end
 
-% Функция подключения/отключения моторов Dynamixel при использовании USB2Dynomixel
+% Р¤СѓРЅРєС†РёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ/РѕС‚РєР»СЋС‡РµРЅРёСЏ РјРѕС‚РѕСЂРѕРІ Dynamixel РїСЂРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё USB2Dynomixel
 function DynoSwitch(SwC)
 
 global CountArd CountDyn CountOCM Us IDm Ard serv  p PROTOCOL_VERSION group LEN_MX_MOVING
 
-[kMr,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+[kMr,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
     
 if (SwC==3) && (kMr~=0)
     
@@ -1934,19 +1934,19 @@ if (SwC==3) && (kMr~=0)
         clear Dxl IDm
     end
     
-    WConD = waitbar(0,'Connection to USB2Dynamixel (~1 sec)'); % Окно ожидания подключения
+    WConD = waitbar(0,'Connection to USB2Dynamixel (~1 sec)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     
     if CountArd~=1
         [Ard,serv]=ArdSwitch(SwC);
     end
     
-    %loadlibrary('dxl_x64_c', 'dynamixel.h'); % подключение библиотеки для моторов Dynamixel
+    %loadlibrary('dxl_x64_c', 'dynamixel.h'); % РїРѕРґРєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
     [notfound, warnings] = loadlibrary('dxl_x64_c', 'dynamixel_sdk.h', 'addheader', 'port_handler.h', 'addheader', 'packet_handler.h', 'addheader', 'group_bulk_read.h');
     
-    % Подключение моторов
-    waitbar(1/2,WConD,'Connection with motors'); % Окно ожидания подключения
+    % РџРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂРѕРІ
+    waitbar(1/2,WConD,'Connection with motors'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     pause(0.1);
-    p=defCOM; % Подключение моторов
+    p=defCOM; % РџРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂРѕРІ
     packetHandler(); % Initialize PacketHandler Structs
     openPort(p);
     BAUDRATE = 1000000;
@@ -1955,7 +1955,7 @@ if (SwC==3) && (kMr~=0)
     group = groupBulkRead(p, PROTOCOL_VERSION);
     LEN_MX_MOVING=1;
     
-    IDm=DynID(kMr,ChMot,p,PROTOCOL_VERSION); % Определение ID моторов
+    IDm=DynID(kMr,ChMot,p,PROTOCOL_VERSION); % РћРїСЂРµРґРµР»РµРЅРёРµ ID РјРѕС‚РѕСЂРѕРІ
     
     pause(0.2);
 
@@ -1963,12 +1963,12 @@ if (SwC==3) && (kMr~=0)
         for jDm=1:kMr
             DynoData(IDm(jDm),jDm);
         end
-        waitbar(2/2,WConD,'Successfully ;-)'); % Окно ожидания подключения
+        waitbar(2/2,WConD,'Successfully ;-)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     else
-        waitbar(2/2,WConD,'Dynamixels are absent'); % Окно ожидания подключения
+        waitbar(2/2,WConD,'Dynamixels are absent'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     end
     
-    % Добавление моторов в группу со всеми моторами
+    % Р”РѕР±Р°РІР»РµРЅРёРµ РјРѕС‚РѕСЂРѕРІ РІ РіСЂСѓРїРїСѓ СЃРѕ РІСЃРµРјРё РјРѕС‚РѕСЂР°РјРё
     CurAng(1)=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),36);
     CurAng(2)=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(2),36);
     CurAng(3)=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(3),36);
@@ -1990,55 +1990,55 @@ if (SwC==3) && (kMr~=0)
     end
     
     CountDyn=1;
-    close(WConD); % Закрытие окна ожидания подключения
+    close(WConD); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
        
 end
 
 end
 
-% Функция определения номера COM порта с USB2Dynamixel
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРѕРјРµСЂР° COM РїРѕСЂС‚Р° СЃ USB2Dynamixel
 function p=defCOM(src,evt)
 
 % port_num=7;
 % 
 % while port_num~=252
 %     portCOM=['COM' num2str(port_num)];
-%     p=portHandler(portCOM); % подключение мотора со скоростью передачи данных 1 Mb
+%     p=portHandler(portCOM); % РїРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂР° СЃРѕ СЃРєРѕСЂРѕСЃС‚СЊСЋ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… 1 Mb
 %     if p == 1
 %         break
 %     else
 %         port_num=port_num+1
 %     end
 % end
-p=portHandler('COM7'); % подключение мотора со скоростью передачи данных 1 Mb
+p=portHandler('COM7'); % РїРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂР° СЃРѕ СЃРєРѕСЂРѕСЃС‚СЊСЋ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… 1 Mb
 
 end
 
-% Функция определение ID мотора Dynamixel (1, 5, 11, 15)
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёРµ ID РјРѕС‚РѕСЂР° Dynamixel (1, 5, 11, 15)
 function IDm=DynID(kMr,ChMot,p,PROTOCOL_VERSION)
 
 global TabMot
 
-kM=0; % Счётчик количества моторов
-ID=1; % Переменная для определения текущего ID
+kM=0; % РЎС‡С‘С‚С‡РёРє РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ
+ID=1; % РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ ID
 IDm=0;
 while (kM<kMr) || (ID<252)
     dxl_model_number = pingGetModelNum(p, PROTOCOL_VERSION, ID);
     dxl_comm_result = getLastTxRxResult(p, PROTOCOL_VERSION);
     if (dxl_comm_result == 0) %|| (s == 2)
         kM=kM+1;
-        IDm(kM)=ID; % Запись полученного ID
+        IDm(kM)=ID; % Р—Р°РїРёСЃСЊ РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ ID
         ChMot(kM,7)={ID};
         
-        write1ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 24, 1); % запись удержания момента
-        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 6, 0); % запись минимального угла CW
+        write1ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 24, 1); % Р·Р°РїРёСЃСЊ СѓРґРµСЂР¶Р°РЅРёСЏ РјРѕРјРµРЅС‚Р°
+        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 6, 0); % Р·Р°РїРёСЃСЊ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CW
         if pingGetModelNum(p, PROTOCOL_VERSION, IDm(kM))==12 %NMot(kMr)==12
-            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 8, 1023); % запись максимального угла CCW для AX-12
+            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 8, 1023); % Р·Р°РїРёСЃСЊ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CCW РґР»СЏ AX-12
         else
-            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 8, 4095); % запись максимального угла CCW для MX-28T и MX-64T
+            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 8, 4095); % Р·Р°РїРёСЃСЊ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CCW РґР»СЏ MX-28T Рё MX-64T
         end
-        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 14, 1023); % включение максимального крутящего момента
-        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 34, 1023); % включение максимального крутящего момента
+        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 14, 1023); % РІРєР»СЋС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
+        write2ByteTxRx(p, PROTOCOL_VERSION, IDm(kM), 34, 1023); % РІРєР»СЋС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
     end
     ID=ID+1;
     
@@ -2048,8 +2048,8 @@ while (kM<kMr) || (ID<252)
 end
 %     KolMot=kMr;
 %     for i=1:length(IDm)
-%         calllib('dxl_x64_c', 'dxl_ping',int32(IDm(i))); % Проверка отклика мотора
-%         s=calllib('dxl_x64_c', 'dxl_get_result') % Проверка ответа мотора
+%         calllib('dxl_x64_c', 'dxl_ping',int32(IDm(i))); % РџСЂРѕРІРµСЂРєР° РѕС‚РєР»РёРєР° РјРѕС‚РѕСЂР°
+%         s=calllib('dxl_x64_c', 'dxl_get_result') % РџСЂРѕРІРµСЂРєР° РѕС‚РІРµС‚Р° РјРѕС‚РѕСЂР°
 %         if (s == 1) %|| (s == 2)
 %             KolMot=KolMot-1
 %         end
@@ -2064,19 +2064,19 @@ set(TabMot,'Data',ChMot);
 
 end
 
-% Функция проверки скоростей и коэффициентов ПИД-регулятора моторов Dynamixel
+% Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРєРѕСЂРѕСЃС‚РµР№ Рё РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ РџРР”-СЂРµРіСѓР»СЏС‚РѕСЂР° РјРѕС‚РѕСЂРѕРІ Dynamixel
 function DynoSpeed(kMr,IDm,ChMot)
 
 global TabMot p PROTOCOL_VERSION
 
-DynCom=[32 28 27 26]; % номера команд для скорости, коэффициентов P, I и D соответственно
-DynCom2=[32 28 26 48]; % номера команд для скорости, коэффициентов P, I и D соответственно
+DynCom=[32 28 27 26]; % РЅРѕРјРµСЂР° РєРѕРјР°РЅРґ РґР»СЏ СЃРєРѕСЂРѕСЃС‚Рё, РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ P, I Рё D СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ
+DynCom2=[32 28 26 48]; % РЅРѕРјРµСЂР° РєРѕРјР°РЅРґ РґР»СЏ СЃРєРѕСЂРѕСЃС‚Рё, РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ P, I Рё D СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ
 
 for jDm=1:kMr
     for i=3:1:6
         PDyno(i)=str2num(cell2mat(ChMot(jDm,i)));
         
-        % Проверка нахождения значений в допустимом диапазоне
+        % РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РІ РґРѕРїСѓСЃС‚РёРјРѕРј РґРёР°РїР°Р·РѕРЅРµ
         if i==3
             PDyno(i)=ParamCheck(PDyno(i),0,1023);
         else
@@ -2084,17 +2084,17 @@ for jDm=1:kMr
         end
         
         if i-2==1
-            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
+            write2ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
         else
             if jDm<kMr
-                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
+                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
             else
-                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom2(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
-                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),(DynCom2(i-2)+1),int32(PDyno(i))); % запись проверенного параметра на мотор
+                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),DynCom2(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
+                write1ByteTxRx(p, PROTOCOL_VERSION, IDm(jDm),(DynCom2(i-2)+1),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
             end
         end
-        %Dxl.writeWord(IDm(jDm),DynCom(i-2),PDyno(i)); % запись проверенного параметра на мотор
-        ChMot(jDm,i)=cellstr(num2str(PDyno(i))); % перезапись нового значения параметра
+        %Dxl.writeWord(IDm(jDm),DynCom(i-2),PDyno(i)); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
+        ChMot(jDm,i)=cellstr(num2str(PDyno(i))); % РїРµСЂРµР·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂР°
     end
 end
 
@@ -2102,31 +2102,31 @@ set(TabMot,'Data',ChMot);
 
 end
 
-% Функция считывания данных с моторов Dynamixel !есть ссылка на конкретные ID!
+% Р¤СѓРЅРєС†РёСЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РґР°РЅРЅС‹С… СЃ РјРѕС‚РѕСЂРѕРІ Dynamixel !РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° РєРѕРЅРєСЂРµС‚РЅС‹Рµ ID!
 function DynoData(ID,jDm)
 
 global TabMaxTorq TabAng CoorX CoorY CountMot CountDyn InitData p PROTOCOL_VERSION IDm
 
-% считывание значений напряжений на моторах
-TMT=get(TabMaxTorq,'Data'); % считывание данных таблицы с данными моторов
+% СЃС‡РёС‚С‹РІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РЅР°РїСЂСЏР¶РµРЅРёР№ РЅР° РјРѕС‚РѕСЂР°С…
+TMT=get(TabMaxTorq,'Data'); % СЃС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ СЃ РґР°РЅРЅС‹РјРё РјРѕС‚РѕСЂРѕРІ
 V=read1ByteTxRx(p, PROTOCOL_VERSION, ID,42)/10;
 TMT(jDm,6)={V};
 
-% считывание нагрузок моторов
-Tm=read2ByteTxRx(p, PROTOCOL_VERSION,ID,40); % считывание текущей нагрузки
+% СЃС‡РёС‚С‹РІР°РЅРёРµ РЅР°РіСЂСѓР·РѕРє РјРѕС‚РѕСЂРѕРІ
+Tm=read2ByteTxRx(p, PROTOCOL_VERSION,ID,40); % СЃС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РµР№ РЅР°РіСЂСѓР·РєРё
 % Enco=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),36)
 % Enco2=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(2),36)
 % Enco3=read2ByteTxRx(p, PROTOCOL_VERSION, IDm(3),36)
-% Проверка моторов на восприятие нагрузки и перезапуск при необходимости
+% РџСЂРѕРІРµСЂРєР° РјРѕС‚РѕСЂРѕРІ РЅР° РІРѕСЃРїСЂРёСЏС‚РёРµ РЅР°РіСЂСѓР·РєРё Рё РїРµСЂРµР·Р°РїСѓСЃРє РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё
 if (Tm==0) && (CountMot~=0) && (CountDyn~=2)
     CurAng=read2ByteTxRx(p, PROTOCOL_VERSION, ID,36);
-    write2ByteTxRx(p, PROTOCOL_VERSION, ID,34,1023); % восстановление восприятия нагрузки
-    write2ByteTxRx(p, PROTOCOL_VERSION, ID,14,1023); % восстановление восприятия нагрузки
-    write2ByteTxRx(p, PROTOCOL_VERSION, ID,30,int32(CurAng)); % запись требуемого положения
-    Tm=read2ByteTxRx(p, PROTOCOL_VERSION, ID,40); % повторное считывание нагрузки
+    write2ByteTxRx(p, PROTOCOL_VERSION, ID,34,1023); % РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РІРѕСЃРїСЂРёСЏС‚РёСЏ РЅР°РіСЂСѓР·РєРё
+    write2ByteTxRx(p, PROTOCOL_VERSION, ID,14,1023); % РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РІРѕСЃРїСЂРёСЏС‚РёСЏ РЅР°РіСЂСѓР·РєРё
+    write2ByteTxRx(p, PROTOCOL_VERSION, ID,30,int32(CurAng)); % Р·Р°РїРёСЃСЊ С‚СЂРµР±СѓРµРјРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
+    Tm=read2ByteTxRx(p, PROTOCOL_VERSION, ID,40); % РїРѕРІС‚РѕСЂРЅРѕРµ СЃС‡РёС‚С‹РІР°РЅРёРµ РЅР°РіСЂСѓР·РєРё
     pause (0.1)
     
-    % Обновление информации о положении в приложении
+    % РћР±РЅРѕРІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїРѕР»РѕР¶РµРЅРёРё РІ РїСЂРёР»РѕР¶РµРЅРёРё
     datAng=get(TabAng,'Data');
     Beta=cell2mat(datAng(2,2));
     Theta=cell2mat(datAng(3,2));
@@ -2148,26 +2148,26 @@ if (Tm==0) && (CountMot~=0) && (CountDyn~=2)
     [x1,y1]=CalcPos(Theta,Beta);
     InitData=PlotLocation(x,y,x1,y1);
 else
-    % Корректировка в соответствии с направлением вращения мотора
+    % РљРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РЅР°РїСЂР°РІР»РµРЅРёРµРј РІСЂР°С‰РµРЅРёСЏ РјРѕС‚РѕСЂР°
     if Tm>1023
         Tm=Tm-1023;
     end
     
-    % Считывание информации о крутящих моментаж
-    TorgDm=[cell2mat(TMT(1,5)) cell2mat(TMT(2,5)) cell2mat(TMT(3,5)) cell2mat(TMT(4,5))]; % массив максимальных крутящих моментов для моторов
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚Р°Р¶
+    TorgDm=[cell2mat(TMT(1,5)) cell2mat(TMT(2,5)) cell2mat(TMT(3,5)) cell2mat(TMT(4,5))]; % РјР°СЃСЃРёРІ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ
     
     TMT(jDm,4)={((Tm*(1/1023)*TorgDm(jDm)*(V/14.8)))};
-    set(TabMaxTorq,'Data',TMT); % перезапись данных о нагрузках моторов
+    set(TabMaxTorq,'Data',TMT); % РїРµСЂРµР·Р°РїРёСЃСЊ РґР°РЅРЅС‹С… Рѕ РЅР°РіСЂСѓР·РєР°С… РјРѕС‚РѕСЂРѕРІ
 end
 
 end
 
-% Функция определения номера COM порта с OpenCM
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРѕРјРµСЂР° COM РїРѕСЂС‚Р° СЃ OpenCM
 function Dxl=OpenCMCon(SwC)
 
 global CountArd CountDyn CountOCM IDm
 
-[kMr,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+[kMr,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
     
 if (SwC==4) && (kMr~=0)
     
@@ -2178,52 +2178,52 @@ if (SwC==4) && (kMr~=0)
     if CountDyn==1
         CountDyn=0;
         closePort(p); % Close port
-        unloadlibrary('dxl_x64_c'); % отключение библиотеки для моторов Dynamixel
+        unloadlibrary('dxl_x64_c'); % РѕС‚РєР»СЋС‡РµРЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
         clear IDm
     end
     
-    WConO = waitbar(0,'Connection to OpenCM (~1 sec)'); % Окно ожидания подключения
+    WConO = waitbar(0,'Connection to OpenCM (~1 sec)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     
-    USBBaudRate = 115200; % Установка скорости обмена информацией
-    Dxl = DXL(USBBaudRate,'COM8'); % Подключение OpenCM
+    USBBaudRate = 115200; % РЈСЃС‚Р°РЅРѕРІРєР° СЃРєРѕСЂРѕСЃС‚Рё РѕР±РјРµРЅР° РёРЅС„РѕСЂРјР°С†РёРµР№
+    Dxl = DXL(USBBaudRate,'COM8'); % РџРѕРґРєР»СЋС‡РµРЅРёРµ OpenCM
     
-    % Подключение моторов
-    waitbar(1/2,WConO,'Connection with motors'); % Окно ожидания подключения
+    % РџРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕС‚РѕСЂРѕРІ
+    waitbar(1/2,WConO,'Connection with motors'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     CountOCM=1;
-    IDm=DynID2(kMr,ChMot); % Определение ID моторов
+    IDm=DynID2(kMr,ChMot); % РћРїСЂРµРґРµР»РµРЅРёРµ ID РјРѕС‚РѕСЂРѕРІ
     for jDm=1:kMr
         %DynoSpeed(jDm,IDm,ChMot);
         DynoData2(IDm(jDm),jDm);
     end
     
-    waitbar(2/2,WConO,'Successfully ;-)'); % Окно ожидания подключения
-    close(WConO); % Закрытие окна ожидания подключения
+    waitbar(2/2,WConO,'Successfully ;-)'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
+    close(WConO); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
     
 end
 
 end
 
-% Функция определение ID мотора Dynamixel
+% Р¤СѓРЅРєС†РёСЏ РѕРїСЂРµРґРµР»РµРЅРёРµ ID РјРѕС‚РѕСЂР° Dynamixel
 function IDm=DynID2(kMr,ChMot)
 
 global Dxl
 
-    kM=0; % Счётчик количества моторов
-    ID=1; % Переменная для определения текущего ID
+    kM=0; % РЎС‡С‘С‚С‡РёРє РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ
+    ID=1; % РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ ID
     while (kM<kMr) || (ID<252)
         if Dxl.ping(ID)==ID
             kM=kM+1;
-            IDm(kM)=ID; % Запись полученного ID
+            IDm(kM)=ID; % Р—Р°РїРёСЃСЊ РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ ID
 
-            Dxl.writeWord(IDm(kM),6,0); % запись минимального угла CW
+            Dxl.writeWord(IDm(kM),6,0); % Р·Р°РїРёСЃСЊ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CW
             if NMot(kMr)==11
-                Dxl.writeWord(IDm(kM),8,1023); % запись максимального угла CCW для AX-12
+                Dxl.writeWord(IDm(kM),8,1023); % Р·Р°РїРёСЃСЊ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CCW РґР»СЏ AX-12
             else
-                Dxl.writeWord(IDm(kM),8,4095); % запись максимального угла CCW для MX-28T и MX-64T
-                %Dxl.writeByte(IDm(kM),73,40); % запись необходимого ускорения
+                Dxl.writeWord(IDm(kM),8,4095); % Р·Р°РїРёСЃСЊ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СѓРіР»Р° CCW РґР»СЏ MX-28T Рё MX-64T
+                %Dxl.writeByte(IDm(kM),73,40); % Р·Р°РїРёСЃСЊ РЅРµРѕР±С…РѕРґРёРјРѕРіРѕ СѓСЃРєРѕСЂРµРЅРёСЏ
             end
-            Dxl.writeWord(IDm(kM),14,1023); % включение максимального крутящего момента
-            Dxl.writeWord(IDm(kM),34,1023); % включение максимального крутящего момента
+            Dxl.writeWord(IDm(kM),14,1023); % РІРєР»СЋС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
+            Dxl.writeWord(IDm(kM),34,1023); % РІРєР»СЋС‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
         end
         ID=ID+1;
     end
@@ -2232,19 +2232,19 @@ global Dxl
         
 end
 
-% Функция проверки скоростей и коэффициентов ПИД-регулятора моторов Dynamixel
+% Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё СЃРєРѕСЂРѕСЃС‚РµР№ Рё РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ РџРР”-СЂРµРіСѓР»СЏС‚РѕСЂР° РјРѕС‚РѕСЂРѕРІ Dynamixel
 function DynoSpeed2(kMr,IDm,ChMot)
 
 global TabMot Dxl
 
-DynCom=[32 28 27 26]; % номера команд для скорости, коэффициентов P, I и D соответственно
-DynCom2=[32 28 26 48]; % номера команд для скорости, коэффициентов P, I и D соответственно
+DynCom=[32 28 27 26]; % РЅРѕРјРµСЂР° РєРѕРјР°РЅРґ РґР»СЏ СЃРєРѕСЂРѕСЃС‚Рё, РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ P, I Рё D СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ
+DynCom2=[32 28 26 48]; % РЅРѕРјРµСЂР° РєРѕРјР°РЅРґ РґР»СЏ СЃРєРѕСЂРѕСЃС‚Рё, РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ P, I Рё D СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ
 
 for jDm=1:kMr
     for i=3:1:6
         PDyno(i)=str2num(cell2mat(ChMot(jDm,i)));
         
-        % Проверка нахождения значений в допустимом диапазоне
+        % РџСЂРѕРІРµСЂРєР° РЅР°С…РѕР¶РґРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РІ РґРѕРїСѓСЃС‚РёРјРѕРј РґРёР°РїР°Р·РѕРЅРµ
         if i==3
             PDyno(i)=ParamCheck(PDyno(i),0,1023);
         else
@@ -2252,16 +2252,16 @@ for jDm=1:kMr
         end
         
         if i-2==1
-            Dxl.writeWord(IDm(jDm),DynCom(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
+            Dxl.writeWord(IDm(jDm),DynCom(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
         else
             if jDm<kMr
-                Dxl.writeByte(IDm(jDm),DynCom(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
+                Dxl.writeByte(IDm(jDm),DynCom(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
             else
-                Dxl.writeByte(IDm(jDm),DynCom2(i-2),int32(PDyno(i))); % запись проверенного параметра на мотор
-                Dxl.writeByte(IDm(jDm),(DynCom2(i-2)+1),int32(PDyno(i))); % запись проверенного параметра на мотор
+                Dxl.writeByte(IDm(jDm),DynCom2(i-2),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
+                Dxl.writeByte(IDm(jDm),(DynCom2(i-2)+1),int32(PDyno(i))); % Р·Р°РїРёСЃСЊ РїСЂРѕРІРµСЂРµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° РЅР° РјРѕС‚РѕСЂ
             end
         end
-        ChMot(jDm,i)=cellstr(num2str(PDyno(i))); % перезапись нового значения параметра
+        ChMot(jDm,i)=cellstr(num2str(PDyno(i))); % РїРµСЂРµР·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂР°
     end
 end
 
@@ -2269,29 +2269,29 @@ set(TabMot,'Data',ChMot);
 
 end
 
-% Функция считывания данных с моторов Dynamixel !есть ссылка на конкретные ID!
+% Р¤СѓРЅРєС†РёСЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РґР°РЅРЅС‹С… СЃ РјРѕС‚РѕСЂРѕРІ Dynamixel !РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° РєРѕРЅРєСЂРµС‚РЅС‹Рµ ID!
 function DynoData2(ID,jDm)
 
 global TabMaxTorq TabAng CoorX CoorY CountMot Dxl
 
-% считывание значений напряжений на моторах
-TMT=get(TabMaxTorq,'Data'); % считывание данных таблицы со значениями крутящих моментов
+% СЃС‡РёС‚С‹РІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РЅР°РїСЂСЏР¶РµРЅРёР№ РЅР° РјРѕС‚РѕСЂР°С…
+TMT=get(TabMaxTorq,'Data'); % СЃС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ СЃРѕ Р·РЅР°С‡РµРЅРёСЏРјРё РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
 V=Dxl.readByte(ID,42)/10;
 TMT(jDm,6)={V};
 
-% считывание нагрузок моторов
-Tm=Dxl.readWord(ID,40); % считывание текущей нагрузки
+% СЃС‡РёС‚С‹РІР°РЅРёРµ РЅР°РіСЂСѓР·РѕРє РјРѕС‚РѕСЂРѕРІ
+Tm=Dxl.readWord(ID,40); % СЃС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РµР№ РЅР°РіСЂСѓР·РєРё
 
-% Проверка моторов на восприятие нагрузки и перезапуск при необходимости
+% РџСЂРѕРІРµСЂРєР° РјРѕС‚РѕСЂРѕРІ РЅР° РІРѕСЃРїСЂРёСЏС‚РёРµ РЅР°РіСЂСѓР·РєРё Рё РїРµСЂРµР·Р°РїСѓСЃРє РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё
 if (Tm==0) && (CountMot~=0)
-    CurAng=Dxl.readWord(ID,36); % считывание последнего положения
-    Dxl.writeWord(ID,34,1023); % восстановление восприятия нагрузки
-    Dxl.writeWord(ID,14,1023); % восстановление восприятия нагрузки
-    Dxl.writeWord(ID,30,int32(CurAng)); % запись требуемого положения
-    Tm=Dxl.readWord(ID,40); % повторное считывание нагрузки
+    CurAng=Dxl.readWord(ID,36); % СЃС‡РёС‚С‹РІР°РЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
+    Dxl.writeWord(ID,34,1023); % РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РІРѕСЃРїСЂРёСЏС‚РёСЏ РЅР°РіСЂСѓР·РєРё
+    Dxl.writeWord(ID,14,1023); % РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РІРѕСЃРїСЂРёСЏС‚РёСЏ РЅР°РіСЂСѓР·РєРё
+    Dxl.writeWord(ID,30,int32(CurAng)); % Р·Р°РїРёСЃСЊ С‚СЂРµР±СѓРµРјРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
+    Tm=Dxl.readWord(ID,40); % РїРѕРІС‚РѕСЂРЅРѕРµ СЃС‡РёС‚С‹РІР°РЅРёРµ РЅР°РіСЂСѓР·РєРё
     pause (0.1)
     
-    % Обновление информации о положении в приложении
+    % РћР±РЅРѕРІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїРѕР»РѕР¶РµРЅРёРё РІ РїСЂРёР»РѕР¶РµРЅРёРё
     datAng=get(TabAng,'Data');
     Beta=cell2mat(datAng(2,2));
     Theta=cell2mat(datAng(3,2));
@@ -2315,26 +2315,26 @@ if (Tm==0) && (CountMot~=0)
 
 end
 
-% Корректировка в соответствии с направлением вращения мотора
+% РљРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РЅР°РїСЂР°РІР»РµРЅРёРµРј РІСЂР°С‰РµРЅРёСЏ РјРѕС‚РѕСЂР°
 if Tm>1023
     Tm=Tm-1023;
 end
 
-% Считывание информации о крутящих моментаж
-TMT=get(TabMaxTorq,'Data'); % считывание данных таблицы со значениями крутящих моментов
-TorgDm=[cell2mat(TMT(1,5)) cell2mat(TMT(2,5)) cell2mat(TMT(3,5))]; % массив максимальных крутящих моментов для моторов
+% РЎС‡РёС‚С‹РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚Р°Р¶
+TMT=get(TabMaxTorq,'Data'); % СЃС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ СЃРѕ Р·РЅР°С‡РµРЅРёСЏРјРё РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
+TorgDm=[cell2mat(TMT(1,5)) cell2mat(TMT(2,5)) cell2mat(TMT(3,5))]; % РјР°СЃСЃРёРІ РјР°РєСЃРёРјР°Р»СЊРЅС‹С… РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ
 
 TMT(jDm,4)={((Tm*(1/1023)*TorgDm(jDm)*(V/14.8)))};
-set(TabMaxTorq,'Data',TMT); % перезапись данных о нагрузках моторов
+set(TabMaxTorq,'Data',TMT); % РїРµСЂРµР·Р°РїРёСЃСЊ РґР°РЅРЅС‹С… Рѕ РЅР°РіСЂСѓР·РєР°С… РјРѕС‚РѕСЂРѕРІ
 
 end
 
-% Подсчёт количества моторов
+% РџРѕРґСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ
 function [kMr,ChMot]=NumbMot(Ty)
 
 global TabMot
 
-% Проверка количества моторов Dynamixel
+% РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
 ChMot=get(TabMot,'Data');
 [rM,cM]=size(ChMot);
 kMr=0;
@@ -2346,13 +2346,13 @@ end
 
 end
 
-% Функция для кнопки перезаписи параметров моторов
+% Р¤СѓРЅРєС†РёСЏ РґР»СЏ РєРЅРѕРїРєРё РїРµСЂРµР·Р°РїРёСЃРё РїР°СЂР°РјРµС‚СЂРѕРІ РјРѕС‚РѕСЂРѕРІ
 function ReWr(src,evt)
 
 global IDm DevCon RWM
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
-[kMr,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+[kMr,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
 
 if SwC==3
     DynoSpeed(kMr,IDm,ChMot);
@@ -2365,24 +2365,36 @@ set(RWM,'Value',0);
 
 end
 
-% Функция передачи данных на моторы
+% Р¤СѓРЅРєС†РёСЏ РїРµСЂРµРґР°С‡Рё РґР°РЅРЅС‹С… РЅР° РјРѕС‚РѕСЂС‹
 function WriteAngles(SwC,InitData,Ard,serv)
 
 global TabMot TabAng tps CountMot IDm %Us serv %Dxl db0 dt0 da0
 
-% Считывание текущих значений углов
+% РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
 datAng=get(TabAng,'Data');
-GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % массив значений текущих углов dt, db, da и fi
+GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ dt, db, da Рё fi
 
-%InitAng=[dt0; db0; da0] % массив значений углов в предыдущем положении манипулятора
-ChMot=get(TabMot,'Data'); % Проверка количества моторов Dynamixel
+%InitAng=[dt0; db0; da0] % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ РІ РїСЂРµРґС‹РґСѓС‰РµРј РїРѕР»РѕР¶РµРЅРёРё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+ChMot=get(TabMot,'Data'); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
 
-% Определение максимального интервала между текущим и предыдущим углом
+% РћРїСЂРµРґРµР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РёРЅС‚РµСЂРІР°Р»Р° РјРµР¶РґСѓ С‚РµРєСѓС‰РёРј Рё РїСЂРµРґС‹РґСѓС‰РёРј СѓРіР»РѕРј
 maxDelta=0;
 for i=1:3
-    Delta(i)=GenAng(i)-InitData(i); % определение интервала между текущим и предыдущим углом
+    Delta(i)=GenAng(i)-InitData(i); % РѕРїСЂРµРґРµР»РµРЅРёРµ РёРЅС‚РµСЂРІР°Р»Р° РјРµР¶РґСѓ С‚РµРєСѓС‰РёРј
+
+[100
+
+[100
+
+[100 KB maximum, text cropped]
+
+ KB maximum, text cropped]
+
+ KB maximum, text cropped]
+
+ Рё РїСЂРµРґС‹РґСѓС‰РёРј СѓРіР»РѕРј
     if Delta(i)~=0
-        Znak(i)=Delta(i)/abs(Delta(i)); % определение направления изменения угла
+        Znak(i)=Delta(i)/abs(Delta(i)); % РѕРїСЂРµРґРµР»РµРЅРёРµ РЅР°РїСЂР°РІР»РµРЅРёСЏ РёР·РјРµРЅРµРЅРёСЏ СѓРіР»Р°
     else
         Znak(i)=1;
     end
@@ -2391,26 +2403,26 @@ for i=1:3
     end
 end
 
-% Передача значений углов на моторы Dynamixel
+% РџРµСЂРµРґР°С‡Р° Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ РЅР° РјРѕС‚РѕСЂС‹ Dynamixel
 if SwC==3
-    [kMrD,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+    [kMrD,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
     for i=1:kMrD
         DynoData(IDm(i),i);
     end
     if CountMot==0
         CountMot=1;
     end
-    DAngMass=DynoAng(GenAng); % массив значений текущих углов для моторов Dynamixel
-    DInAngMas=DynoAng(InitData); % массив значений начальных углов для моторов Dynamixel
+    DAngMass=DynoAng(GenAng); % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
+    DInAngMas=DynoAng(InitData); % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ РЅР°С‡Р°Р»СЊРЅС‹С… СѓРіР»РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
 %     DynoMotion(DAngMass);
     SmoothDyno(IDm,DAngMass,DInAngMas,maxDelta);
 end
 
-% Передача значений углов на сервомоторы
-[kMrS,ChMot]=NumbMot({'Servo'}); % Проверка количества моторов Servo
+% РџРµСЂРµРґР°С‡Р° Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ РЅР° СЃРµСЂРІРѕРјРѕС‚РѕСЂС‹
+[kMrS,ChMot]=NumbMot({'Servo'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Servo
 if SwC>=2
-    AngMas=ConvAng; % Считывание текущих значений углов
-    InAngMas=ConvAng; % Считывание текущих значений углов
+    AngMas=ConvAng; % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
+    InAngMas=ConvAng; % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
     if kMrS>=2
         for i=1:kMrS-1
             if strcmp({'Servo'},ChMot(i,2))==1
@@ -2423,13 +2435,13 @@ if SwC>=2
         writePosition(serv(kMrS),AngMas(4));
     end
 
-    % Считывание данных датчиков
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… РґР°С‚С‡РёРєРѕРІ
     SensData(Ard);
 end
 
 end
 
-% Преобразование текущих значений углов в углы моторов для моторов Dynamixel
+% РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ РІ СѓРіР»С‹ РјРѕС‚РѕСЂРѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
 function DAngMass=DynoAng(GenAng)
 
 Theta=(90+GenAng(1))/0.088; %89
@@ -2440,7 +2452,7 @@ DAngMass=[Theta Beta Alpha Psi];
 
 end
 
-% Функция для выполнения плавного вращения моторов Dynamixel
+% Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РїР»Р°РІРЅРѕРіРѕ РІСЂР°С‰РµРЅРёСЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
 function SmoothDyno(ID,CurAng,InAng,maxDelta)
 
 global AngStep p PROTOCOL_VERSION %TabAng %Dxl
@@ -2449,18 +2461,18 @@ global AngStep p PROTOCOL_VERSION %TabAng %Dxl
 % GamAng=cell2mat(datAng(5,2));
 
 ah=get(AngStep,'String'); % 0.015
-h=str2num(ah)*180; % шаг изменения угла
+h=str2num(ah)*180; % С€Р°Рі РёР·РјРµРЅРµРЅРёСЏ СѓРіР»Р°
 
-[kMrD,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Servo
+[kMrD,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Servo
 
 if maxDelta>h
-    Nd=fix(maxDelta/h); % определение количества шагов для перехода в новое положение
-    Angl=InAng; % Запись  первой позиции для углов
+    Nd=fix(maxDelta/h); % РѕРїСЂРµРґРµР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° С€Р°РіРѕРІ РґР»СЏ РїРµСЂРµС…РѕРґР° РІ РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
+    Angl=InAng; % Р—Р°РїРёСЃСЊ  РїРµСЂРІРѕР№ РїРѕР·РёС†РёРё РґР»СЏ СѓРіР»РѕРІ
     
     for i=1:kMrD-1
-        Delta(i)=CurAng(i)-InAng(i); % определение интервала между текущим и предыдущим углом
+        Delta(i)=CurAng(i)-InAng(i); % РѕРїСЂРµРґРµР»РµРЅРёРµ РёРЅС‚РµСЂРІР°Р»Р° РјРµР¶РґСѓ С‚РµРєСѓС‰РёРј Рё РїСЂРµРґС‹РґСѓС‰РёРј СѓРіР»РѕРј
         if Delta(i)~=0
-            Znak(i)=Delta(i)/abs(Delta(i)); % определение направления изменения угла
+            Znak(i)=Delta(i)/abs(Delta(i)); % РѕРїСЂРµРґРµР»РµРЅРёРµ РЅР°РїСЂР°РІР»РµРЅРёСЏ РёР·РјРµРЅРµРЅРёСЏ СѓРіР»Р°
         else
             Znak(i)=1;
         end
@@ -2470,42 +2482,42 @@ if maxDelta>h
     for j=1:1:Nd
         for i=1:kMrD-1
             Angl(i)=Angl(i)+step(i);
-%             write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(Angl(i))); % запись нового положения от 0 до 1023 (0-300 градусов)
+%             write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(Angl(i))); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
             %Dxl.writeWord(ID(i),30,Angl(i));
             %DynoData(ID(i),i);
         end
         DynoMotion(Angl);
 %         Angl(1)
-        mass(j,1)=abs(CalcCargo(0)); % первичное вычисление массы груза
+        mass(j,1)=abs(CalcCargo(0)); % РїРµСЂРІРёС‡РЅРѕРµ РІС‹С‡РёСЃР»РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р°
         %WrData;
         pause(0.05)
     end
     
-    % Запись конечного положения манипулятора
+    % Р—Р°РїРёСЃСЊ РєРѕРЅРµС‡РЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
     Angl=CurAng;
     for i=1:kMrD
-        write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(Angl(i))); % запись нового положения от 0 до 1023 (0-300 градусов)
+        write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(Angl(i))); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
     end
 else
     for i=1:kMrD
-        write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(CurAng(i))); % запись нового положения от 0 до 1023 (0-300 градусов)
+        write2ByteTxRx(p, PROTOCOL_VERSION, ID(i),30,int32(CurAng(i))); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
     end
 end
 
-%calllib('dxl_x64_c', 'dxl_read_word',ID,14); % проверка максимального крутящего момента
+%calllib('dxl_x64_c', 'dxl_read_word',ID,14); % РїСЂРѕРІРµСЂРєР° РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
 %calllib('dxl_x64_c', 'dxl_read_word',ID,34);
-%Dxl.readWord(ID,14); % проверка максимального крутящего момента
+%Dxl.readWord(ID,14); % РїСЂРѕРІРµСЂРєР° РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
 %Dxl.readWord(ID,34);
 
 end
 
-% функция для приведения в движение всех моторов одновременно
+% С„СѓРЅРєС†РёСЏ РґР»СЏ РїСЂРёРІРµРґРµРЅРёСЏ РІ РґРІРёР¶РµРЅРёРµ РІСЃРµС… РјРѕС‚РѕСЂРѕРІ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ
 function DynoMotion(CurAng)
 
 global p PROTOCOL_VERSION IDm group LEN_MX_MOVING dxl1_present_position dxl2_moving
 
 for i=1:3
-    write2ByteTxRx(p, PROTOCOL_VERSION,IDm(i),30,int32(CurAng(i))); % запись нового положения от 0 до 1023 (0-300 градусов)
+    write2ByteTxRx(p, PROTOCOL_VERSION,IDm(i),30,int32(CurAng(i))); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
 end
 
 while 1
@@ -2528,7 +2540,7 @@ end
 
 end
 
-% Преобразование текущих значений углов в углы моторов для Arduino
+% РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ РІ СѓРіР»С‹ РјРѕС‚РѕСЂРѕРІ РґР»СЏ Arduino
 function AngMas=ConvAng
 
 global TabAng
@@ -2543,12 +2555,12 @@ AngMas=[dt db da psi fi];
 
 end
 
-% Функция замедления перемещения сервомоторов
+% Р¤СѓРЅРєС†РёСЏ Р·Р°РјРµРґР»РµРЅРёСЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃРµСЂРІРѕРјРѕС‚РѕСЂРѕРІ
 function SlowServo(angle,angle0,servos,maxDelta,delta,zn)
 
-%Start = cputime; % измерение времени работы функции
+%Start = cputime; % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
 
-h=0.004*180; % шаг изменения угла
+h=0.004*180; % С€Р°Рі РёР·РјРµРЅРµРЅРёСЏ СѓРіР»Р°
 angleEnd=angle;
 if maxDelta>h
     Nd=fix(delta/h);
@@ -2563,11 +2575,11 @@ else
     writePosition(servos,angle);
 end
 
-%Elapsed = cputime - Start % измерение времени работы функции
+%Elapsed = cputime - Start % РёР·РјРµСЂРµРЅРёРµ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё
 
 end
 
-% Подключение датчиков
+% РџРѕРґРєР»СЋС‡РµРЅРёРµ РґР°С‚С‡РёРєРѕРІ
 function BTCon(SwC)
 
 global ActSw SerCon CountBT InitEncAng mn0 DevCon
@@ -2575,11 +2587,11 @@ global ActSw SerCon CountBT InitEncAng mn0 DevCon
 ActSw=true;
 pause(0.07)
 
-[kMr,ChMot]=NumbMot({'Dynamixel'}); % Проверка количества моторов Dynamixel
+[kMr,ChMot]=NumbMot({'Dynamixel'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Dynamixel
     
 if (SwC==5) && (kMr~=0)
     
-    WConA = waitbar(0,'Connection to Arduino'); % Окно ожидания подключения
+    WConA = waitbar(0,'Connection to Arduino'); % РћРєРЅРѕ РѕР¶РёРґР°РЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 %     SerCon=connect_bluetooth;    
     SerCon=serial('COM8','baudrate',115200); %38400 COM23 COM5
     
@@ -2594,19 +2606,19 @@ if (SwC==5) && (kMr~=0)
     % set(SerCon, 'Parity', 'none');
     % set(SerCon, 'FlowControl', 'none');
     pause(0.2)
-    disp('Подключаемся');
+    disp('РџРѕРґРєР»СЋС‡Р°РµРјСЃСЏ');
     
-    try % Обработчик исключений
-        waitbar(1/3,WConA,'COM port opening...'); % Обновление окна ожидания
+    try % РћР±СЂР°Р±РѕС‚С‡РёРє РёСЃРєР»СЋС‡РµРЅРёР№
+        waitbar(1/3,WConA,'COM port opening...'); % РћР±РЅРѕРІР»РµРЅРёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ
         fopen(SerCon);       
         CountBT=true;
-        waitbar(2/3,WConA,'Data checking...'); % Обновление окна ожидания
-        disp('Ждём данные');
+        waitbar(2/3,WConA,'Data checking...'); % РћР±РЅРѕРІР»РµРЅРёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ
+        disp('Р–РґС‘Рј РґР°РЅРЅС‹Рµ');
        
 %         readasync(SerCon);
 %         pause(0.01);
 %         stopasync(SerCon);
-        while(isnan(str2double(fscanf(SerCon)))==0) % отправка текстового символа, чтобы понять, когда начинать считывание
+        while(isnan(str2double(fscanf(SerCon)))==0) % РѕС‚РїСЂР°РІРєР° С‚РµРєСЃС‚РѕРІРѕРіРѕ СЃРёРјРІРѕР»Р°, С‡С‚РѕР±С‹ РїРѕРЅСЏС‚СЊ, РєРѕРіРґР° РЅР°С‡РёРЅР°С‚СЊ СЃС‡РёС‚С‹РІР°РЅРёРµ
         end
         
         pause(0.5)
@@ -2614,32 +2626,32 @@ if (SwC==5) && (kMr~=0)
         fprintf(SerCon,'\z');
         InitEncAng=fscanf(SerCon,'%f');%str2num(fscanf(d));
         mn0=InitEncAng
-        waitbar(1,WConA,'Successfully'); % Обновление окна ожидания
-    catch err % Обработка возможных ошибок
+        waitbar(1,WConA,'Successfully'); % РћР±РЅРѕРІР»РµРЅРёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ
+    catch err % РћР±СЂР°Р±РѕС‚РєР° РІРѕР·РјРѕР¶РЅС‹С… РѕС€РёР±РѕРє
         CountBT=false;
         set(DevCon,'Value',1);
-        disp('Не удалось подключиться');
-        waitbar(1,WConA,'No data'); % Обновление окна ожидания
+        disp('РќРµ СѓРґР°Р»РѕСЃСЊ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ');
+        waitbar(1,WConA,'No data'); % РћР±РЅРѕРІР»РµРЅРёРµ РѕРєРЅР° РѕР¶РёРґР°РЅРёСЏ
     end
     
     pause(0.1)
-    close(WConA); % Закрытие окна подключения Arduino
+    close(WConA); % Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ Arduino
 end
 
 ActSw=false;
 
 end
-%% Дополнительные функции
-% Переход в одну из заранее обозначенных точек
+%% Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё
+% РџРµСЂРµС…РѕРґ РІ РѕРґРЅСѓ РёР· Р·Р°СЂР°РЅРµРµ РѕР±РѕР·РЅР°С‡РµРЅРЅС‹С… С‚РѕС‡РµРє
 function PrePa(src,evt)
 
 global l1 l2 z Pointsy
 
 pNumb=get(Pointsy,'Value');
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
-% запоминаем предыдущие координаты
+% Р·Р°РїРѕРјРёРЅР°РµРј РїСЂРµРґС‹РґСѓС‰РёРµ РєРѕРѕСЂРґРёРЅР°С‚С‹
 str = get(handles.edtY, 'String');
 y=str2num(str);
 str = get(handles.edtX, 'String');
@@ -2658,37 +2670,37 @@ set(Pointsy,'Value',1);
 
 end
 
-% Выполнения демонстрации
+% Р’С‹РїРѕР»РЅРµРЅРёСЏ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё
 function FRDemo(src,evt)
 
-% координаты промежуточных точек
+% РєРѕРѕСЂРґРёРЅР°С‚С‹ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹С… С‚РѕС‡РµРє
 %xdem=[0 0.18 0.3 0.44 0.5 0.54 0.4 0.28 0 -0.14 -0.08 0 0.06];
 %ydem=[-0.24 -0.16 0 0.06 0.1 -0.2 -0.4 -0.52 -0.6 -0.54 -0.38 -0.24 -0.07];
 xdem=[0.18 0.3 0.34 0.36 0.4 0.34 0.28 0 -0.14 -0.08 0 0.06];
 ydem=[-0.16 0 0.06 -0.1 -0.2 -0.4 -0.52 -0.6 -0.54 -0.38 -0.24 -0.07];
 ldem=length(xdem);
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
 for i=1:1:ldem
     
-    % запоминаем предыдущие координаты
+    % Р·Р°РїРѕРјРёРЅР°РµРј РїСЂРµРґС‹РґСѓС‰РёРµ РєРѕРѕСЂРґРёРЅР°С‚С‹
     str = get(handles.edtY, 'String');
     y=str2num(str);
     str = get(handles.edtX, 'String');
     x=str2num(str);
     
-    % Записываем новые координаты
+    % Р—Р°РїРёСЃС‹РІР°РµРј РЅРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
     x1=xdem(i);
     y1=ydem(i);
     
     StartApp(x,y,x1,y1);
     
-    if i==5 % Схватывание груза
+    if i==5 % РЎС…РІР°С‚С‹РІР°РЅРёРµ РіСЂСѓР·Р°
         ObMove(1,src);
         pause(0.4);
     else
-        if i==9 % Отпускание груза
+        if i==9 % РћС‚РїСѓСЃРєР°РЅРёРµ РіСЂСѓР·Р°
             ObMove(2,src);
         end
     end
@@ -2696,16 +2708,16 @@ for i=1:1:ldem
     pause(0.8);
 end
 
-set(handles.Dem,'Value',0); % возвращение кнопки в исходное положение
+set(handles.Dem,'Value',0); % РІРѕР·РІСЂР°С‰РµРЅРёРµ РєРЅРѕРїРєРё РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
 
 end
 
-% Функция взаимодействия с грузом
+% Р¤СѓРЅРєС†РёСЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РіСЂСѓР·РѕРј
 function ObMove(val,src)
 
 global GrCont GrRot
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
 set(GrRot,'Value',90);
 ValRot(src);
@@ -2717,14 +2729,14 @@ ValRot(src);
 
 end
 
-% Выполнения цикла вычислений массы полученного груза
+% Р’С‹РїРѕР»РЅРµРЅРёСЏ С†РёРєР»Р° РІС‹С‡РёСЃР»РµРЅРёР№ РјР°СЃСЃС‹ РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РіСЂСѓР·Р°
 function ChWeigh(src,evt)
 
 global TabMass TabMaxTorq TabAng DevCon err massc
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
-% координаты промежуточных точек
+% РєРѕРѕСЂРґРёРЅР°С‚С‹ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹С… С‚РѕС‡РµРє
 %theta=[76 97 114];
 %beta=[74 44 145];
 theta=52;
@@ -2733,7 +2745,7 @@ xc=0;
 yc=0;
 h=-0.1;
 
-% вычисление начальной точки и диапазона углов поворота радиус-вектора
+% РІС‹С‡РёСЃР»РµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРё Рё РґРёР°РїР°Р·РѕРЅР° СѓРіР»РѕРІ РїРѕРІРѕСЂРѕС‚Р° СЂР°РґРёСѓСЃ-РІРµРєС‚РѕСЂР°
 [xr,yr]=CalcPos(theta,beta);
 a1=atand(yr/xr);
 a2=-89; % 101
@@ -2748,7 +2760,7 @@ massc=0;
 
 set(TabMass,'Data',M);
 
-angles=get(TabAng,'Data'); % углы
+angles=get(TabAng,'Data'); % СѓРіР»С‹
 beta=cell2mat(angles(2,2));
 theta=cell2mat(angles(3,2));
 
@@ -2761,17 +2773,17 @@ TMT(3,3)={T2};
 TMT(5,3)={T3};
 set(TabMaxTorq,'Data',TMT);
 
-% выполнение алгоритма вычисления веса груза
+% РІС‹РїРѕР»РЅРµРЅРёРµ Р°Р»РіРѕСЂРёС‚РјР° РІС‹С‡РёСЃР»РµРЅРёСЏ РІРµСЃР° РіСЂСѓР·Р°
 k=0;
-CountExp=3; % Количество повторений
+CountExp=3; % РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№
 for k=1:CountExp
     for i=1:P
         
         if i==2
-            pause(0.1); % пауза для стабилизации после вытягивания манипулятора
+            pause(0.1); % РїР°СѓР·Р° РґР»СЏ СЃС‚Р°Р±РёР»РёР·Р°С†РёРё РїРѕСЃР»Рµ РІС‹С‚СЏРіРёРІР°РЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
         end
         
-        % запоминаем предыдущие и записываем новые координаты
+        % Р·Р°РїРѕРјРёРЅР°РµРј РїСЂРµРґС‹РґСѓС‰РёРµ Рё Р·Р°РїРёСЃС‹РІР°РµРј РЅРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
         str = get(handles.edtY, 'String');
         y=str2num(str);
         str = get(handles.edtX, 'String');
@@ -2780,32 +2792,32 @@ for k=1:CountExp
         y1=ya(i);
         StartApp(x,y,x1,y1);
         
-        mass(i,k)=abs(CalcCargo(i)); % первичное вычисление массы груза
+        mass(i,k)=abs(CalcCargo(i)); % РїРµСЂРІРёС‡РЅРѕРµ РІС‹С‡РёСЃР»РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р°
         
         pause(0.016)
     end
 end
-m=CargoMass(mass,CountExp,P); % вычисление уточнённой массы груза
+m=CargoMass(mass,CountExp,P); % РІС‹С‡РёСЃР»РµРЅРёРµ СѓС‚РѕС‡РЅС‘РЅРЅРѕР№ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 
-% Запись вычисленного значения массы груза
+% Р—Р°РїРёСЃСЊ РІС‹С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 M(1,2)={m};
 set(TabMass,'Data',M);
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 ChButs(SwC);
 
-set(handles.Demo2,'Value',0); % возвращение кнопки в исходное положение
+set(handles.Demo2,'Value',0); % РІРѕР·РІСЂР°С‰РµРЅРёРµ РєРЅРѕРїРєРё РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
 
 end
 
-% Выполнения цикла вычислений массы полученного груза
+% Р’С‹РїРѕР»РЅРµРЅРёСЏ С†РёРєР»Р° РІС‹С‡РёСЃР»РµРЅРёР№ РјР°СЃСЃС‹ РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РіСЂСѓР·Р°
 function ChWeigh0(src,evt)
 
 global TabMass TabMaxTorq TabAng IDm DevCon err massc p PROTOCOL_VERSION
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
-% координаты промежуточных точек
+% РєРѕРѕСЂРґРёРЅР°С‚С‹ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹С… С‚РѕС‡РµРє
 %theta=[76 97 114];
 %beta=[74 44 145];
 theta=52;
@@ -2815,7 +2827,7 @@ xc=0;
 yc=0;
 h=-0.1;
 
-% вычисление начальной точки и диапазона углов поворота радиус-вектора
+% РІС‹С‡РёСЃР»РµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРё Рё РґРёР°РїР°Р·РѕРЅР° СѓРіР»РѕРІ РїРѕРІРѕСЂРѕС‚Р° СЂР°РґРёСѓСЃ-РІРµРєС‚РѕСЂР°
 [xr,yr]=CalcPos(theta,beta);
 a1=atand(yr/xr);
 a2=-89; % 101
@@ -2830,7 +2842,7 @@ massc=0;
 
 set(TabMass,'Data',M);
 
-angles=get(TabAng,'Data'); % углы
+angles=get(TabAng,'Data'); % СѓРіР»С‹
 beta=cell2mat(angles(2,2));
 theta=cell2mat(angles(3,2));
 
@@ -2843,12 +2855,12 @@ TMT(3,3)={T2};
 TMT(5,3)={T3};
 set(TabMaxTorq,'Data',TMT);
 
-% выполнение алгоритма вычисления веса груза
+% РІС‹РїРѕР»РЅРµРЅРёРµ Р°Р»РіРѕСЂРёС‚РјР° РІС‹С‡РёСЃР»РµРЅРёСЏ РІРµСЃР° РіСЂСѓР·Р°
 k=0;
-CountExp=10; % Количество повторений
+CountExp=10; % РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№
 for k=1:CountExp
     tic;
-    % запоминаем предыдущие и записываем новые координаты
+    % Р·Р°РїРѕРјРёРЅР°РµРј РїСЂРµРґС‹РґСѓС‰РёРµ Рё Р·Р°РїРёСЃС‹РІР°РµРј РЅРѕРІС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
     str = get(handles.edtY, 'String');
     y=str2num(str);
     str = get(handles.edtX, 'String');
@@ -2856,13 +2868,13 @@ for k=1:CountExp
     x1=xa(P);
     y1=ya(P);
     InitData=PlotLocation(x,y,x1,y1);
-    % Считывание текущих значений углов
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
     datAng=get(TabAng,'Data');
-    GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % массив значений текущих углов dt, db, da и fi
-    DAngMass=DynoAng(GenAng); % массив значений текущих углов для моторов Dynamixel
+    GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ dt, db, da Рё fi
+    DAngMass=DynoAng(GenAng); % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
     DynoMotion(DAngMass)
 %     for i=1:3
-%         write2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),30,int32(DAngMass(i))); % запись нового положения от 0 до 1023 (0-300 градусов)
+%         write2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),30,int32(DAngMass(i))); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
 %     end
     
     toc
@@ -2871,7 +2883,7 @@ for k=1:CountExp
     DesAng=0;
     while DesAng<138
         i=i+1;
-        mass(i,k)=abs(CalcCargo(0)); % первичное вычисление массы груза
+        mass(i,k)=abs(CalcCargo(0)); % РїРµСЂРІРёС‡РЅРѕРµ РІС‹С‡РёСЃР»РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р°
         DesAng=0.08*read2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),36)
         pause(0.001)
     end
@@ -2884,42 +2896,42 @@ for k=1:CountExp
     x1=xa(1);
     y1=ya(1);
     InitData=PlotLocation(x,y,x1,y1);
-    % Считывание текущих значений углов
+    % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РµРєСѓС‰РёС… Р·РЅР°С‡РµРЅРёР№ СѓРіР»РѕРІ
     datAng=get(TabAng,'Data');
-    GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % массив значений текущих углов dt, db, da и fi
-    DAngMass=DynoAng(GenAng); % массив значений текущих углов для моторов Dynamixel
+    GenAng=[cell2mat(datAng(3,2)) cell2mat(datAng(2,2)) cell2mat(datAng(1,2)) cell2mat(datAng(5,2)) cell2mat(datAng(4,2))]; % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ dt, db, da Рё fi
+    DAngMass=DynoAng(GenAng); % РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ С‚РµРєСѓС‰РёС… СѓРіР»РѕРІ РґР»СЏ РјРѕС‚РѕСЂРѕРІ Dynamixel
     DynoMotion(DAngMass);
-% write2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),30,int32((90+52)/0.08)); % запись нового положения от 0 до 1023 (0-300 градусов)
+% write2ByteTxRx(p, PROTOCOL_VERSION, IDm(1),30,int32((90+52)/0.08)); % Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РѕС‚ 0 РґРѕ 1023 (0-300 РіСЂР°РґСѓСЃРѕРІ)
     pause(1)
 end
-m=CargoMass(mass,CountExp,P); % вычисление уточнённой массы груза
+m=CargoMass(mass,CountExp,P); % РІС‹С‡РёСЃР»РµРЅРёРµ СѓС‚РѕС‡РЅС‘РЅРЅРѕР№ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 
-% Запись вычисленного значения массы груза
+% Р—Р°РїРёСЃСЊ РІС‹С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃС‹ РіСЂСѓР·Р°
 M(1,2)={m};
 set(TabMass,'Data',M);
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 ChButs(SwC);
 
-set(handles.Demo2,'Value',0); % возвращение кнопки в исходное положение
+set(handles.Demo2,'Value',0); % РІРѕР·РІСЂР°С‰РµРЅРёРµ РєРЅРѕРїРєРё РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ
 
 end
 
-% Функция вычисления веса
+% Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РІРµСЃР°
 function mcc=CalcCargo(i)
 
 global TabMass TabMaxTorq TabAng mx g l1 l2 T0calc CalibT l3 cm1 cm2 cm3 arm4 ml1 ml2 z
 
-% Добавить обновление значения веса груза
+% Р”РѕР±Р°РІРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РІРµСЃР° РіСЂСѓР·Р°
 
 M=get(TabMass,'Data');
-ms0=cell2mat(M(2,2)); % кг, масса сервомотора № 0
-ms1=cell2mat(M(3,2)); % кг, масса сервомотора № 1
-ms2=cell2mat(M(4,2)); % кг, масса сервомотора № 2
-ms3=cell2mat(M(5,2)); % кг, масса сервомотора № 3
+ms0=cell2mat(M(2,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 0
+ms1=cell2mat(M(3,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 1
+ms2=cell2mat(M(4,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 2
+ms3=cell2mat(M(5,2)); % РєРі, РјР°СЃСЃР° СЃРµСЂРІРѕРјРѕС‚РѕСЂР° в„– 3
 mm= mx + ms3 + ms2 + ms1+0.0207+0.01+0.006;
 
-TMT=get(TabMaxTorq,'Data'); % значения крутящих моментов
+TMT=get(TabMaxTorq,'Data'); % Р·РЅР°С‡РµРЅРёСЏ РєСЂСѓС‚СЏС‰РёС… РјРѕРјРµРЅС‚РѕРІ
 Data(1)=cell2mat(TMT(1,4));
 Data(2)=cell2mat(TMT(2,4));
 Data(3)=cell2mat(TMT(3,4));
@@ -2932,24 +2944,24 @@ if Data(4)<0
     Data(1)=-Data(1);
 end
 
-angles=get(TabAng,'Data'); % углы
+angles=get(TabAng,'Data'); % СѓРіР»С‹
 %alpha=cell2mat(angles(1,2));
 beta=cell2mat(angles(2,2));
 theta=cell2mat(angles(3,2));
 %fi=cell2mat(angles(4,2));
 
-%Tpart2=(mx*cm3+ms3*l3+0.022*0.0207+0.164*0.01+0.173*0.006); % масса на плечо для захвата
-%mpart2=mx + ms3 + 0.0207 + 0.01 + 0.006 + ms2; % запас
+%Tpart2=(mx*cm3+ms3*l3+0.022*0.0207+0.164*0.01+0.173*0.006); % РјР°СЃСЃР° РЅР° РїР»РµС‡Рѕ РґР»СЏ Р·Р°С…РІР°С‚Р°
+%mpart2=mx + ms3 + 0.0207 + 0.01 + 0.006 + ms2; % Р·Р°РїР°СЃ
 
 %mc0=(Data(3)/(10.19716*g)-(mx*cm3+ms3*l3+0.022*0.0207+0.164*0.01+0.173*0.006))/(cm3+arm4)
-%mc01=(Data(3)-Data(6))/(10.19716*g*(cm3+arm4)); % запас
+%mc01=(Data(3)-Data(6))/(10.19716*g*(cm3+arm4)); % Р·Р°РїР°СЃ
 
-%mc10=((Data(2)-Data(3))/(10.19716*g*cosd(180-theta-beta))-mpart2*l2 - ml2*cm2)/l2; % запас
-%mc1=((Data(2)/(10.19716*g)-Tpart2)/cosd(180-theta-beta)-mpart2*l2 - ml2*cm2)/((cm3+arm4)*cosd(180-theta-beta)+l2); % запас, расчёт массы груза без учёта Т3
-%mc11=(Data(2)-Data(5))/(10.19716*g*((cm3+arm4)+l2*cosd(180-theta-beta))); % запас
+%mc10=((Data(2)-Data(3))/(10.19716*g*cosd(180-theta-beta))-mpart2*l2 - ml2*cm2)/l2; % Р·Р°РїР°СЃ
+%mc1=((Data(2)/(10.19716*g)-Tpart2)/cosd(180-theta-beta)-mpart2*l2 - ml2*cm2)/((cm3+arm4)*cosd(180-theta-beta)+l2); % Р·Р°РїР°СЃ, СЂР°СЃС‡С‘С‚ РјР°СЃСЃС‹ РіСЂСѓР·Р° Р±РµР· СѓС‡С‘С‚Р° Рў3
+%mc11=(Data(2)-Data(5))/(10.19716*g*((cm3+arm4)+l2*cosd(180-theta-beta))); % Р·Р°РїР°СЃ
 
 %mc20=(Data(1)/(10.19716*g)-((Tpart2+((mpart2)*l2 + ml2*cm2)*cosd(180-theta-beta))+((ml2 + ms1+mpart2)*sqrt(l1^2+z^2) + ml1*cm1)*cosd(theta-acosd(l1/sqrt(l1^2+z^2)))))/(cm3+arm4+l2*cosd(180-theta-beta)+sqrt(l1^2+z^2)*cosd(theta-acosd(l1/sqrt(l1^2+z^2))))
-%mc2=((Data(1)-Data(2))/(10.19716*g*cosd(theta-acosd(l1/sqrt(l1^2+z^2))))-ml1*cm1)/sqrt(l1^2+z^2)-ml2-ms1-mpart2; % запас
+%mc2=((Data(1)-Data(2))/(10.19716*g*cosd(theta-acosd(l1/sqrt(l1^2+z^2))))-ml1*cm1)/sqrt(l1^2+z^2)-ml2-ms1-mpart2; % Р·Р°РїР°СЃ
 %mc21=(Data(1)-Data(4))/(10.19716*g*((cm3+arm4)+l2*cosd(180-theta-beta)+sqrt(l1^2+z^2)*cosd(theta-acosd(l1/sqrt(l1^2+z^2)))))
 Tmc2=interp1(CalibT,T0calc(:,1),theta);
 Tmc3=interp1(CalibT,T0calc(:,2),theta);
@@ -2961,19 +2973,19 @@ Tmc3=interp1(CalibT,T0calc(:,2),theta);
 
 end
 
-% Вычисление массы груза на базе полученных данных
+% Р’С‹С‡РёСЃР»РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р° РЅР° Р±Р°Р·Рµ РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С…
 function mOpt=CargoMass(mass,CountExp,P)
 
 global mmc err massc
 
-% Уточнение веса груза
+% РЈС‚РѕС‡РЅРµРЅРёРµ РІРµСЃР° РіСЂСѓР·Р°
 j=1;
 errMin=999;
 for j=1:P
     err=999;
     m=0;
     k=1;
-    mv=mean(mass(j,:)); % Первичное вычисление массы груза
+    mv=mean(mass(j,:)); % РџРµСЂРІРёС‡РЅРѕРµ РІС‹С‡РёСЃР»РµРЅРёРµ РјР°СЃСЃС‹ РіСЂСѓР·Р°
     mass2=0;
     for i=1:CountExp
         if ((mass(j,i)-mv)/mv)<0.2
@@ -2984,7 +2996,7 @@ for j=1:P
     massn(j)=mean(mass2);
     
     for i=1:length(mmc)
-        acc=(massn(j)-mmc(i))*100/mmc(i); % отклонение от фактического значения массы груза
+        acc=(massn(j)-mmc(i))*100/mmc(i); % РѕС‚РєР»РѕРЅРµРЅРёРµ РѕС‚ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃС‹ РіСЂСѓР·Р°
         if abs(acc)<err
             m=mmc(i);
             err=abs(acc);
@@ -2999,17 +3011,17 @@ end
 
 end
 
-%% Управление гриппером
-% Функция распределения заданий для гриппера
+%% РЈРїСЂР°РІР»РµРЅРёРµ РіСЂРёРїРїРµСЂРѕРј
+% Р¤СѓРЅРєС†РёСЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ Р·Р°РґР°РЅРёР№ РґР»СЏ РіСЂРёРїРїРµСЂР°
 function GrCo(src,evt)
 
 global GrCont ChSt
 
-ChSt=1; % переключение в режим работы хвата
+ChSt=1; % РїРµСЂРµРєР»СЋС‡РµРЅРёРµ РІ СЂРµР¶РёРј СЂР°Р±РѕС‚С‹ С…РІР°С‚Р°
 
 GrNumb=get(GrCont,'Value');
 
-handles = guihandles(src); % запись в структуру handles указателей на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
 if GrNumb==1
     GripHold(src);
@@ -3027,26 +3039,26 @@ else
 end
 
 if GrNumb~=3
-    set(GrCont,'Value',3) % возвращение кнопки в отключенное состояние
+    set(GrCont,'Value',3) % РІРѕР·РІСЂР°С‰РµРЅРёРµ РєРЅРѕРїРєРё РІ РѕС‚РєР»СЋС‡РµРЅРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
 end
 
 ChSt=0;
 
 end
 
-% Функция зажатия груза хватом
+% Р¤СѓРЅРєС†РёСЏ Р·Р°Р¶Р°С‚РёСЏ РіСЂСѓР·Р° С…РІР°С‚РѕРј
 function GripHold(src,evt)
 
 global TabAng xc yc xa ya arm123x arm123y fi q serv DevCon Ard GrCont
 
-handles = guihandles(src); % записываем в структуру handles указатели на объекты приложения
+handles = guihandles(src); % Р·Р°РїРёСЃС‹РІР°РµРј РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»Рё РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 % set(handles.GrDrop,'Value',0);
-[kMrS,ChMot]=NumbMot({'Servo'}); % Проверка количества моторов Servo
+[kMrS,ChMot]=NumbMot({'Servo'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Servo
 
 if q~=0
-    % Считываем координат X, Y и углов
+    % РЎС‡РёС‚С‹РІР°РµРј РєРѕРѕСЂРґРёРЅР°С‚ X, Y Рё СѓРіР»РѕРІ
     str = get(handles.edtX, 'String');
     x=str2num(str);
     str2 = get(handles.edtY, 'String');
@@ -3063,17 +3075,17 @@ if q~=0
         SensData(Ard);
     end
     
-    pause(0.1); % ожидание в случае изменения режима
+    pause(0.1); % РѕР¶РёРґР°РЅРёРµ РІ СЃР»СѓС‡Р°Рµ РёР·РјРµРЅРµРЅРёСЏ СЂРµР¶РёРјР°
     
     while fin<=0.88
         fin=fin+0.21; % 0.03
         %fin=0.88;
         fi=(1.132674-fin)*180*6.732/13.5;
         cla
-        p1=plot(xa,ya,'g','LineWidth',5); % Изобрачение рабочей области манипулятора
-        p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % Изображение текужего положения манипулятора
-        p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс манипулятора
-        p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс дрона
+        p1=plot(xa,ya,'g','LineWidth',5); % РР·РѕР±СЂР°С‡РµРЅРёРµ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСѓР¶РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РґСЂРѕРЅР°
 
         PicGrip(x,y,fi);
         
@@ -3090,7 +3102,7 @@ if q~=0
         
         pause(0.1)
 
-        val = get(GrCont,'Value'); % проверяем значение кнопки с тэгом ChStop
+        val = get(GrCont,'Value'); % РїСЂРѕРІРµСЂСЏРµРј Р·РЅР°С‡РµРЅРёРµ РєРЅРѕРїРєРё СЃ С‚СЌРіРѕРј ChStop
         if (val~=1)
             break
         end
@@ -3100,17 +3112,17 @@ end
 
 end
 
-% Функция разжатия хвата
+% Р¤СѓРЅРєС†РёСЏ СЂР°Р·Р¶Р°С‚РёСЏ С…РІР°С‚Р°
 function GripDrop(src,evt)
 
 global TabAng xc yc xa ya arm123x arm123y fi q serv DevCon Ard GrCont
 
-[kMrS,ChMot]=NumbMot({'Servo'}); % Проверка количества моторов Servo
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
-handles = guihandles(src); % записываем в структуру handles указатели на объекты приложения
+[kMrS,ChMot]=NumbMot({'Servo'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Servo
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+handles = guihandles(src); % Р·Р°РїРёСЃС‹РІР°РµРј РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»Рё РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 
 if q~=0
-    % Считываем координат X, Y и углов
+    % РЎС‡РёС‚С‹РІР°РµРј РєРѕРѕСЂРґРёРЅР°С‚ X, Y Рё СѓРіР»РѕРІ
     handles = guihandles(src);
     str = get(handles.edtX, 'String');
     x=str2num(str);
@@ -3124,17 +3136,17 @@ if q~=0
         writePosition(serv(kMrS),fin);
     end
     
-    pause(0.1); % ожидание в случае изменения режима
+    pause(0.1); % РѕР¶РёРґР°РЅРёРµ РІ СЃР»СѓС‡Р°Рµ РёР·РјРµРЅРµРЅРёСЏ СЂРµР¶РёРјР°
     
     %while fin>=0.13
         %fin=fin-0.03;
         fin=0.13;
         fi=(1.132674-fin)*180*6.732/13.5;
         cla
-        p1=plot(xa,ya,'g','LineWidth',5); % Изобрачение рабочей области манипулятора
-        p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % Изображение текужего положения манипулятора
-        p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс манипулятора
-        p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % Изображение центра масс дрона
+        p1=plot(xa,ya,'g','LineWidth',5); % РР·РѕР±СЂР°С‡РµРЅРёРµ СЂР°Р±РѕС‡РµР№ РѕР±Р»Р°СЃС‚Рё РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p2=plot(xc,yc,'k-o','LineWidth',3,'MarkerSize',4); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С‚РµРєСѓР¶РµРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p3=plot(arm123x,arm123y,'r x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
+        p4=plot(0,0.08,'b x','LineWidth',2,'MarkerSize', 10); % РР·РѕР±СЂР°Р¶РµРЅРёРµ С†РµРЅС‚СЂР° РјР°СЃСЃ РґСЂРѕРЅР°
 
         PicGrip(x,y,fi);
 
@@ -3151,7 +3163,7 @@ if q~=0
         
         pause(0.1)
         
-%         val = get(GrCont,'Value'); % проверяем значение кнопки с тэгом ChStop
+%         val = get(GrCont,'Value'); % РїСЂРѕРІРµСЂСЏРµРј Р·РЅР°С‡РµРЅРёРµ РєРЅРѕРїРєРё СЃ С‚СЌРіРѕРј ChStop
 %         if (val~=2)
 %             break
 %         end
@@ -3161,22 +3173,22 @@ end
 
 end
 
-% Функция остановки функционирования хвата
+% Р¤СѓРЅРєС†РёСЏ РѕСЃС‚Р°РЅРѕРІРєРё С„СѓРЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ С…РІР°С‚Р°
 function GripStop(src,evt)
 
 global serv Ard DevCon fi
 
-[kMrS,ChMot]=NumbMot({'Servo'}); % Проверка количества моторов Servo
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+[kMrS,ChMot]=NumbMot({'Servo'}); % РџСЂРѕРІРµСЂРєР° РєРѕР»РёС‡РµСЃС‚РІР° РјРѕС‚РѕСЂРѕРІ Servo
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
-handles = guihandles(src); % записываем в структуру handles указатели на объекты приложения
-% val = get(handles.ChStop,'Value'); % проверяем значение кнопки с тэгом ChStop
+handles = guihandles(src); % Р·Р°РїРёСЃС‹РІР°РµРј РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»Рё РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
+% val = get(handles.ChStop,'Value'); % РїСЂРѕРІРµСЂСЏРµРј Р·РЅР°С‡РµРЅРёРµ РєРЅРѕРїРєРё СЃ С‚СЌРіРѕРј ChStop
 
 % if (val~=0) && (ChSt==0)
-%     set(handles.ChStop,'Value',0); % возвращение кнопки в исходное положение, если хват не функционировал
+%     set(handles.ChStop,'Value',0); % РІРѕР·РІСЂР°С‰РµРЅРёРµ РєРЅРѕРїРєРё РІ РёСЃС…РѕРґРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, РµСЃР»Рё С…РІР°С‚ РЅРµ С„СѓРЅРєС†РёРѕРЅРёСЂРѕРІР°Р»
 % else
-%     HoDr=0; % переключатель кнопок Hold/Drop/Stop
-%     pause(0.1); % ожидание в случае изменения режима
+%     HoDr=0; % РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РєРЅРѕРїРѕРє Hold/Drop/Stop
+%     pause(0.1); % РѕР¶РёРґР°РЅРёРµ РІ СЃР»СѓС‡Р°Рµ РёР·РјРµРЅРµРЅРёСЏ СЂРµР¶РёРјР°
 % end
 
 if SwC>=2
@@ -3187,20 +3199,20 @@ end
 
 end
 
-% Функция автоматического захвата объекта
+% Р¤СѓРЅРєС†РёСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ Р·Р°С…РІР°С‚Р° РѕР±СЉРµРєС‚Р°
 function UltraCheck(src,evt)
 
 global TabSens SwC x0 GrCont
 
-% записываем в структуру handles указатели на объекты приложения
+% Р·Р°РїРёСЃС‹РІР°РµРј РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ handles СѓРєР°Р·Р°С‚РµР»Рё РЅР° РѕР±СЉРµРєС‚С‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 handles = guihandles(src);
 
-% берем текст из строки ввода (координата Х)
+% Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (РєРѕРѕСЂРґРёРЅР°С‚Р° РҐ)
 str = get(handles.edtX, 'String');
 x1=str2num(str);
 x=x0;
 
-% берем текст из строки ввода (координата Y)
+% Р±РµСЂРµРј С‚РµРєСЃС‚ РёР· СЃС‚СЂРѕРєРё РІРІРѕРґР° (РєРѕРѕСЂРґРёРЅР°С‚Р° Y)
 str2 = get(handles.edtY, 'String');
 y2=str2num(str2);
 
@@ -3241,7 +3253,7 @@ if SwC==2
         pause(0.16);
         Tsens=get(TabSens,'Data');
         
-        val = get(GrCont,'Value'); % проверяем значение кнопки с тэгом ChStop
+        val = get(GrCont,'Value'); % РїСЂРѕРІРµСЂСЏРµРј Р·РЅР°С‡РµРЅРёРµ РєРЅРѕРїРєРё СЃ С‚СЌРіРѕРј ChStop
         if (val==3)
             break
         end
@@ -3267,9 +3279,9 @@ InitData=PlotLocation(x,y,x1,y1);
 
 pause(0.2);
 
-% GH = get(GrHo,'Value'); % Считывание подключения Arduino
+% GH = get(GrHo,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Arduino
 % if GH~=1
-%     set(GrHo,'Value',1); % подключение Arduino для включения питания
+%     set(GrHo,'Value',1); % РїРѕРґРєР»СЋС‡РµРЅРёРµ Arduino РґР»СЏ РІРєР»СЋС‡РµРЅРёСЏ РїРёС‚Р°РЅРёСЏ
 %     GripHold(src);
 %     set(GrHo,'Value',0);
 % end
@@ -3293,7 +3305,7 @@ InitData=PlotLocation(x,y,x1,y1);
 
 end
 
-% Функция поворота гриппера
+% Р¤СѓРЅРєС†РёСЏ РїРѕРІРѕСЂРѕС‚Р° РіСЂРёРїРїРµСЂР°
 function GripRotate(src,evt)
 
 global p PROTOCOL_VERSION TabAng GrCont DevCon
@@ -3302,11 +3314,11 @@ datAng=get(TabAng,'Data');
 GamAng=cell2mat(datAng(5,2));
 psi=int32((60+GamAng)/0.29); %0.3516
 
-SwC = get(DevCon,'Value'); % Считывание типа подключения манипулятора
+SwC = get(DevCon,'Value'); % РЎС‡РёС‚С‹РІР°РЅРёРµ С‚РёРїР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјР°РЅРёРїСѓР»СЏС‚РѕСЂР°
 
 if (SwC>=2)
     write2ByteTxRx(p, PROTOCOL_VERSION, 15,30,psi);
-    ChButs(SwC); % Мониторинг текущих параметров датчиков и моторов
+    ChButs(SwC); % РњРѕРЅРёС‚РѕСЂРёРЅРі С‚РµРєСѓС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ РґР°С‚С‡РёРєРѕРІ Рё РјРѕС‚РѕСЂРѕРІ
 end
 
 end
