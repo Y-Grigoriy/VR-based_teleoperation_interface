@@ -1,0 +1,4 @@
+[submodule "AirInterface-ROS"]
+	path = AirInterface-ROS
+	url = https://github.com/CityAplons/AirInterface-ROS
+	branch = release
